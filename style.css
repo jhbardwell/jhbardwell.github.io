@@ -17,6 +17,17 @@ html {
   font-family: "Lucida Sans", sans-serif;
 }
 
+.button{
+}
+
+#button_portfolio {
+  width: 150px;
+  height: 150px;
+  background-image: url('/images/portfolio.png');
+  background-size: cover;
+  background-color: #eee;
+  }
+
 .header {
   background-color: #9933cc;
   color: #ffffff;
@@ -61,10 +72,6 @@ html {
 
 /* For mobile phones: */
 @media screen and (max-width: 600px) {
-  div.example {
-    font-size: 30px;
-  }
-}
 [class*="col-"] {
   width: 100%;
 }
