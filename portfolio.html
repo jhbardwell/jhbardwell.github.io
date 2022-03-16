@@ -8,10 +8,13 @@
   <body>
     <div class="wrapper">
       <div class="header">HEADER</div>
-      <div class="menu">MENU</div>
       <div class="ui">
-        <form>
-          <img src="https://raw.githubusercontent.com/jhbardwell/Newsletter-Concatenation-Program/main/images/header.png"  
+        <form id="Project-Form">
+          <label id="Form-label" for="Project-Form" class="formlabels"><b>Recent Projects</b></label>
+          <br>
+          <br>
+          <img id="Newsletter-Concatenation-Program-image"
+          src="https://raw.githubusercontent.com/jhbardwell/Newsletter-Concatenation-Program/main/images/header.png"  
           width=100% height=auto>
           <input type="radio" name="RadioGroupName" id="GroupName1" onclick="ShowRadioButtonDiv('GroupName', 9)"/>
           <label for="GroupName1" class="radiobuttonlabels"><b>System</b></label>
@@ -20,7 +23,8 @@
           <input type="radio" name="RadioGroupName" id="GroupName3" onclick="ShowRadioButtonDiv('GroupName', 9)"/>
           <label for="GroupName3" class="radiobuttonlabels"><b>Demo</b></label>
           <hr>
-          <img src="https://raw.githubusercontent.com/jhbardwell/Research-Data-Manager-Program/main/images/header.png"
+          <img id="Research-Data-Manager-Program-image"
+          src="https://raw.githubusercontent.com/jhbardwell/Research-Data-Manager-Program/main/images/header.png"
           width=100% height=auto>
           <input type="radio" name="RadioGroupName" id="GroupName4" onclick="ShowRadioButtonDiv('GroupName', 9)"/>
           <label for="GroupName4" class="radiobuttonlabels"><b>System</b></label>
@@ -29,7 +33,8 @@
           <input type="radio" name="RadioGroupName" id="GroupName6" onclick="ShowRadioButtonDiv('GroupName', 9)"/>
           <label for="GroupName6" class="radiobuttonlabels"><b>Demo</b></label>
           <hr>
-          <img src="https://raw.githubusercontent.com/jhbardwell/Fantasy-Narrative-Program/main/images/header.png"
+          <img id="Fantasy-Narrative-Program-image"
+          src="https://raw.githubusercontent.com/jhbardwell/Fantasy-Narrative-Program/main/images/header.png"
           width=100% height=auto>
           <input type="radio" name="RadioGroupName" id="GroupName7" onclick="ShowRadioButtonDiv('GroupName', 9)"/>
           <label for="GroupName7" class="radiobuttonlabels"><b>System</b></label>
@@ -59,16 +64,19 @@
         <div id="GroupName9Div" style="display:none;">Section 9
         </div>
       </div>
-      <div class="aside">ASIDE</div>
+      <div class="aside">
+        <div id="Project1Div" style="display:none;">Project 1
+        </div>
+        <div id="Project2Div" style="display:none;">Project 2
+        </div>
+        <div id="Project3Div" style="display:none;">Project 3
+        </div>
+      </div>
       <div class="footer">
         <a href="https://github.com/jhbardwell">GitHub</a>
       </div>
     </div>
-    
-
-    
-    
-
+  
   </body>
 </html>
 
