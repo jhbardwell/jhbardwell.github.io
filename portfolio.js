@@ -37,6 +37,7 @@ let resetAll = function(){
 }
 
 let clickRadioButton1 = function() {
+    resetAll();
     project1Image.style.filter="sepia(0)";
     project1SystemContent.style.display="block";
     project1Aside.style.display="block";
@@ -55,6 +56,7 @@ let clickRadioButton3 = function() {
 }
 
 let clickRadioButton4 = function() {
+    resetAll();
     project2Image.style.filter="sepia(0)";
     project2SystemContent.style.display="block";
     project2Aside.style.display="block";
@@ -67,6 +69,7 @@ let clickRadioButton5 = function() {
 }
 
 let clickRadioButton6 = function() {
+    resetAll();
     project2Image.style.filter="sepia(0)";
     project2DemoContent.style.display="block";
     project2Aside.style.display="block";
