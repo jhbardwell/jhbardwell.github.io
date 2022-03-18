@@ -42,6 +42,10 @@ form{
   text-align: center;
 }
 
+.projectimages{
+  filter: sepia(1);
+}
+
 /*Dynamic Properties*/
 
 @media only screen and (max-width: 600px) {
