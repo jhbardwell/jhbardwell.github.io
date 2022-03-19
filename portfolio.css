@@ -1,0 +1,126 @@
+/*Static Properties*/
+
+body{
+  background-image: url("images/background.png");
+  
+  background-size: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+form{
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+.wrapper{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+}
+
+.footer{
+  position:fixed;
+  left:0px;
+  background-color: black;
+  bottom:0px;
+  width:100%;
+  text-align: center;
+}
+
+.radiobuttonlabels{
+  font-size: 100%;
+  color: gray;
+  text-align: center;
+}
+
+.projectimages{
+  filter: sepia(1);
+}
+
+/*Dynamic Properties*/
+
+@media only screen and (max-width: 600px) {
+
+  .ui{
+    grid-row:1;
+    grid-column: span 12;
+  }
+
+  .content{
+    grid-row:2;
+    grid-column: span 12;
+  }
+
+  .aside{
+    grid-row:2;
+    grid-column: span 12;
+  }
+
+  .footer{
+    grid-row:4;
+    grid-column: span 12;
+    
+  }
+
+  .radiobuttonblabels{
+    font-size: 200%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+
+  .ui{
+    grid-row:1;
+    grid-column: span 3;
+  }
+
+  .content{
+    grid-row:1;
+    grid-column: span 9;
+  }
+
+  .aside{
+    grid-row:2;
+    grid-column: span 12;
+  }
+
+  .footer{
+    grid-row:3;
+    grid-column: span 12;
+  }
+
+  .radiobuttonblabels{
+    font-size: 150%;
+  }
+
+}  
+
+@media only screen and (min-width: 920px) {
+
+  .ui{
+    grid-row:1;
+    grid-column: span 3;
+  }
+
+  .content{
+    grid-row:1;
+    grid-column: span 7;
+  }
+
+  .aside{
+    grid-row:1;
+    grid-column: span 2;
+  }
+
+
+  .footer{
+    grid-row:2;
+    grid-column: span 12;
+  }
+
+  .radiobuttonblabels{
+    font-size: 100%;
+  }
+
+}
