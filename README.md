@@ -36,6 +36,7 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 - [ ] Create and iterate contact form
 - [ ] Unit test and optimize code
 ## Stage 3 - Prune
+- [ ] Make all images load before html appears via onload
 - [ ] Add scrollbars where necessary
 - [ ] Fix the header gap issue
 - [ ] Make grass animate in subtle left/right waves when the mouse passes over in that direction
