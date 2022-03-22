@@ -1,5 +1,3 @@
-let formLabel = document.getElementById("Form-label");
-
 let projectImages = document.getElementsByClassName("projectimages")
 
 let project1Image = document.getElementById("Newsletter-Concatenation-Program-image");
@@ -52,10 +50,9 @@ let resetAll = function () {
   }
 };
 
-document.body.addEventListener("change", function (e) {
-    let target = e.target;
+document.body.addEventListener("change", function (event) {
     resetAll();
-    switch (target.id) {
+    switch (event.target.id) {
         case "RadioButton1-input":
           project1Image.style.filter = "none";
           project1SystemContent.style.display = "block";

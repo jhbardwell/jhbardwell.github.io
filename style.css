@@ -19,11 +19,18 @@ form{
 
 .content{
   color:rgb(187, 187, 204);
+}
+
+.center{
   text-align: center;
 }
 
-.dark-text{
-  color:black
+.left{
+  text-align: justify;
+}
+
+.justify{
+  text-align: justify;
 }
 
 .glow { 
@@ -45,11 +52,6 @@ form{
   text-align: center;
 }
 
-.footer a.active{
-  background-color:rgb(217, 232, 243);
-  color: rgb(35, 73, 104);
-}
-
 .footer ul {
   list-style: none;
   background-color: rgb(0, 0, 0);
@@ -64,24 +66,24 @@ form{
   height: 40px;
   border-bottom: 1px solid rgb(0, 0, 0);
 }
- 
+
 .footer a {
   text-decoration: none;
   color:rgb(187, 187, 204);
   display: block;
   transition: .3s background-color;
 }
- 
+
 .footer a:hover {
   background-color: rgb(35, 73, 104);
 }
- 
+ /*
 .footer a:active {
   background-color:rgb(187, 187, 204);
   color: rgb(0, 0, 0);
   cursor: default;
 }
-
+*/
 .projectimages{
   filter: sepia(1);
 }

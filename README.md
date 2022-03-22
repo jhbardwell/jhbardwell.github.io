@@ -30,13 +30,12 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 - [X] Design or modify graphics
 - [X] Create website HTML components 
 - [X] Create website layout using CSS grid
-- [X] Make website layout dynamnic using media queries
+- [X] Make website layout dynamic using media queries
 - [X] Code simple nav menu GUI
+- [X] Create and iterate image cache preloader
 - [X] Create and iterate collective radiobutton event listener
-- [ ] Create and iterate contact form
-- [ ] Unit test and optimize code
+- [X] Unit test and optimize code using codepen.io modules
 ## Stage 3 - Prune
-- [ ] Make all images load before html appears via onload
 - [ ] Add scrollbars where necessary
 - [ ] Fix the header gap issue
 - [ ] Make grass animate in subtle left/right waves when the mouse passes over in that direction
