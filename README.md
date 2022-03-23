@@ -28,12 +28,14 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 - [X] Design system mechanics
 - [X] Design system aesthetics
 - [X] Design or modify graphics
-- [X] Create website HTML components 
-- [X] Create website layout using CSS grid
+- [X] Create website class layout in HTML
+- [X] Define website class descriptions in CSS
+- [X] Structure HTML layout using CSS grid
 - [X] Make website layout dynamic using media queries
 - [X] Code simple nav menu GUI
-- [X] Create and iterate image cache preloader
-- [X] Create and iterate collective radiobutton event listener
+- [ ] Create and iterate index.js image cache preloader
+- [ ] Create and iterate contact.js form input event listener
+- [X] Create and iterate projects.js radiobutton event listener
 - [X] Unit test and optimize code using codepen.io modules
 ## Stage 3 - Prune
 - [ ] Add scrollbars where necessary
@@ -61,5 +63,5 @@ If this project piques your interest, you can invest here
 # ![Newsletter](/images/newsletters.png)Newsletter
 Do you want all the latest about ongoing app developments and exciting new projects? Then sign up [here](https://jeffreybardwell.com/sendy/subscription?f=6x4w4Uh71014jJOESdfio6xcewae763pRAzSfj7irZuWdB8L8892O9A892xV6qp892juL1LRkvjEzZEC7oYmFBh5HYNmOw).
 # ![Contact](/images/contact.png)Contact
-Please address all questions, comments, and concerns [here](jhbardwell@gmail.com)
+Please address all questions, comments, and concerns [here]("mailto:jhbardwell@gmail.com")
 
