@@ -44,6 +44,10 @@ form{
   grid-template-rows: auto;
 }
 
+.header{
+  color:rgb(187, 187, 204);
+}
+
 .footer{
   position:fixed;
   left:0px;
@@ -115,27 +119,33 @@ form{
 /*Dynamic Media Screen Properties*/
 
 @media only screen and (max-width: 600px) {
+  .footer{
+    grid-row:1;
+    grid-column: span 12;
+    
+  }
+  
+  .header{
+    grid-row:2;
+    grid-column: span 12;
+  }
 
   .ui{
-    grid-row:1;
+    grid-row:3;
     grid-column: span 12;
   }
 
   .content{
-    grid-row:2;
+    grid-row:4;
     grid-column: span 12;
   }
 
   .aside{
-    grid-row:2;
+    grid-row:5;
     grid-column: span 12;
   }
 
-  .footer{
-    grid-row:4;
-    grid-column: span 12;
-    
-  }
+
 
   .radiobuttonblabels{
     font-size: 200%;
@@ -144,23 +154,28 @@ form{
 
 @media only screen and (min-width: 600px) {
 
-  .ui{
+  .header{
     grid-row:1;
+    grid-column: span 12;
+  }
+
+  .ui{
+    grid-row:2;
     grid-column: span 3;
   }
 
   .content{
-    grid-row:1;
+    grid-row:2;
     grid-column: span 9;
   }
 
   .aside{
-    grid-row:2;
+    grid-row:3;
     grid-column: span 12;
   }
 
   .footer{
-    grid-row:3;
+    grid-row:4;
     grid-column: span 12;
   }
 
@@ -172,24 +187,29 @@ form{
 
 @media only screen and (min-width: 920px) {
 
-  .ui{
+  .header{
     grid-row:1;
+    grid-column: span 12;
+  }
+
+  .ui{
+    grid-row:2;
     grid-column: span 3;
   }
 
   .content{
-    grid-row:1;
+    grid-row:2;
     grid-column: span 6;
   }
 
   .aside{
-    grid-row:1;
+    grid-row:2;
     grid-column: span 3;
   }
 
 
   .footer{
-    grid-row:2;
+    grid-row:3;
     grid-column: span 12;
   }
 

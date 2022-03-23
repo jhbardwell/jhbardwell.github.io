@@ -18,4 +18,4 @@ function preloadImages(array) {
     }
 }
 
-preloadImages(["url1.jpg", "url2.jpg", "url3.jpg"]);
+preloadImages(["images/background.png"]);

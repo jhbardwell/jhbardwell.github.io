@@ -3,14 +3,24 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" />
-    <script src="projects.js" defer></script>
+    <script src="contact.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
+      <div class="header"></div>
       <div class="ui"></div>
       <div class="content">
-        <p>Contact Page</p>
-      </div>
+          <form>
+            <input type="text" id="name-input" placeholder="Name"/>
+            <br>
+            <input type="text" id="company-input" placeholder="Company"/>
+            <br>
+            <input type="text" id="email-input" placeholder="Email"/>
+            <span>What is your question?</span>
+            <br>
+            <textarea id="question" rows="4"></textarea>
+            <br><br>
+          </form>
       <div class="aside"></div>
       <div class="footer">
         <ul id="Main-menu">
