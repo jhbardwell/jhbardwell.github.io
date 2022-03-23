@@ -9,17 +9,17 @@ Enjoy exploring the creative coding endeavors of Jeffrey Bardwell courtesy of hi
 # ![About](/images/about.png)About 
 How do you sell the image of a person without a photograph? How do you tell their life story without a novel? How do you trumpet their glorious achievements without a big brass band? You need, dear readers, a portfolio and a website to showcase all that razzle dazzle. This is one such website–one of the best such websites–because it is my website. 
 
-# ![Users](/images/user.png)Users
+# ![Users](/images/users.png)Users
 Are you a private invidivual or company seeking further information about the skills, quirks, and code of [jhbardwell](https://github.com/jhbardwell): system dev, data scientist, and designer extraordinaire? Then you should check out his portfolio there below.
 # ![Demo](/images/demo.png)Demo
 Do you wish to see the current project demonatration? Experience it for yourself [here](https://jhbardwell.github.io).
 # ![Install](/images/install.png)Install
 There is no installation. It's a website.
-# ![Bugs](/images/bug.png)Bugs
+# ![Bugs](/images/bugs.png)Bugs
 Please report all bugs here
-# ![Design](/images/designs.png)Design
+# ![Design](/images/design.png)Design
 Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) documents the development goals, system architexture, and schedule of this project.
-# ![Roadmap](/images/roadmaps.png)Roadmap
+# ![Roadmap](/images/roadmap.png)Roadmap
 ## Stage 1 - Plan
 - [X] Define problem scope
 - [X] Define target user
@@ -52,7 +52,7 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 - [ ] Ensure old project contents update automatically from their respective github pages 
 # ![License](/images/licenses.png)License
 - GPL
-# ![People](/images/contributors.png)People
+# ![People](/images/people.png)People
 ## Contributors
 - Design: [jhbardwell](https://github.com/jhbardwell)
 - Writing: [jhbardwell](https://github.com/jhbardwell)
@@ -60,7 +60,7 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 - Graphics: [jhbardwell](https://github.com/jhbardwell)
 ## Investors
 If this project piques your interest, you can invest here
-# ![Newsletter](/images/newsletters.png)Newsletter
+# ![Newsletter](/images/newsletter.png)Newsletter
 Do you want all the latest about ongoing app developments and exciting new projects? Then sign up [here](https://jeffreybardwell.com/sendy/subscription?f=6x4w4Uh71014jJOESdfio6xcewae763pRAzSfj7irZuWdB8L8892O9A892xV6qp892juL1LRkvjEzZEC7oYmFBh5HYNmOw).
 # ![Contact](/images/contact.png)Contact
 Please address all questions, comments, and concerns [here]("mailto:jhbardwell@gmail.com")
