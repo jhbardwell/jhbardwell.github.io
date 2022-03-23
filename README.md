@@ -5,10 +5,8 @@ Enjoy exploring the creative coding endeavors of Jeffrey Bardwell courtesy of hi
 [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/jhbardwell/jhbardwell.github.io)
 
 [About](#About) | [Users](#Users) | [Demo](#Demo) | [Install](#Install) | [Bugs](#Bugs) | [Design](#Design) | [Roadmap](#Roadmap) | [License](#License) | [People](#People) | [Newsletter](#Newsletter) | [Contact](#Contact)
-
 # ![About](/images/about.png)About 
 How do you sell the image of a person without a photograph? How do you tell their life story without a novel? How do you trumpet their glorious achievements without a big brass band? You need, dear readers, a portfolio and a website to showcase all that razzle dazzle. This is one such website–one of the best such websites–because it is my website. 
-
 # ![Users](/images/users.png)Users
 Are you a private invidivual or company seeking further information about the skills, quirks, and code of [jhbardwell](https://github.com/jhbardwell): system dev, data scientist, and designer extraordinaire? Then you should check out his portfolio there below.
 # ![Demo](/images/demo.png)Demo
@@ -50,7 +48,7 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 ## Stage 7 - Post
 - [ ] Update with new content and graphics as new projects arise
 - [ ] Ensure old project contents update automatically from their respective github pages 
-# ![License](/images/licenses.png)License
+# ![License](/images/license.png)License
 - GPL
 # ![People](/images/people.png)People
 ## Contributors
