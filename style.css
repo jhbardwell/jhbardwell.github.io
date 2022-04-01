@@ -2,9 +2,11 @@
 
 body{
   background-image: url("images/background.png");
-  background-size: fill;
-  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 5%;
 }
 
 form{
@@ -33,9 +35,14 @@ form{
   text-align: justify;
 }
 
-.glow { 
+.glow-text { 
   text-shadow: 0 0 10px #6d87a8; 
   text-shadow: 0 0 15px #c1c9d3; 
+}
+
+.glow-image { 
+  box-shadow: 0 0 10px #6d87a8; 
+  box-shadow: 0 0 15px #c1c9d3; 
 }
 
 .wrapper{
@@ -46,6 +53,14 @@ form{
 
 .header{
   color:rgb(187, 187, 204);
+}
+
+.content hr{
+  border: 1px solid gray
+}
+
+.ui hr{
+  border: 1px solid gray
 }
 
 .footer{
@@ -92,25 +107,7 @@ form{
   filter: sepia(1);
 }
 
-.project1labels{
-  font-size: 100%;
-  color: gray;
-  text-align: center;
-}
-
-.project2labels{
-  font-size: 100%;
-  color: gray;
-  text-align: center;
-}
-
-.project3labels{
-  font-size: 100%;
-  color: gray;
-  text-align: center;
-}
-
-.project4labels{
+.projectlabels{
   font-size: 100%;
   color: gray;
   text-align: center;
@@ -119,33 +116,32 @@ form{
 /*Dynamic Media Screen Properties*/
 
 @media only screen and (max-width: 600px) {
-  .footer{
-    grid-row:1;
-    grid-column: span 12;
-    
-  }
   
   .header{
-    grid-row:2;
+    grid-row:1;
     grid-column: span 12;
   }
 
   .ui{
-    grid-row:3;
+    grid-row:2;
     grid-column: span 12;
   }
 
   .content{
-    grid-row:4;
+    grid-row:3;
     grid-column: span 12;
   }
 
   .aside{
-    grid-row:5;
+    grid-row:4;
     grid-column: span 12;
   }
 
-
+  .footer{
+    grid-row:5;
+    grid-column: span 12;
+    
+  }
 
   .radiobuttonblabels{
     font-size: 200%;

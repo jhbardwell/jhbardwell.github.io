@@ -48,23 +48,23 @@ let project4Aside = document.getElementById("Project4-div")
 
 let radiobuttons = document.getElementsByClassName("radiobuttons")
 
-let resetAll = function () {
-  for (i = 0; i < projectImages.length; i++) {
-    projectImages[i].style.filter = "sepia(1)";  
+let resetAllProjects = function () {
+  for (let i = 0; i < projectImages.length; i++) {
+    projectImages[i].style.filter = "sepia(1)"; 
   }
-  for (i = 0; i < projectLabels.length; i++) {
+  for (let i = 0; i < projectLabels.length; i++) {
     projectLabels[i].style.color = "gray";  
   }
-  for (i = 0; i < projectContents.length; i++) {
+  for (let i = 0; i < projectContents.length; i++) {
     projectContents[i].style.display = "none";  
   }
-  for (i = 0; i < projectAsides.length; i++) {
+  for (let i = 0; i < projectAsides.length; i++) {
     projectAsides[i].style.display = "none";  
   }
-};
+}
 
 document.body.addEventListener("change", function (event) {
-    resetAll();
+    resetAllProjects();
     switch (event.target.id) {
         case "RadioButton1-input":
           project1Image.style.filter = "none";
@@ -86,55 +86,55 @@ document.body.addEventListener("change", function (event) {
           break;
         case "RadioButton4-input":
           project2Image.style.filter = "none";
-          project2SystemLabel.style.color = "gold";
+          project2SystemLabel.style.color = "lightblue";
           project2SystemContent.style.display = "block";
           project2Aside.style.display = "block";
           break;
         case "RadioButton5-input":
           project2Image.style.filter = "none";
-          project2TimelineLabel.style.color = "gold";
+          project2TimelineLabel.style.color = "lightblue";
           project2TimelineContent.style.display = "block";
           project2Aside.style.display = "block";
           break;
         case "RadioButton6-input":
           project2Image.style.filter = "none";
-          project2DemoLabel.style.color = "gold";
+          project2DemoLabel.style.color = "lightblue";
           project2DemoContent.style.display = "block";
           project2Aside.style.display = "block";
           break;
         case "RadioButton7-input":
           project3Image.style.filter = "none";
-          project3SystemLabel.style.color = "gold";
+          project3SystemLabel.style.color = "orange";
           project3SystemContent.style.display = "block";
           project3Aside.style.display = "block";
           break;
         case "RadioButton8-input":
           project3Image.style.filter = "none";
-          project3TimelineLabel.style.color = "gold";
+          project3TimelineLabel.style.color = "orange";
           project3TimelineContent.style.display = "block";
           project3Aside.style.display = "block";
           break;
         case "RadioButton9-input":
           project3Image.style.filter = "none";
-          project3DemoLabel.style.color = "gold";
+          project3DemoLabel.style.color = "orange";
           project3DemoContent.style.display = "block";
           project3Aside.style.display = "block";
           break;
         case "RadioButton10-input":
           project4Image.style.filter = "none";
-          project4SystemLabel.style.color = "gold";
+          project4SystemLabel.style.color = "purple";
           project4SystemContent.style.display = "block";
           project4Aside.style.display = "block";
           break;
         case "RadioButton11-input":
           project4Image.style.filter = "none";
-          project4TimelineLabel.style.color = "gold";
+          project4TimelineLabel.style.color = "purple";
           project4TimelineContent.style.display = "block";
           project4Aside.style.display = "block";
           break;
         case "RadioButton12-input":
           project4Image.style.filter = "none";
-          project4DemoLabel.style.color = "gold";
+          project4DemoLabel.style.color = "purple";
           project4DemoContent.style.display = "block";
           project4Aside.style.display = "block";
           break;

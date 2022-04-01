@@ -3,53 +3,63 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" />
-    <script src="projects.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
+      <div class="header">
+        <h1 class="glow-text center">Frequently Asked Questions</h1>
+      </div>
       <div class="ui"></div>
       <div class="content">
-        <br>
-        <h1 class="glow">Frequently Asked Questions</h1>
-        <p><b>1. Why I don't comment my code</b></p>
-        <p>"Elegant code is like elegant dialogue," he said. Less is more. Exhaustive detail doesn't make things better, it's a crutch. Most comments are an excuse for incoherent, disorganized clutter. One should be able to read good code like the pages of a good book, never mind the footnotes. The sole exceptions are for cases of instruction or organization.</p>
-        <hr>
-        <p><b>2. What is my animus against frameworks and stock engines</b></p>
-        <p>Other than that they both encourage bloated over-abstract code riddled with dependencies, stifle innovation in favor of one-size-fits-all conformity, and aggravate my contrarian dislike of trends, that's it. When the advantages outweigh the disadvantages, I will use them, but I don't rely on them.</p>
-        <hr>
-        <p><b>3. Why I quit being a professional scientist</b></p>
+        <p><b>1. Whence the gradual transition from ecologist to data scientist to software engineer?</b></p>
         <img src="https://imgs.xkcd.com/comics/purity.png"
-          width=100% height=auto>
-        <p> In short, I wanted to find a new career that better satiated both the logical and creative hemispheres of my brain. There's not much difference between the binary and biological arts. Both involve a precarious balance between problem solving content generation and interdisciplinary project management. Both involve generating and testing hypotheses, finding intriguing patterns in the world around us, and modeling complex systems using mathematical models.</p>
+        alt="xkcd Webcomic showing derivative relationships among scientific disciplines" width=100% height=auto>
+        <p> I wanted a career that satiates and better integrates the logical and creative hemispheres of my brain. There's not much difference between the binary and biological arts. Both involve research and innovation in their respective fields. Both maintain a precarious three way balance between problem solving, content generation, and interdisciplinary collaboration. Both generate and test hypotheses, discover intriguing patterns in the world around us, and model complex systems using mathematics.</p>
         <hr>
-        <p><b>4A. My design management philosophy</b>
+        <p><b>2. Why do I rarely comment my code?</b></p>
+        <p>"Elegant code is like elegant dialogue," he said. Less is more. Exhaustive detail doesn't make things better, it's a crutch. Most comments are an excuse to handwave disorganized code, ambiguous variable names, or overcomplex functions. One should be able to read good code like the pages of a good book, never mind the footnotes. The sole exceptions are for cases of instruction or categorical organization.</p>
+        <hr>
+        <p><b>3. What is my system design philosophy?</b>
           <ul>
-            <li>Never embrace the esoteric at the expense of the fundamentals: rule of three, colorwheel, etc</li>
+            <li>Follow the 7P's: Plan, Prototype, Prune, Playtest, Polish, Publish, Post</li>
+            <li>Make your project accessible because not everyone sees, hears, or interprets symobls and stimuli the same way that you do</li>
+            <li>Never embrace the esoteric at the expense of the fundamentals</li>
+            <li>Fully develop the core mechanics first, the minimal necessary functions second, and the aesthetics third...then and only then glance at that shiny new features wishlist</li> 
+            <li>Build your product to flex and evolve</li>
+            <li>Make it modular, then reuse your assets</li>
+            <li>Decouple everything (i.e. separate concerns)</li>
+            <li>Our life is frittered away by detail. Simplify, simplify, simplify!</li>
           </ul>
         </p>
-        <p><b>4B. My code management philosophy</b>
+        <hr>
+        <p><b>4. What is my code writing philosophy?</b>
           <ul>
+            <li>Hardcode as little as possible</li>
+            <li>Always favor composition over inheritance</li>
+            <li>Give your variables, functions, and classes descriptive names</li>
             <li>Each function should do one thing and one thing well</li>
             <li>In the tradeoff between fewer functions (optimize!) and more functions (specialize!), err towards the latter</li>
-            <li>Nested if else statements are evil incarnate and nested for loops hordes of little demonspawn</li>
-            <li>Split your code into bite sized interactive objects or modules--do not make a giant slimy block of spaghetti code lest you choke on it later</li>
+            <li>Nested if else statements are evil incarnate, nested for loops hordes of little demonspawn, and if/elseif chains their intruments of doom</li>
+            <li>Split your code into independent bite sized chunks&mdash;do not make a giant slimy block of spaghetti code lest you choke on it</li>
             <li>Plan your code with the mindset that you will need to modify, rearrange, or update it someday</li>
-            <li>If someone who does not know the language in which you are coding can still interpret the functionality of your code, you have succeeded</li>
+            <li>If someone who does not know the language in which you are coding can still interpret what your code does, you have succeeded</li>
           </ul>
         </p>
-        <p><b>4C. My project management philosophy</b>
-          <ul>
-            <li>One or two group update meetings per week is quite enough of that folderol</li>
-            <li>Pre and post production phases are important, damn it</li>
-            <li>Debrief after every project to redress potential flaws in the next project</li>
-          </ul>
-        </p>
-        <p><b>5. How I fill my spare time</b></p>
-        <p>I enjoy crafting things with my hands, be it food (cooking), the precursors to food (gardening), or small tables on which to set that food (woodworking). I also write dark epic fantasies. You can check out my novels <a href="https://jeffreybardwell.com">here</a>.</p>
         <hr>
-        <p><b>6. What I look like</b></p>
-        <p><img src="https://raw.githubusercontent.com/jhbardwell/jhbardwell.github.io/main/images/monkey.png"
-          width=50% height=auto> This picture is a lie in every detail, but truthful in all that matters.</p>
+        <p><b>5. What is my project management philosophy?</b>
+          <ul>
+            <li>Think it through completely; solicit input humbly; accept feedback gracefully</li>
+            <li>Establish unambiguous spheres of responsibility and milestones for all tasks</li>
+            <li>Planning, building, and managing the same task each require different mindsets and skillsets</li>
+            <li>Debrief after every project to redress potential flaws in the next project</li>
+            <li>Pre and post production phases are important, damn it...don't neglect them</li>
+            <li>Encourage lower echelon ingenuity: upper level employees decide what needs to get done while lower level employees should be trusted to plan how and adapt that plan as needed</li>
+            <li>While one group update meeting (i.e., stand meeting) per week is necessary, once per week is quite enough</li>
+          </ul>
+        </p>
+        <hr>
+        <p><b>6. How do I fill my spare time?</b></p>
+        <p>I enjoy crafting things with my hands, be it food (cooking), the precursors to food (gardening), or small tables on which to set that food (woodworking). I also write dark epic fantasy novels and design games.</p>
       </div>
       <div class="aside"></div>
       <div class="footer">
@@ -57,7 +67,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="https://github.com/jhbardwell" target="_blank">GitHub</a></li>
-          <li><a href="Bardwell.Resume.redacted.pdf" target="_blank">Resume</a></li>
+          <li><a href="Bardwell.Resume.redacted.pdf" target="_blank">Resumé</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>

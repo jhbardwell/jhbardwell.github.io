@@ -46,6 +46,7 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 ## Stage 6 - Publish
 - [X] Host site on github.io server
 ## Stage 7 - Post
+- [ ] Integrate php code hosted on server to allow message sending and json updates
 - [ ] Update with new content and graphics as new projects arise
 - [ ] Ensure old project contents update automatically from their respective github pages 
 # ![License](/images/license.png)License
