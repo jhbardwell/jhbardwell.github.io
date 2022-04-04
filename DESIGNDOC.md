@@ -69,7 +69,11 @@ Demonstrate core competencies without too many bells and whistes to distract fro
 %%{init: {'theme': 'forest'}}%%
 flowchart LR
    %%relationships
-     
+      arrayquoteimagination--populates-->arrayquotesconcat
+      arrayquotephilosophy--populates-->arrayquotesconcat
+      arrayquotestars--populates-->arrayquotesconcat
+      arrayquotesystems--populates-->arrayquotesconcat
+      arrayquotewriting--populates-->arrayquotesconcat
    %% structure
    subgraph INDEXHTML [Index.HTML]
       headerindex{Index Header}
