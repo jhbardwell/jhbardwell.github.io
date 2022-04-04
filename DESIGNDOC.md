@@ -74,6 +74,10 @@ flowchart LR
       arrayquotestars--populates-->arrayquotesconcat
       arrayquotesystems--populates-->arrayquotesconcat
       arrayquotewriting--populates-->arrayquotesconcat
+      CONTACTHTML--references-->STYLECSS
+      FAQHTML--references-->STYLECSS
+      IMAGELOADERJS--updates-->INDEXHTML
+      INDEXHTML--references-->STYLECSS
    %% structure
    subgraph INDEXHTML [Index.HTML]
       headerindex{Index Header}
