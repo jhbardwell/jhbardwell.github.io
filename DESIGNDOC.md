@@ -167,7 +167,6 @@ flowchart LR
       eventlistenercontactforminput{Contact Form Input Event Listener}
       end
    subgraph STYLECSS [Style.CSS]
-      end
    subgraph GITHUB [GitHub]
       images{External Image Data}
       projects{External Project Data}
