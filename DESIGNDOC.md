@@ -80,7 +80,7 @@ flowchart LR
       INDEXHTML--references-->STYLECSS
       menuitemcontact--hyperlinks to-->CONTACTHTML
       menuitemfaq--hyperlinks to-->FAQHTML
-
+      menuitemgithub--hyperlinks to-->projects
    %% structure
    subgraph INDEXHTML [Index.HTML]
       headerindex{Index Header}
