@@ -78,6 +78,7 @@ flowchart LR
       menuitemhome{Home Menu Item}
       menuitemprojects{Projects Menu Item}
       menuitemresume{Resume Menu Item}
+      end
 ```
 
 ## Development Schedule
