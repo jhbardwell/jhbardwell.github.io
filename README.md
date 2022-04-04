@@ -49,7 +49,7 @@ Are you craving the nitty gritty details of design? [This file](DESIGNDOC.md) do
 - [ ] Update with new content and graphics as new projects arise
 - [ ] Ensure old project contents update automatically from their respective github pages 
 # ![License](/images/license.png)License
-- GPL
+- [MIT](https://raw.github.com/jhbardwell/jhbardwell.github.io/main/LICENSE)
 # ![People](/images/people.png)People
 ## Contributors
 - Design: [jhbardwell](https://github.com/jhbardwell)
