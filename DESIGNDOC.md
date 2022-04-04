@@ -79,6 +79,7 @@ flowchart LR
       IMAGELOADERJS--updates-->INDEXHTML
       INDEXHTML--references-->STYLECSS
       menuitemcontact--hyperlinks to-->CONTACTHTML
+      menuitemfaq--hyperlinks to-->FAQHTML
 
    %% structure
    subgraph INDEXHTML [Index.HTML]
