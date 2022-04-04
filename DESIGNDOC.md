@@ -66,8 +66,7 @@ A demonstration website requires certain high functionality standards regarding 
 Demonstrate core competencies without too many bells and whistes to distract from the clean, minimal requirements of this website: present the site creator as an innovative software designer and manager by highlighting and glorifying his or her web application development accomplishments. All else is dross. Allow for multiple target users&mdash;programmers vs managers or the logical vs the artistic&mdash;to easily select and view what data they prefer&mdash;either code, design docs, or working prototypes&mdash;using an organized, intuitive layout. Keep peripherals such as resumes and githubpages behind external links. The github.io static hosting restrictions and lack of php or node.js experience will limit the backend applications of this website, so polish the frontend and warn users that they can't actually send emails, etc.
 ## System Architecture
 ```mermaid
-%%{init: {'theme': 'forest', 'themeVariables': 
-{ 'primaryColor': '#DDDA4D', 'edgeLabelBackground':'#F7F6DA', 'tertiaryColor': '#D5DEF6'}}}%%
+%%{init: {'theme': 'forest'}}%%
 flowchart LR
    %% structure
    subgraph INDEXHTML [Index.HTML]
