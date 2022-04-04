@@ -32,7 +32,7 @@ A demonstration website requires certain high functionality standards regarding 
 - No CSS, let the HTML fall where it will 
 - Use basic CSS
 - Use CSS Flexbox
-- **Use CSS Grid [current]
+- **Use CSS Grid [current]**
 ### Layout Scaling
 - Use single static layout regardless of screen size
 - Use media queries with breakpoints for large screens and phones 
