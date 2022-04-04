@@ -69,26 +69,6 @@ Demonstrate core competencies without too many bells and whistes to distract fro
 %%{init: {'theme': 'forest', 'themeVariables': 
 { 'primaryColor': '#DDDA4D', 'edgeLabelBackground':'#F7F6DA', 'tertiaryColor': '#D5DEF6'}}}%%
 flowchart LR
-   %%relationships
-      arrayquoteimagination--populates-->arrayquotesconcat
-      arrayquotephilosophy--populates-->arrayquotesconcat
-      arrayquotestars--populates-->arrayquotesconcat
-      arrayquotesystems--populates-->arrayquotesconcat
-      arrayquotewriting--populates-->arrayquotesconcat
-      CONTACTHTML--references-->STYLECSS
-      FAQHTML--references-->STYLECSS
-      IMAGELOADERJS--updates-->INDEXHTML
-      INDEXHTML--references-->STYLECSS
-      menuitemcontact--hyperlinks to-->CONTACTHTML
-      menuitemfaq--hyperlinks to-->FAQHTML
-      menuitemgithub--hyperlinks to-->projects
-      menuitemhome--hyperlinks to-->INDEXHTML
-      menuitemprojects--hyperlinks to-->PROJECTSHTML
-      menuitemresume--hyperlinks to-->Resume
-      PROJECTSHTML--references-->STYLECSS
-      QUOTEGENERATORJS--updates-->INDEXHTML
-      QUOTESJS--sends data to-->QUOTEGENERATORJS
-      variablerandomquote--updates-->paragraphquote
    %% structure
    subgraph INDEXHTML [Index.HTML]
       headerindex{Index Header}
