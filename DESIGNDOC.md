@@ -78,6 +78,16 @@ flowchart LR
       FAQHTML--references-->STYLECSS
       IMAGELOADERJS--updates-->INDEXHTML
       INDEXHTML--references-->STYLECSS
+      menuitemcontact--hyperlinks to-->CONTACTHTML
+      menuitemfaq--hyperlinks to-->FAQHTML
+      menuitemgithub--hyperlinks to-->projects
+      menuitemhome--hyperlinks to-->INDEXHTML
+      menuitemprojects--hyperlinks to-->PROJECTSHTML
+      menuitemresume--hyperlinks to-->resume
+      PROJECTSHTML--references-->STYLECSS
+      QUOTEGENERATORJS--updates-->INDEXHTML
+      QUOTESJS--sends data to-->QUOTEGENERATORJS
+      variablerandomquote--updates-->paragraphquote
    %% structure
    subgraph INDEXHTML [Index.HTML]
       headerindex{Index Header}
