@@ -18,7 +18,7 @@ A demonstration website requires certain high functionality standards regarding 
 ### Content Organization
 - Include a single index HTML projects page with no additonal HTML or external hyperlinks required
 - Include an index HTML homepage with external hyperlinks to projects, github, resume, faq, and contacts
-- **Include an index HTML homepage; additional HTML pages for projects, faq, and contacts; and external hyperlinks to github** and resume [current]
+- **Include an index HTML homepage; additional HTML pages for projects, faq, and contacts; and external hyperlinks to github and resume [current]**
 ### Content Storage
 - Use website as static silo storage, and include all content within the website server folder
 - **Use website as dynamic presentation hub, and link to external content whenever possible [current]**
