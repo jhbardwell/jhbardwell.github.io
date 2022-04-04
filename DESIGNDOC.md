@@ -69,7 +69,7 @@ Demonstrate core competencies without too many bells and whistes to distract fro
 %%{init: {'theme': 'forest'}}%%
 flowchart LR
    %% structure
-   subgraph INDEXHTML [Index.HTML]
+   subgraph INDEXHTML [Index HTML]
       headerindex{Index Header}
       paragraphquote(Quote Paragraph)
       menuitemcontact{Contact Menu Item}
