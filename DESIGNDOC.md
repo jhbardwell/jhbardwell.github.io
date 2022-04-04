@@ -84,10 +84,7 @@ flowchart LR
       menuitemhome--hyperlinks to-->INDEXHTML
       menuitemprojects--hyperlinks to-->PROJECTSHTML
       menuitemresume--hyperlinks to-->resume
-      PROJECTSHTML--references-->STYLECSS
-      QUOTEGENERATORJS--updates-->INDEXHTML
-      QUOTESJS--sends data to-->QUOTEGENERATORJS
-      variablerandomquote--updates-->paragraphquote
+
    %% structure
    subgraph INDEXHTML [Index.HTML]
       headerindex{Index Header}
