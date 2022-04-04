@@ -13,20 +13,20 @@ A demonstration website requires certain high functionality standards regarding 
 ## Options
 ### Script Loading and Execution
 - None: JS loads and executes immediately, blocking parsing until the script is completed
-- **Defer: JS loads in parallel with HTML parsing and executes after parsing is complete [current]
+- **Defer: JS loads in parallel with HTML parsing and executes after parsing is complete [current]**
 - Async: JS loads in parallel with HTML parsing and executes as soon as available
 ### Content Organization
 - Include a single index HTML projects page with no additonal HTML or external hyperlinks required
 - Include an index HTML homepage with external hyperlinks to projects, github, resume, faq, and contacts
-- **Include an index HTML homepage; additional HTML pages for projects, faq, and contacts; and external hyperlinks to github and resume [current]
+- **Include an index HTML homepage; additional HTML pages for projects, faq, and contacts; and external hyperlinks to github** and resume [current]
 ### Content Storage
 - Use website as static silo storage, and include all content within the website server folder
-- **Use website as dynamic presentation hub, and link to external content whenever possible [current]
+- **Use website as dynamic presentation hub, and link to external content whenever possible [current]**
 ### Layout Artistic Themes
 - Do not use any artistic themes
 - Use prefabricated static CSS
 - Use prefabricated keyframe animated CSS
-- **Create original static CSS  [current]
+- **Create original static CSS  [current]**
 - Create original keyframe animated CSS
 ### Layout Organization
 - No CSS, let the HTML fall where it will 
@@ -36,17 +36,17 @@ A demonstration website requires certain high functionality standards regarding 
 ### Layout Scaling
 - Use single static layout regardless of screen size
 - Use media queries with breakpoints for large screens and phones 
-- **Use media queries with breakpoints for large screens, tablets, and phones [current]
+- **Use media queries with breakpoints for large screens, tablets, and phones [current]**
 - Use media queries with breakpoints for hi res screens, large screens, tablets, and phones
 ### Image Preloading
 - Do nothing and let image icons sit onscreen until all the images intitially load
-- **List sources for the other more image heavy pages on initial image single image homepage using JS [current]
+- **List sources for the other more image heavy pages on initial image single image homepage using JS [current]**
 - Use a window onload global event handler to forestall page updating while the images load
 - Play a skeleton loading animation while page images load
 ### Form Validation
 - Have neither form validation nor error messages
 - Use automatic HTML "required" client side validation and error messages
-- **Use custom JS client side validation and error messages [current]
+- **Use custom JS client side validation and error messages [current]**
 - Use custom JS.node server side validation and error messages
 - Use custom PHP server side validation and error messages
 ### Project Data Presentation
@@ -54,12 +54,12 @@ A demonstration website requires certain high functionality standards regarding 
 - Use separate HTML webpages for each project, then use subtle JS touches to jazz it up
 - Use separate HTML webpages for each project, then use flamboyant JS to overwhelm the viewer
 - Use a single page application HTML to present all projects at once, but do not use any JS to jazz it up
-- **Use a single page application HTML to present all projects at once, then use subtle JS touches to jazz it up [current]
+- **Use a single page application HTML to present all projects at once, then use subtle JS touches to jazz it up [current]**
 - Use a single page application HTML to present all projects at once, then use flamboyant JS to overwhelm the viewer
 ### User Accessibility
 - Do not implement any user accessibility techniques
 - Use high foreground/background contrast
-- **Use high foreground/background contrast and image alt tags [current]
+- **Use high foreground/background contrast and image alt tags [current]**
 - Use high foreground/background contrast, image alt tags, and keyboard shortcuts
 - Use high foreground/background contrast, image alt tags, keyboard shortcuts, and dynamic settings selection options
 ## Solution
