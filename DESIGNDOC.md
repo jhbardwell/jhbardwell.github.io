@@ -83,8 +83,7 @@ flowchart LR
 
 ## Development Schedule
 ```mermaid
-%%{init: {'theme': 'forest', 'themeVariables': 
-{ 'primaryColor': '#DDDA4D', 'edgeLabelBackground':'#F7F6DA', 'tertiaryColor': '#D5DEF6'}}}%%
+%%{init: {'theme': 'forest'}}%%
 gantt
     dateFormat  YYYY-MM-DD
     title       Project Webpage
