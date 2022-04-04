@@ -142,7 +142,7 @@ flowchart LR
       variableprojectimages{Project Image Variables}
       variableradiobuttonlabels{Radiobutton Label Variables}
       functionresetallprojects{Reset All Projects Function}
-      eventlistener
+      eventlistenerprojectradiobuttoninput{Project Radiobutton Input Event Listener}
       end
    subgraph CONTACTHTML [Contact.HTML]
       headercontact{Contact Header}
@@ -164,7 +164,7 @@ flowchart LR
       functiontestvalidation{Test Validation Function}
       functionresetallinputs{Reset All Inputs Function}
       functionresetalloutputs{Reset All Outputs Function}
-      eventlistener
+      eventlistenercontactforminput{Contact Form Input Event Listener}
       end
    subgraph STYLECSS [Style.CSS]
       end
