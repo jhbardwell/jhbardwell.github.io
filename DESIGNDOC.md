@@ -68,8 +68,28 @@ Demonstrate core competencies without too many bells and whistes to distract fro
 ```mermaid
 %%{init: {'theme': 'forest'}}%%
 flowchart LR
+   %%relationships
+      arrayquoteimagination--populates-->arrayquotesconcat
+      arrayquotephilosophy--populates-->arrayquotesconcat
+      arrayquotestars--populates-->arrayquotesconcat
+      arrayquotesystems--populates-->arrayquotesconcat
+      arrayquotewriting--populates-->arrayquotesconcat
+      CONTACTHTML--references-->STYLECSS
+      FAQHTML--references-->STYLECSS
+      IMAGELOADERJS--updates-->INDEXHTML
+      INDEXHTML--references-->STYLECSS
+      menuitemcontact--hyperlinks to-->CONTACTHTML
+      menuitemfaq--hyperlinks to-->FAQHTML
+      menuitemgithub--hyperlinks to-->projects
+      menuitemhome--hyperlinks to-->INDEXHTML
+      menuitemprojects--hyperlinks to-->PROJECTSHTML
+      menuitemresume--hyperlinks to-->Resume
+      PROJECTSHTML--references-->STYLECSS
+      QUOTEGENERATORJS--updates-->INDEXHTML
+      QUOTESJS--sends data to-->QUOTEGENERATORJS
+      variablerandomquote--updates-->paragraphquote
    %% structure
-   subgraph INDEXHTML [Index HTML]
+   subgraph INDEXHTML [Index.HTML]
       headerindex{Index Header}
       paragraphquote(Quote Paragraph)
       menuitemcontact{Contact Menu Item}
@@ -79,6 +99,80 @@ flowchart LR
       menuitemprojects{Projects Menu Item}
       menuitemresume{Resume Menu Item}
       end
+   subgraph IMAGELOADERJS [ImageLoader.JS]
+      arrayimagesrc{Image Src Array}
+      functionpreloadimages{PreLoad Images Function}
+      end
+   subgraph QUOTESJS [Quotes.JS]
+      arrayquoteimagination{Imagination Quotes Array}
+      arrayquotephilosophy{Philosophy Quotes Array}
+      arrayquotestars{Stars Quotes Array}
+      arrayquotesystems{Systems Quotes Array}
+      arrayquotewriting{Writing Quotes Array}
+      end
+   subgraph QUOTEGENERATORJS [QuoteGenerator.JS]
+      arrayquotesconcat{Quotes Arrays Concatenated Array}
+      variablerandomquote{Random Quote Variable}
+      end
+   subgraph FAQHTML [Faq.HTML]
+      headerfaq{FAQ Header}
+      contentfaq{FAQ Content}
+      menuitemcontact{Contact Menu Item}
+      menuitemfaq{FAQ Menu Item}
+      menuitemgithub{GitHub Menu Item}
+      menuitemhome{Home Menu Item}
+      menuitemprojects{Projects Menu Item}
+      menuitemresume{Resume Menu Item}
+      end
+   subgraph PROJECTSHTML [Projects.HTML]
+      headerprojects{Projects Header}
+      inputprojectradiobuttons{Project Radiobutton Input}
+      divprojectcontents{Project Content Divs}
+      divprojectasides{Project Content Asides}
+      menuitemcontact{Contact Menu Item}
+      menuitemfaq{FAQ Menu Item}
+      menuitemgithub{GitHub Menu Item}
+      menuitemhome{Home Menu Item}
+      menuitemprojects{Projects Menu Item}
+      menuitemresume{Resume Menu Item}
+      end
+   subgraph PROJECTSJS [Projects.JS]
+      variableprojectasides{Project Aside Variables}
+      variableprojectcontents{Project Content Variables}
+      variableprojectimages{Project Image Variables}
+      variableradiobuttonlabels{Radiobutton Label Variables}
+      functionresetallprojects{Reset All Projects Function}
+      eventlistener
+      end
+   subgraph CONTACTHTML [Contact.HTML]
+      headercontact{Contact Header}
+      buttonreset{Reset Form Button}
+      buttonsend{Send Form Button}
+      menuitemcontact{Contact Menu Item}
+      menuitemfaq{FAQ Menu Item}
+      menuitemgithub{GitHub Menu Item}
+      menuitemhome{Home Menu Item}
+      menuitemprojects{Projects Menu Item}
+      menuitemresume{Resume Menu Item}
+      end
+   subgraph CONTACTJS [Contact.JS]
+      form{Contact Form}
+      variableinput{Variable Input}
+      variableinputlabels{Variable Input Labels}
+      variableregex{Variable Regex}
+      variableoutput{Variable Output}
+      functiontestvalidation{Test Validation Function}
+      functionresetallinputs{Reset All Inputs Function}
+      functionresetalloutputs{Reset All Outputs Function}
+      eventlistener
+      end
+   subgraph STYLECSS [Style.CSS]
+      end
+   subgraph GITHUB [GitHub]
+      images{External Image Data}
+      projects{External Project Data}
+      resume{Resume Data}
+      end 
 ```
 
 ## Development Schedule
