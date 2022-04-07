@@ -1,5 +1,6 @@
 let imageList = [
     "https://imgs.xkcd.com/comics/purity.png",
+    "https://raw.githubusercontent.com/jhbardwell/jhbardwell.github.io/main/images/background.png",
     "https://raw.githubusercontent.com/jhbardwell/jhbardwell.github.io/main/images/header.png",
     "https://raw.githubusercontent.com/jhbardwell/Narrative-Exploration-Program/main/images/header.png",
     "https://raw.githubusercontent.com/jhbardwell/Newsletter-Concatenation-Program/main/images/header.png",
@@ -12,5 +13,4 @@ let preloadImages = function () {
         imageObject.src = imageList[i];
     }
 }
-
 preloadImages();
