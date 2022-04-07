@@ -12,34 +12,27 @@
       </div>
       <div class="ui"></div>
       <div class="content">
-        <div id="Form-error"></div>
-        <form id="Contact-form" novalidation action="/" method="GET">
-          <div id="Form-error"></div>
-          <label for="Name-input" class="contactlabels">Company/Individual Name:</label><br>
+        <form id="Contact-form" autocomplete="off">
+          <label for="Name-input">Individual Name:</label><br>
           <input type="text" id="Name-input" name="name">
-          <div id="Name-valid"></div>
-          <br>
-          <label for="Website-input" class="contactlabels">Website:</label><br>
-          <input type="text" id="Website-input" name="website">
-          <div id="Website-valid"></div>
-          <br>
-          <label for="Phone-input" class="contactlabels">Phone Number:</label><br>
-          <input type="text" id="Phone-input" name="phone">
-          <div id="Phone-valid"></div>
-          <br>
-          <label for="Email-input" class="contactlabels">Email Address:</label><br>
-          <input type="email" id="Email-input" name="email">
-          <div id="Email-valid"></div>
-          <br>
+          <output id="Name-output"></output>
+          <br><br>
+          <label for="Website-input">Company Website:</label><br>
+          <input type="text" id="Website-input" name="website url">
+          <output id="Website-output"></output>
+          <br><br>          
+          <label for="Email-input" >Email:</label><br>
+          <input type="text" id="Email-input" name="email address">
+          <output id="Email-output"></output>
+          <br><br>
           <label>Job Requirements:</label><br>
           <br>
           <fieldset>
             <legend>Skillset:</legend>
-            <input type="checkbox" id="Code-input" class="skillset" name="code">Code
-            <input type="checkbox" id="Design-input" class="skillset" name="design">Design
             <input type="checkbox" id="Manage-input" class="skillset" name="manage">Manage
+            <input type="checkbox" id="Design-input" class="skillset" name="design">Design
+            <input type="checkbox" id="Code-input" class="skillset" name="code">Code
           </fieldset>
-          <div id="Skillset-valid"></div>
           <br>
           <fieldset>
             <legend>Programs:</legend>
@@ -48,7 +41,6 @@
             <input type="checkbox" id="Trello-input" class="programs" name="trello">Trello
             <input type="checkbox" id="Vscode-input" class="programs" name="vscode">Visual Studio Code
           </fieldset>
-          <div id="Programs-valid"></div>
           <br>
           <fieldset>
             <legend>Languages:</legend>
@@ -63,15 +55,14 @@
             <input type="checkbox" id="Shellscript-input" class="languages" name="shellscript">ShellScript
             <input type="checkbox" id="Cpp-input" class="languages" name="cpp">C++
           </fieldset>
-          <div id="Languages-valid"></div>
           <br>
-          <label for="message">Message:</label><br>
+          <label for="message">Message:</label><output id="Message-output"></output><br>
           <textarea id="Message-input" name="message" placeholder="I look forward to hearing from you..."></textarea>
-          <div id="Message-valid"></div>
+          <br>
           <br>
           <div class="center">
             <input type="reset" id="Reset-input" value="Reset">
-            <input disabled type="submit" id="Submit-input" value="Submit">
+            <input disabled="true" type="submit" id="Submit-input" value="Submit">
           </div>
           <br>
         </form>
