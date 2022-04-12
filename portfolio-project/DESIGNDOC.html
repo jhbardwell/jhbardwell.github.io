@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+   <script>mermaid.initialize({startOnLoad:true});</script>
+   <script src="mermaidinitializer.js" defer></script>
+   <title>Portfolio Project Webpage Design Doc</title>
+</head>
+<body>
+   <h1>Portfolio Webpage Design Doc</h1>
+   <h2>Setup</h2>
+   <p>Various coding demonstration projects need an appropriate showcase which itself doubles as another project.</p>
+   <h2>Problem</h2>
+   <p>A demonstration website requires certain high functionality standards regarding content, layout, image preloading, form validation, project data presentation, and user accessibility. The system is more than the sum of its parts, and each part must integrate into the whole seamlessly.</p>
+   <h2>Goals</h2>
+   <ul>
+      <li>Display software programming, organization and planning, and system design competency</li>
+      <li>Showcase an engaging, dynamic frontend website</li>
+      <li>Make data presentation a subtle, pleasurable experience</li>
+      <li>Create GUIs that are user friendly and intuitive</li>
+      <li>Make system easy to use and hard to break</li>
+      <li>Optimize time management</li>
+   </ul>
+   <h2>Options</h2>
+   <h3>Script Loading and Execution</h3>
+   <ol>
+      <li>None: JS loads and executes immediately, blocking parsing until the script is completed</li>
+      <li><b>Defer: JS loads in parallel with HTML parsing and executes after parsing is complete [current]</b></li>
+      <li>Async: JS loads in parallel with HTML parsing and executes as soon as available</li>
+   </ol>
+   <h3>Content Organization</h3>
+   <ol>
+      <li>Include a single index HTML projects page with no additonal HTML or external hyperlinks required</li>
+      <li>Include an index HTML homepage with external hyperlinks to projects, github, resume, faq, and contacts</li>
+      <li><b>Include an index HTML homepage; additional HTML pages for projects, faq, and contacts; and external hyperlinks to github and resume [current]</b></li>
+   </ol>
+   <h3>Content Storage</h3>
+   <ol>
+      <li>Use website as static silo storage, and include all content within the website server folder</li>
+      <li><b>Use website as dynamic presentation hub, and link to external content whenever possible [current]</b></li>
+   </ol>
+   <h3>Layout Artistic Themes</h3>
+   <ol>
+      <li>Do not use any artistic themes</li>
+      <li>Use prefabricated static CSS</li>
+      <li>Use prefabricated keyframe animated CSS</li>
+      <li><b>Create original static CSS  [current]</b></li>
+      <li>Create original keyframe animated CSS</li>
+   </ol>
+   <h3>Layout Organization</h3>
+   <ol>
+      <li>No CSS, let the HTML fall where it will </li>
+      <li>Use basic CSS</li>
+      <li>Use CSS Flexbox</li>
+      <li><b>Use CSS Grid [current]</b></li>
+   </ol>
+   <h3>Layout Scaling</h3>
+   <ol>
+      <li>Use single static layout regardless of screen size</li>
+      <li>Use media queries with breakpoints for large screens and phones </li>
+      <li><b>Use media queries with breakpoints for large screens, tablets, and phones [current]</b></li>
+      <li>Use media queries with breakpoints for hi res screens, large screens, tablets, and phones</li>
+   </ol>
+   <h3>Image Preloading</h3>
+   <ol>
+      <li>Do nothing and let image icons sit onscreen until all the images intitially load</li>
+      <li><b>List sources for the other more image heavy pages on initial image single image homepage using JS [current]</b>></li>
+      <li>Use a window onload global event handler to forestall page updating while the images load</li>
+      <li>Play a skeleton loading animation while page images load</li>
+   </ol>
+   <h3>Form Validation</h3>
+   <ol>
+      <li>Have neither form validation nor error messages</li>
+      <li>Use automatic HTML "required" client side validation and error messages</li>
+      <li><b>Use custom JS client side validation and error messages [current]</b></li>
+      <li>Use custom JS.node server side validation and error messages</li>
+      <li>Use custom PHP server side validation and error messages</li>
+   </ol>
+   <h3>Project Data Presentation</h3>
+   <ol>
+      <li>Use separate HTML webpages for each project, but do not use any JS to jazz it up</li>
+      <li>Use separate HTML webpages for each project, then use subtle JS touches to jazz it up</li>
+      <li>Use separate HTML webpages for each project, then use flamboyant JS to overwhelm the viewer</li>
+      <li>Use a single page application HTML to present all projects at once, but do not use any JS to jazz it up</li>
+      <li><b>Use a single page application HTML to present all projects at once, then use subtle JS touches to jazz it up [current]</b></li>
+      <li>Use a single page application HTML to present all projects at once, then use flamboyant JS to overwhelm the viewer</li>
+   </ol>
+   <h3>User Accessibility</h3>
+   <ol>
+     <li>Do not implement any user accessibility techniques</li>
+     <li>Use high foreground/background contrast</li>
+     <li><b>Use high foreground/background contrast and image alt tags [current]</b></li>
+     <li>Use high foreground/background contrast, image alt tags, and keyboard shortcuts</li>
+     <li>Use high foreground/background contrast, image alt tags, keyboard shortcuts, and dynamic settings selection options</li>
+   </ol>
+   <h2>Solution</h2>
+   <p>Demonstrate core competencies without too many bells and whistes to distract from the clean, minimal requirements of this website: present the site creator as an innovative software designer and manager by highlighting and glorifying his or her web application development accomplishments. All else is dross. Allow for multiple target users&mdash;programmers vs managers or the logical vs the artistic&mdash;to easily select and view what data they prefer&mdash;either code, design docs, or working prototypes&mdash;using an organized, intuitive layout. Keep peripherals such as resumes and githubpages behind external links. The github.io static hosting restrictions and lack of php or node.js experience will limit the backend applications of this website, so polish the frontend and warn users that they can't actually send emails, etc.</p>
+   <h2>System Architecture</h2>
+   <div class="mermaid">
+      %%{init: {'theme': 'forest'}}%%
+      flowchart LR
+         %%relationships
+            arrayquoteimagination--populates-->arrayquotesconcat
+            arrayquotephilosophy--populates-->arrayquotesconcat
+            arrayquotestars--populates-->arrayquotesconcat
+            arrayquotesystems--populates-->arrayquotesconcat
+            arrayquotewriting--populates-->arrayquotesconcat
+            CONTACTHTML--references-->STYLECSS
+            FAQHTML--references-->STYLECSS
+            IMAGELOADERJS--updates-->INDEXHTML
+            INDEXHTML--references-->STYLECSS
+            menuitemcontact--hyperlinks to-->CONTACTHTML
+            menuitemfaq--hyperlinks to-->FAQHTML
+            menuitemgithub--hyperlinks to-->projects
+            menuitemhome--hyperlinks to-->INDEXHTML
+            menuitemprojects--hyperlinks to-->PROJECTSHTML
+            menuitemresume--hyperlinks to-->resume
+            PROJECTSHTML--references-->STYLECSS
+            QUOTEGENERATORJS--updates-->INDEXHTML
+            QUOTEDATAJS--sends data to-->QUOTEGENERATORJS
+            variablerandomquote--updates-->paragraphquote
+         %% structure
+         subgraph INDEXHTML [Index.HTML]
+            headerindex{Index Header}
+            paragraphquote(Quote Paragraph)
+            menuitemcontact{Contact Menu Item}
+            menuitemfaq{FAQ Menu Item}
+            menuitemgithub{GitHub Menu Item}
+            menuitemhome{Home Menu Item}
+            menuitemprojects{Projects Menu Item}
+            menuitemresume{Resume Menu Item}
+            end
+         subgraph IMAGELOADERJS [ImageLoader.JS]
+            arrayimagesrc{Image Src Array}
+            functionpreloadimages{PreLoad Images Function}
+            end
+         subgraph QUOTEDATAJS [QuoteData.JS]
+            arrayquoteimagination{Imagination Quotes Array}
+            arrayquotephilosophy{Philosophy Quotes Array}
+            arrayquotestars{Stars Quotes Array}
+            arrayquotesystems{Systems Quotes Array}
+            arrayquotewriting{Writing Quotes Array}
+            end
+         subgraph QUOTEGENERATORJS [QuoteGenerator.JS]
+            arrayquotesconcat{Quotes Arrays Concatenated Array}
+            variablerandomquote{Random Quote Variable}
+            end
+         subgraph FAQHTML [Faq.HTML]
+            headerfaq{FAQ Header}
+            contentfaq{FAQ Content}
+            menuitemcontact{Contact Menu Item}
+            menuitemfaq{FAQ Menu Item}
+            menuitemgithub{GitHub Menu Item}
+            menuitemhome{Home Menu Item}
+            menuitemprojects{Projects Menu Item}
+            menuitemresume{Resume Menu Item}
+            end
+         subgraph PROJECTSHTML [Projects.HTML]
+            headerprojects{Projects Header}
+            inputprojectradiobuttons{Project Radiobutton Input}
+            divprojectcontents{Project Content Divs}
+            divprojectasides{Project Content Asides}
+            menuitemcontact{Contact Menu Item}
+            menuitemfaq{FAQ Menu Item}
+            menuitemgithub{GitHub Menu Item}
+            menuitemhome{Home Menu Item}
+            menuitemprojects{Projects Menu Item}
+            menuitemresume{Resume Menu Item}
+            end
+         subgraph PROJECTSJS [Projects.JS]
+            variableprojectasides{Project Aside Variables}
+            variableprojectcontents{Project Content Variables}
+            variableprojectimages{Project Image Variables}
+            variableradiobuttonlabels{Radiobutton Label Variables}
+            functionresetallprojects{Reset All Projects Function}
+            eventlistenerprojectradiobuttoninput{Project Radiobutton Input Event Listener}
+            end
+         subgraph CONTACTHTML [Contact.HTML]
+            headercontact{Contact Header}
+            buttonreset{Reset Form Button}
+            buttonsend{Send Form Button}
+            menuitemcontact{Contact Menu Item}
+            menuitemfaq{FAQ Menu Item}
+            menuitemgithub{GitHub Menu Item}
+            menuitemhome{Home Menu Item}
+            menuitemprojects{Projects Menu Item}
+            menuitemresume{Resume Menu Item}
+            end
+         subgraph CONTACTJS [Contact.JS]
+            form{Contact Form}
+            variableinput{Variable Input}
+            variableinputlabels{Variable Input Labels}
+            variableregex{Variable Regex}
+            variableoutput{Variable Output}
+            functiontestvalidation{Test Validation Function}
+            functionresetallinputs{Reset All Inputs Function}
+            functionresetalloutputs{Reset All Outputs Function}
+            eventlistenercontactforminput{Contact Form Input Event Listener}
+            end
+         subgraph STYLECSS [Style.CSS]
+            end
+         subgraph GITHUB [GitHub]
+            images{External Image Data}
+            projects{External Project Data}
+            resume{Resume Data}
+            end 
+   <div>
+   <h2>Development Schedule</h2>
+   <div class="mermaid">
+      %%{init: {'theme': 'forest', 'themeVariables': 
+      { 'primaryColor': '#DDDA4D', 'edgeLabelBackground':'#F7F6DA', 'tertiaryColor': '#D5DEF6'}}}%%
+      gantt
+         dateFormat  YYYY-MM-DD
+         title       Project Webpage
+         
+         todayMarker stroke-width:5px,stroke:#0f0,opacity:0.5
+         
+         section Plan
+         Define problem scope         :done,  scope, 2022-02-05, 5d
+         Define target user           :done,  user, after scope, 3d
+         Draft resume		           :done,  resumedraft, 2022-02-20, 1d
+         Iterate resume		           :done,  resumeiterate, after resumedraft, 10d
+         Draft readme                 :done,  readmedraft, after user, 6d
+         Iterate readme               :done,  readmeiterate, after readmedraft, 2022-04-02
+         Draft designdoc              :done,  designdocdraft, after readmedraft, 5d
+         Iterate architecture         :done,  archituredraft, 2022-03-15, 1w
+         Draft gantt chart            :done,  ganttdraft, 2022-03-22, 2d
+         Iterate gantt chart          :done,  ganttiterate, after genttdraft, 2022-04-02
+         
+         section Prototype
+         Design system mechanics      :done,   mechanicsdesign, 2022-03-01, 2d
+         Iterate system mechanics     :done,   mechanicsiterate, after mechanicsdesign, 1w
+         Design system aesthetics     :done,   aestheticsdesign, 2022-03-02, 3d
+         Iterate system aesthetics    :done,   aestheticsiterate, after aestheticsdesign, 1w
+         Design graphics              :done,   graphicsdesign, 2022-03-02, 2d
+         Iterate graphics             :active, graphicsiterate, after graphicsdesign, 2022-04-10
+         Design CSS                   :done,   cssdesign, 2022-03-10, 2d
+         Iterate CSS                  :done,   cssiterate, after cssdesign, 5d
+         Design CSS grid              :done,   griddesign, 2022-03-11, 1d
+         Iterate CSS grid             :done,   griditerate, after griddesign, 2d
+         Design menu GUI              :done,   menudesign, 2022-03-12, 2d
+         Iterate menu GUI             :done,   menuiterate, after menu design, 4d
+         Design imageloader.js        :done,   imageloaderdesign, 2022-03-15, 2d
+         Iterate imageloader.js       :done,   imageloaderiterate, after imageloaderdesign, 8d
+         Unit Test imageloader.js	  :active, imageloadertest, 2022-04-1, 1w
+         Design quotes.js             :done,   quotedesign, 2022-03-25, 1d 
+         Iterate quotes.js            :done,   quoteiterate, after quotedesign, 2d
+         Design quotegenerator.js     :done,   quotegeneratordesign,2022-03-25, 1d 
+         Iterate quotegenerator.js    :done,   quotegeneratoriterate,after quotegeneratordesign,2d
+         Unit Test quotesgenerator.js :active, quotegeneratortest, 2022-04-1, 1w    
+         Design projects.js           :done,   projectsdesign, 2022-03-20, 2d
+         Iterate projects.js          :done,   projectsiterate, after projectdesign, 1w 
+         Unit Test projects.js        :active, projectstest, 2022-04-1, 1w
+         Design contact.js            :done,   contactdesign, 2022-03-30, 4d
+         Iterate contact.js           :active, contactiterate, after contactdesign, 1w
+         Unit Test contact.js         :active, contacttest, 2022-04-1, 1w
+         
+         section Playtest
+         Solicit feedback             :active, feedback, 2022-03-26, 2w
+         
+         section Polish 
+         Create Dynamic Gantts        :active, ganttdynamiccreate,  2022-04-10, 1w
+         Iterate Dynamic Gantts       :active, ganttdynamiciterate, ganttdynamiccreate, 1w
+
+         section Patch
+         Optimize Code                :active, codeoptimize,  2022-04-10, 1w
+
+         section Publish
+         GitHub.io host               :done, githubhost,      2022-03-18, 1d  
+
+         section Post
+         Design Server Side code      :active, servercodedesign
+         Iterate Server Side Code     :active, servercodeupdate
+         Update Content               :active, contentupdate
+         Update Graphics              :active, graphicsupdate
+   </div>
+   <h2>Features</h2>
+   <h3>Minimum (Implemented)</h3>
+   <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+   <h3>Core (Implemented)</h3>
+   <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+   <h3>Wishlist (Implemented)</h3>
+   <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+   <h3>Wishlist (Pending...)</h3>
+   <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+   </ul>
+   <h2>References</h2>
+   <ul>
+      <li><a href="https://www.youtube.com/watch?v=-IhQl1CBj9U">Accessibility Guidelines, Games 01</a></li>
+      <li><a href="https://www.youtube.com/watch?v=-IhQl1CBj9U">Accessibility Guidelines, Games 02</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility">Accessibility Guidelines, Websites</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ZVug65gW-fc&t=195s">Skeleton Loading Animation</a></li>
+      <li><a href="https://www.youtube.com/watch?v=DG4obitDvUA&t=2069s">Template Literals</a></li>
+   </ul>
+</body>
+</html>
