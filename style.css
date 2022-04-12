@@ -7,35 +7,12 @@ body{
   padding-bottom: 5%;
 }
 
-form{
-  padding-left: 5px;
-  padding-bottom: 5px;
-}
-
-textarea {
+embed{
+  background-color: #c1c9d3;
+  overflow:auto;
   min-width: 100%;
-  height: auto;
-}
-
-.aside{
-  color:rgb(187, 187, 204);
-  text-align: center;
-}
-
-.content{
-  color:rgb(187, 187, 204);
-}
-
-.center{
-  text-align: center;
-}
-
-.left{
-  text-align: justify;
-}
-
-.justify{
-  text-align: justify;
+  min-height: 100vh;
+  padding-left: 10px;
 }
 
 .glow-text { 
@@ -48,6 +25,42 @@ textarea {
   box-shadow: 0 0 15px #c1c9d3; 
 }
 
+.center{
+  text-align: center;
+}
+
+.left{
+  text-align: left;
+}
+
+.justify{
+  text-align: justify;
+}
+
+form{
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+input[type="checkbox"]{
+  margin-left: 12px;
+  margin-right: 3px;
+  margin-top: 0px;
+  Margin-bottom: 0px;
+}
+
+input[type="radio"]{
+  margin-left: 10px;
+  margin-right: 0px;
+  margin-top: 0px;
+  Margin-bottom: 0px;
+}
+
+textarea {
+  min-width: 100%;
+  height: auto;
+}
+
 .wrapper{
   display:grid;
   grid-template-columns: repeat(12, 1fr);
@@ -56,14 +69,37 @@ textarea {
 
 .header{
   color:rgb(187, 187, 204);
+  padding:10px;
+}
+
+.userinterface{
+  padding:10px;
+}
+
+.userinterface hr{
+  border: 1px solid gray
+}
+
+.content{
+  color:rgb(187, 187, 204);
+  padding:10px;
+}
+
+.content div{
+  display:none;
 }
 
 .content hr{
   border: 1px solid gray
 }
 
-.ui hr{
-  border: 1px solid gray
+.aside{
+  color:rgb(187, 187, 204);
+  padding:10x;
+}
+
+.aside div{
+  display:none;
 }
 
 .footer{
@@ -120,110 +156,111 @@ textarea {
 
 @media only screen and (max-width: 600px) {
   
-  .header{
-    grid-row:1;
-    grid-column: span 12;
-  }
+    .header{
+      grid-row:1;
+      grid-column: span 12;
+    }
 
-  .ui{
-    grid-row:2;
-    grid-column: span 12;
-  }
+    .userinterface{
+      grid-row:2;
+      grid-column: span 12;
+    }
 
-  .content{
-    grid-row:3;
-    grid-column: span 12;
-  }
+    .content{
+      grid-row:3;
+      grid-column: span 12;
+    }
 
-  .aside{
-    grid-row:4;
-    grid-column: span 12;
-  }
+    .aside{
+      grid-row:4;
+      grid-column: span 12;
+    }
 
-  .footer{
-    grid-row:5;
-    grid-column: span 12;
-    
-  }
+    .footer{
+      grid-row:5;
+      grid-column: span 12;
+      
+    }
 
-  .radiobuttonblabels{
-    font-size: 200%;
-  }
+    .radiobuttonblabels{
+      font-size: 200%;
+    }
 }
 
 @media only screen and (min-width: 600px) {
 
-  .header{
-    grid-row:1;
-    grid-column: span 12;
-  }
+    .header{
+      grid-row:1;
+      grid-column: span 12;
+    }
 
-  .ui{
-    grid-row:2;
-    grid-column: span 3;
-  }
+    .userinterface{
+      grid-row:2;
+      grid-column: span 3;
+    }
 
-  .content{
-    grid-row:2;
-    grid-column: span 9;
-  }
+    .content{
+      grid-row:2;
+      grid-column: span 9;
+    }
 
-  .aside{
-    grid-row:3;
-    grid-column: span 12;
-  }
+    .aside{
+      grid-row:3;
+      grid-column: span 12;
+    }
 
-  .footer{
-    grid-row:4;
-    grid-column: span 12;
-  }
+    .footer{
+      grid-row:4;
+      grid-column: span 12;
+    }
 
-  .radiobuttonblabels{
-    font-size: 150%;
-  }
+    .radiobuttonblabels{
+      font-size: 150%;
+    }
 
 }  
 
 @media only screen and (min-width: 920px) {
 
-  .header{
-    grid-row:1;
-    grid-column: span 12;
-  }
+    .header{
+      grid-row:1;
+      grid-column: span 12;
+    }
 
-  .ui{
-    grid-row:2;
-    grid-column: span 3;
-  }
+    .userinterface{
+      grid-row:2;
+      grid-column: span 3;
+    }
 
-  .content{
-    grid-row:2;
-    grid-column: span 6;
-  }
+    .content{
+      grid-row:2;
+      grid-column: span 6;
+    }
 
-  .aside{
-    grid-row:2;
-    grid-column: span 3;
-  }
+    .aside{
+      grid-row:2;
+      grid-column: span 9;
+      padding: 20px;
+    }
 
 
-  .footer{
-    grid-row:3;
-    grid-column: span 12;
-  }
+    .footer{
+      grid-row:3;
+      grid-column: span 12;
+    }
 
-  .footer li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
-    display: inline-block;
-    margin-right: -4px;
-  }
+    .footer li {
+      width: 120px;
+      border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      font-size: 1.4em;
+      display: inline-block;
+      margin-right: -4px;
+    }
 
-  .radiobuttonblabels{
-    font-size: 100%;
-  }
+    .radiobuttonblabels{
+      font-size: 100%;
+    }
 
 }
