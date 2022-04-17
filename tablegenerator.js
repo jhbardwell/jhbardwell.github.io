@@ -7,10 +7,8 @@ let buildTable = function(data){
           <td>${data[i].filename}</td>
           <td>${data[i].extension}</td>
           <td>${data[i].features}</td>
+          <td>${data[i].module}</td>
           <td>${data[i].linesofcode}</td>
-          <td>${data[i].variables}</td>
-          <td>${data[i].functions}</td>
-          <td>${data[i].classes}</td>
         </tr>`
     table.innerHTML += row
   }
