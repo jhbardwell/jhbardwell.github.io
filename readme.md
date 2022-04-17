@@ -21,7 +21,7 @@ Do you wish to see the current project demonatration? Experience it for yourself
 There is no installation. It's a website.
 
 # ![Design](/images/design.png)Design
-Are you craving all those nitty gritty details? ![This](designdoc.html))documents the goals, design rationale, implementation methods, system architecture, and development schedule of this project.
+Are you craving all those nitty gritty details? ![This](https://jhbardwell.github.io/designdoc.html)documents the goals, design rationale, implementation methods, system architecture, and development schedule of this project.
 
 # ![Roadmap](/images/roadmap.png)Roadmap
 ## Stage 1 - Plan
