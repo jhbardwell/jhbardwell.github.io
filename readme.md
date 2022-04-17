@@ -1,5 +1,9 @@
 ![Portfolio Webpage Project Read Me](/images/header.png)
+
+
 Explore the coding endeavors that created a powerhouse portfolio webpage
+
+
 [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/jhbardwell/jhbardwell.github.io)
 
 [About](#About) | [Users](#Users) | [Demo](#Demo) | [Install](#Install) | [Bugs](#Bugs) | [Design](#Design) | [Roadmap](#Roadmap) | [License](#License) | [People](#People) | [Newsletter](#Newsletter) | [Contact](#Contact)
