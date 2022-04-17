@@ -119,7 +119,7 @@ Are you craving all those nitty gritty details? ![This](designdoc.html))document
 
 Please report all additonal bugs here
 
-# ![License](/images/licenses.png)License
+# ![License](/images/license.png)License
 ![MIT](https://raw.github.com/jhbardwell/jhbardwell.github.io/main/LICENSE)
 
 # ![People](/images/people.png)People
