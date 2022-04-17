@@ -120,7 +120,7 @@ Are you craving all those nitty gritty details? Go to https:jhbardwell.github.io
 Please report all additonal bugs here
 
 # ![License](/images/license.png)License
-![MIT](https://raw.github.com/jhbardwell/jhbardwell.github.io/main/LICENSE)
+MIT
 
 # ![People](/images/people.png)People
 ## Contributors
