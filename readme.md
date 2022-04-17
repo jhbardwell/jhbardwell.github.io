@@ -20,7 +20,7 @@ Do you wish to see the current project demonatration? Experience it for yourself
 # ![Install](/images/install.png)Install
 There is no installation. It's a website.
 
-# ![Design](/images/designs.png)Design
+# ![Design](/images/design.png)Design
 Are you craving all those nitty gritty details? ![This](designdoc.html))documents the goals, design rationale, implementation methods, system architecture, and development schedule of this project.
 
 # ![Roadmap](/images/roadmap.png)Roadmap
