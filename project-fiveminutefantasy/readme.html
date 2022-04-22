@@ -4,74 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>ul{list-style: none}</style>
+    <style>
+        ul{
+            list-style: none;
+        }
+        p,h2,h3{
+            margin-left: 40px;
+        }
+        .center{
+         text-align: center;
+        }
+        .left{
+        text-align: left;
+        }
+        .justify{
+        text-align: justify;
+        }
+    </style>
     <title>Five Minute Fantasy Project Read Me</title>
 </head>
 <body>
-    <div><img src="/fiveminutefantasy-project/images/header.png" alt="Readme Header"></div>
-    <p></p>
+    <div class="center"><img src="/project-fiveminutefantasy/images/header.png" alt="Readme Header"></div>
+    <p class="center">Dragons, danger, gold and glory...every game a different story.<br>How far can you get in five minutes?</p>
     <p><a href="https://github.com/jhbardwell/jhbardwell.github.io"><img src="https://img.shields.io/badge/Maintained-yes-green.svg" alt="Maintenance"></a></p>
-    <p><a href="#About">About</a> | <a href="#Users">Users</a> | <a href="#Demo">Demo</a> | <a href="#Install">Install</a> | <a href="#Bugs">Bugs</a> | <a href="#Design">Design</a> | <a href="#Roadmap">Roadmap</a> | <a href="#License">License</a> | <a href="#People">People</a> | <a href="#Newsletter">Newsletter</a> | <a href="#Contact">Contact</a></p>
-    <h1><img src="/fiveminutefantasy-project/images/about.png" id="About" alt="About">About</h1>
-    <p>How do you sell the image of a person without a photograph? How do you tell their life story without a novel? How do you trumpet their glorious achievements without a big brass band? You need, dear readers, a portfolio and a website to showcase all that razzle dazzle. This is one such website–one of the best such websites–because it is my website. </p>
-    <h1><img src="/fiveminutefantasy-project/images/users.png" id="Users" alt="Users">Users</h1>
-    <p>Are you a private invidivual or company seeking further information about the skills, quirks, and code of <a href="https://github.com/jhbardwell">jhbardwell</a>: system dev, data scientist, and designer extraordinaire? Then you should check out his portfolio there below.</p>
-    <h1><img src="/fiveminutefantasy-project/images/demo.png" id="Demo" alt="Demo">Demo</h1>
-    <p>Do you wish to see the current project demonatration? Experience it for yourself <a href="https://jhbardwell.github.io">here</a>.</p>
-    <h1><img src="/fiveminutefantasy-project/images/install.png" id="Install" alt="Install">Install</h1>
-    <p>There is no installation. It&#39;s a website.</p>
-    <h1><img src="/fiveminutefantasy-project/images/bugs.png" id="Bugs" alt="Bugs">Bugs</h1>
-    <p>Please report all bugs here</p>
-    <h1><img src="/fiveminutefantasy-project/images/design.png" id="Design" alt="Design">Design</h1>
-    <p>Are you craving the nitty gritty details of design? <a href="DESIGNDOC.md">This file</a> documents the development goals, system architexture, and schedule of this project.</p>
-    <h1><img src="/fiveminutefantasy-project/images/roadmap.png" id="Roadmap" alt="Roadmap">Roadmap</h1>
+    <p class="center"><a href="#About">About</a> | <a href="#Users">Users</a> | <a href="#Demo">Demo</a> | <a href="#Install">Install</a> | <a href="#Design">Design</a> | <a href="#Roadmap">Roadmap</a> | <a href="#Bugs">Bugs</a> | <a href="#License">License</a> | <a href="#People">People</a> | <a href="#Newsletter">Newsletter</a> | <a href="#Contact">Contact</a></p>
+    <h1><img src="/project-fiveminutefantasy/images/about.png" id="About" alt="About">About</h1>
+    <p>This proof-of-concept narrative adventure rogue-lite project serves as a testbed to explore several ideas regarding narrative design graph theory, modern choose your own adventure game mechanics, random element interjection, player agency and consequence, and variable win state conditions. The core conceit is that after being thrown into a low fantasy setting, every choice the player makes opens and closes different options for each subsequent encounter and swiftly counts down the clock. After making "five minutes" worth of decisions, the game ends whether a classical win condition has been achieved or not.</p> 
+    <p>The central temporal mechanic is something of a role reversal from most games that operate within set time limits. The player is not in a race to reach a finish line, but rather to experience as much as they can before the curtain falls. It's about the expanse of different stories unraveling with each new decision, not the final destination. And keeping the scope narrow allows for a rich, deeply layered player experience with high replay value.</p> 
+    <h1><img src="/project-fiveminutefantasy/images/users.png" id="Users" alt="Users">Users</h1>
+    <p>Do you enjoy narrative based games, rollicking adventures, and low fantasy epics? Did you skip through old choose your own adventure books to try and find the best elements to craft your own story from all the pieces strewn through those dog-eared pages? You ... do like dragons ... don't you?</p>
+    <p>Does your heart harken back to old school dungeons and dragons roguelikes such as Gauntlet and WazHack? Do you like your fantasy games with an actual challenge linked to a strong time mechanic a la Spelunky? Do you want to feel like your decisions matter to the larger text based narrative like Sorcery? Do your hectic schedule appreciate a satisfying, short play cycle? Then check out the "Five Minute Fantasy" demo! Given the current dearth of content, it's more like "Five Second Fantasy," but please give it a whirl regerdless.</p>
+    <h1><img src="/project-fiveminutefantasy/images/demo.png" id="Demo" alt="Demo">Demo</h1>
+    <p>Do you wish to see the current project demonatration? Experience it for yourself <a href="https://jhbardwell.github.io/project-fiveminutefantasy/index.html">here</a>.</p>
+    <h1><img src="/project-fiveminutefantasy/images/install.png" id="Install" alt="Install">Install</h1>
+    <p>Download the game here on GitHub</p>
+    <h1><img src="/project-fiveminutefantasy/images/design.png" id="Design" alt="Design">Design</h1>
+    <p>Are you craving all those fiery details? <a href="designdoc.md">This</a> documents the goals, design rationale, implementation methods, system architecture, and development schedule of this project.</p>
+    <h1><img src="/project-fiveminutefantasy/images/roadmap.png" id="Roadmap" alt="Roadmap">Roadmap</h1>
     <h2>Stage 1 - Plan</h2>
     <ul>
         <li>[X] Define problem scope</li>
         <li>[X] Define target user</li>
-        <li>[X] Write project documentation</li>
+        <li>[--] Write project documentation</li>
     </ul>
     <h2>Stage 2 - Prototype</h2>
+    <h3>Minimum Features</h3>
     <ul>
-        <li>[X] Design system mechanics</li>
-        <li>[X] Design system aesthetics</li>
-        <li>[X] Design or modify graphics</li>
+       <li>[--] Documentation: static</li>
+       <li>[--] Game Engine: 2 state</li>
+       <li>[--] Narrative Graph: 2 nodes</li>
+       <li>[--] Items Array: dynamic</li>
     </ul>
-    <h2>Stage 3 - Prune</h2>
+    <h2>Stage 3 - Playtest</h2>
     <ul>
-        <li>[ ]</li>
+        <li>[--] Solicit feedback</li>
     </ul>
-    <h2>Stage 4 - Playtest</h2>
+    <h2>Stage 4 - Prove</h2>
+    <h3>Core Festures</h3>
     <ul>
-        <li>[ ]</li>
+        <li>[--] Documentation: static</li>
+        <li>[--] Graphics: dynamic</li>
+        <li>[--] Rendering: canvas </li>
+    </ul>
+    <h3>Wishlist Features</h3>
+    <ul>
+        <li>[X] Graphics: image preloader</li>
     </ul>
     <h2>Stage 5 - Polish</h2>
     <ul>
-        <li>[ ]</li>
+        <li>[--] Solicit feedback again</li>
+        <li>[--] Optimize code</li>
     </ul>
     <h2>Stage 6 - Publish</h2>
     <ul>
-        <li>[ ]</li>
+        <li>[X] Host site on github.io server</li>
     </ul>
     <h2>Stage 7 - Post</h2>
     <ul>
-        <li>[ ]</li>
+        <li>[--] Expand game</li>
+        <li>[--] Create a youtube trailer</li>
+        <li>[--] Feature game mechanics on GameMaker Markup</li>
+        <li>[--] Start a kickstarter campaign</li>
     </ul>
-    <h1><img src="/fiveminutefantasy-project/images/license.png" id="License" alt="License">License</h1>
-    <li><a href="https://raw.github.com/jhbardwell/jhbardwell.github.io/main/LICENSE">MIT</a></li>
-    <h1><img src="/fiveminutefantasy-project/images/people.png" id="People" alt="People">People</h1>
+    <h1><img src="/project-fiveminutefantasy/images/bugs.png" id="Bugs" alt="Bugs">Bugs</h1>
+    <h2>Current</h2>
+    <ul>
+        <li>[--] Documentation: Add missing bug reporting functionality to Readme HTML via GitHub</li>
+        <li>[--] Documentation: Look into adding more badges (limit to 5) to Readme HTML from shields.io</li>
+        <li>[--] Documentation: Embed development kanban in Designdoc HTML between the features list and file system architecture</li>
+    </ul>
+    <h2>Fixed</h2>
+    <ul>
+        <li>[X] Documentation: Readme HTML internal styling should better match old MD format (but with more flair)</li>
+        <li>[X] Documentation: Designdoc HTML internal styling should better match old MD format (but with more flair)</li>
+        <li>[X] Documentation: Convert Readme MD to ReadMe HTML with its own internal styling</li>
+        <li>[X] Documentation: Convert Designdoc MD to Designdoc HTML with its own internal styling</li>
+        <li>[X] Documentation: Typographical errors in Readme HTML</li>
+        <li>[X] Documentation: Typographical errors in Designdoc HTML</li>
+    </ul>
+    <p>Please report all additonal bugs here</p>
+    <h1><img src="/project-fiveminutefantasy/images/license.png" id="License" alt="License">License</h1>
+    <ul>
+        <li>MIT</li>
+    </ul>
+    <h1><img src="/project-fiveminutefantasy/images/people.png" id="People" alt="People">People</h1>
     <h2>Contributors</h2>
     <ul>
         <li>Design: <a href="https://github.com/jhbardwell">jhbardwell</a></li>
         <li>Writing: <a href="https://github.com/jhbardwell">jhbardwell</a></li>
         <li>Code: <a href="https://github.com/jhbardwell">jhbardwell</a></li>
+        <li>Debugging: <a href="https://www.fiverr.com/zullubalti/debug-your-html-css-javascript-code">zullubalti</a></li>
         <li>Graphics: <a href="https://github.com/jhbardwell">jhbardwell</a></li>
     </ul>
     <h2>Investors</h2>
     <p>If this project piques your interest, you can invest here</p>
-    <h1><img src="/fiveminutefantasy-project/images/newsletter.png" id="Newsletter" alt="Newsletter">Newsletter</h1>
-    Do you want all the latest about ongoing app developments and exciting new projects? Then sign up <a href="https://jeffreybardwell.com/sendy/subscription?f=6x4w4Uh71014jJOESdfio6xcewae763pRAzSfj7irZuWdB8L8892O9A892xV6qp892juL1LRkvjEzZEC7oYmFBh5HYNmOw">here</a>.</p>
-    <h1><img src="/fiveminutefantasy-project/images/contact.png" id="Contact" alt="Contact">Contact</h1>
+    <h1><img src="/project-fiveminutefantasy/images/newsletter.png" id="Newsletter" alt="Newsletter">Newsletter</h1>
+    <p>Do you want all the latest about ongoing app developments and exciting new projects? Then sign up <a href="https://jeffreybardwell.com/sendy/subscription?f=6x4w4Uh71014jJOESdfio6xcewae763pRAzSfj7irZuWdB8L8892O9A892xV6qp892juL1LRkvjEzZEC7oYmFBh5HYNmOw">here</a>.</p>
+    <h1><img src="/project-fiveminutefantasy/images/contact.png" id="Contact" alt="Contact">Contact</h1>
     <p>Please address all questions, comments, and concerns <a href="&quot;mailto:jhbardwell@gmail.com&quot;">here</a></p>
 </body>
 </html>
