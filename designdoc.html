@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body{
+         padding:10px;
+      }
+      embed{
+         background-color: white;
+         overflow:auto;
+         min-width: 100%;
+         min-height: 100vh;
+         padding-left: 10px;
+      }
+      h1{
+         color: hsl(0, 10%, 0%)
+      }
+      h2{
+         color: hsl(0, 0%, 0%)
+      }
+      h3{
+         color: hsl(0, 10%, 20%)
+      }
+      table, th, td {
+         padding: 10px;
+         border: 1px solid black;
+         border-collapse: collapse;
+      }
+      th{
+         background-color:lightgray;
+      }
+   </style>
+   <title>Portfolio Project Webpage Design Doc</title>
+</head>
+<body>
+   <h1>Portfolio Webpage Design Doc</h1>
+   <p>This is a living document, changing and adapting as needs warrant to reflect the current state of the project.</p>
+   <br>
+   <h2>Table of Contents</h2>
+   <p><a href="#Setup">Setup</a> | <a href="#Problem">Problem</a> | <a href="#Solutions">Solutions</a> | <a href="#Goals">Goals</a> | <a href="#Features">Features</a> | <a href="#Implementation">Implementation</a> | <a href="#Architecture">Architecture</a> | <a href="#Schedule">Schedule</a> | <a href="#References">References</a></p> 
+   <br>
+   <h2 id="Setup">Setup</h2>
+   <p>Several software demonstration projects require an online showcase, which itself doubles as another software demonstration project.</p>
+   <br>
+   <h2 id="Problem">Problem</h2>
+   <p>A frontend demonstration website requires meeting&mdash;and in the best-case scenario wildly exceeding&mdash;certain standards regarding documentation, design, content, layout, image preloading, form validation, project data presentation, and user accessibility. Aesthetics and system design considerations must be balanced with practical and elegant code. Across the hierarchy of mechanics, dynamics, and aesthetics, a creation is judged by the user experiences it generates and those impressions reflect upon the one who created it.</p>
+   <br>
+   <h2 id="Solutions">Solutions</h2>
+   <h3>Website Build Options</h3>
+   <table>
+      <tr>
+         <th colspan="2">Option</th>
+         <th>Pros</th>
+         <th>Cons</th>
+      </tr>
+      <tr>
+         <td rowspan="2">
+            <img src="/project-portfoliowebpage/images/styleguide.png",
+            alt="Icon: artist's palette and brush"> 
+         </td>
+         <td>1a. Use a styleguide template</td>
+         <td>Prefabricated styleguides are ubiquitous. Demonstrates proficiency in styleguide aesthetics.</td>
+         <td>Does not offer the opportunity to demonstrate styleguide creation proficiency and that template may be a pain to modify.</td>
+      </tr>
+      <tr>
+         <td>1b. Create an original styleguide</td>
+         <td>Demonstrates proficiency in styleguide creation and organization.</td>
+         <td>Someone&mdash;likely several someones each with more artistic flair and technical skill than you&mdash;has already written and tested the code to do what you require.</td>
+      </tr>
+      <tr>
+         <td rowspan="2">
+            <img src="/project-portfoliowebpage/images/framework.png",
+            alt="Icon: wrench superimposed on a cog">  
+         </td>
+         <td>2a. Use common framework(s)</td>
+         <td>Presupposing foreknowledge, this demonstrates prowess in the particular framework(s) used and can generate code quickly.</td>
+         <td>This code is rigid and difficult to modify. Code generation may be swift but debugging is not. Code is bloated, verbose, and dependency ridden with copious workarounds and exceptions.</td>
+      </tr>
+      <tr>
+         <td>2b. Use vanilla code in lieu of framework(s)</td>
+         <td>Demonstrates code architecture competency. Allows for freedom and flexibility when designing and creating system mechanics.</td>
+         <td>Someone&mdash;likely several someones each more competent and skilled than you&mdash;has already written and tested the code to do what you require.</td>
+      </tr>
+      <tr>
+         <td rowspan="3">
+            <img src="/project-portfoliowebpage/images/libraries.png",
+            alt="Icon: library book">  
+         </td>
+         <td>3a. Use copious amounts of libraries</td>
+         <td>Why reinvent the wheel? Takes advantage of pre-existing code and modules to complete a given task.</td>
+         <td>This wheel probably doesn't fit your specific make or model of vehicle and must be pummeled with a tire iron until it "fits" to spec.</td>
+      </tr>
+      <tr>
+         <td>3b. Use libraries sparingly</td>
+         <td>A compromise between comparison shopping for a shirt to fit your frame in a store versus gathering the materials, measuring the fabric, and stitching the garment from whole cloth.</td>
+         <td>Like most middle of the road options, there are no great disadvantages other than those caused by trying to mutally satisfy two opposing choices.</td>
+      </tr>
+      <tr>
+         <td>3c. Use pure vanilla code in lieu of libraries</td>
+         <td>This is the best method for demonstrating code architecture and overall fundamental proficiency.</td>
+         <td>Are you masochistic? This requires a full team engaging in copious amounts of writing and debugging. Unless extenuating circumstances warrant, it's an egregious waste of time!</td>
+      </tr>
+   </table>
+   <h3>Selection Rationale</h3>
+   <p>Of the 12 different plan configrations presented by the options above, I selected suboptions 1b, 2b, and 3b to strike a balance between churning out cookie cutter code and having to create everything from scratch. Sadly, this did not allow me to showcase my nonexistant framework skills. Frameworks are no more than scaffolding upon a foundation, and if the foundation is weak, what use conveniently erected timbers? So, I played to my strengths and chose a plan that lets me flex my HTML, CSS, and JS muscles. This allows me to demonstrate my system design as well as coding prowess. It also provides more options for customization; is broadly applicable to a wider range of employment opportunities; and showcases my grasp of the fundamentals planning, writing, testing my own code mechanics while still making judicious use of a few handy libraries.</p>
+   <br>
+   <h2 id="Goals">Goals</h2>
+   <ul>
+      <li>Display software programming, organization and planning, and system design skills</li>
+      <li>Showcase an engaging, dynamic frontend website</li>
+      <li>Make data presentation a subtle, pleasurable experience</li>
+      <li>Create GUIs that are user friendly and intuitive</li>
+      <li>Make system easy to use and hard to break</li>
+      <li>Optimize time management</li>
+   </ul>
+   <br>
+   <h2 id="Features">Features</h2>
+   <h3>Minimum (Implemented)</h3>
+   <ul>
+      <li>documentation: static</li>
+      <li>headers: static</li>
+      <li>contents: static</li>
+      <li>contents: home page</li>
+      <li>user interface: static</li>
+      <li>graphics: placeholder</li>
+      <li>mermaid charts: none</li>
+      <li>tables: static</li>
+      <li>forms: input fields</li>
+      <li>menus: static</li>
+      <li>layouts: none</li>
+      <li>themes: none</li>
+   </ul>
+   <h3>Core (Implemented)</h3>
+   <ul>
+      <li>contents: random quote generation</li>
+      <li>contents: contact page</li>
+      <li>contents: faq page</li>
+      <li>contents: projects showcase page</li>
+      <li>user interface: dynamic</li>
+      <li>graphics: high quality</li>
+      <li>mermaid charts: static</li>
+      <li>forms: output general error validation</li>
+      <li>forms: submit button activation</li>
+      <li>menus: hyperlinked</li>
+      <li>layouts: responsive</li>
+      <li>themes: custom</li>
+   </ul>
+   <h3>Wishlist (Implemented)</h3>
+   <ul>
+      <li>graphics: image preloader</li>
+      <li>mermaid charts: hyperlinked</li>
+      <li>tables: table generator</li>
+   </ul>
+   <h3>Wishlist (Pending...)</h3>
+   <ul>
+      <li>user interface: animated</li>
+      <li>forms: submit button php functionality</li>
+      <li>forms: output error failure specifics</li>
+      <li>mermaid charts: custom theme</li>
+      <li>layouts: transform animations</li>
+      <li>tables: search functionality</li>
+      <li>tables: sort functionality</li>
+      <li>tables: data generation</li>
+   </ul>
+   <br>
+   <h2 id="Implementation">Implementation Options</h2>
+   <p>Various options are categorized by common functionality and arranged in ascending order of complexity. Currently implemented options are bracket labeled as such and highlighted with bold text. These selections are always updated to reflect current project status.</p>
+   <h3>HyperText Markup Language Functionality</h3>
+   <ol>
+      <li>Static: No JavaScript interactions with HTML code</li>
+      <li><b>Dynamic: JavaScript modifies, creates, or deletes existing HTML code [current]</b></li>
+   </ol>
+   <h3>Content Organization</h3>
+   <ol>
+      <li>Include a single index HTML page with no additonal HTML or external hyperlinks required</li>
+      <li>Include an index HTML homepage with external hyperlinks</li>
+      <li><b>Include an index HTML homepage, additional HTML pages, and external hyperlinks [current]</b></li>
+   </ol>
+   <h3>Content Storage</h3>
+   <ol>
+      <li>Use website as static silo storage, and include all content within the website server folder</li>
+      <li><b>Use website as dynamic presentation hub, and link to external content whenever possible [current]</b></li>
+   </ol>
+   <h3>Cascading Style Sheets</h3>
+   <ol>
+      <li>Inline</li>
+      <li>Internal</li>
+      <li>External</li>
+      <li><b>Combination [current]</b></li>
+   </ol>
+   <h3>Layout Artistic Themes</h3>
+   <ol>
+      <li>Do not use any artistic themes</li>
+      <li>Use prefabricated static CSS</li>
+      <li>Use prefabricated dynamic CSS</li>
+      <li>Create original static CSS</b></li>
+      <li><b>Create original dynamic CSS [current]</b></li>
+   </ol>
+   <h3>Layout Organization</h3>
+   <ol>
+      <li>No CSS</li>
+      <li>Use basic CSS</li>
+      <li>Use CSS Flexbox</li>
+      <li><b>Use CSS Grid [current]</b></li>
+   </ol>
+   <h3>Layout Scaling</h3>
+   <ol>
+      <li>Use single static layout regardless of screen size</li>
+      <li>Use media queries with breakpoints for large screens and phones </li>
+      <li><b>Use media queries with breakpoints for large screens, tablets, and phones [current]</b></li>
+      <li>Use media queries with breakpoints for hi res screens, large screens, tablets, and phones</li>
+   </ol>
+   <h3>JavaScript Loading and Execution</h3>
+   <ol>
+      <li>No Preference: JS loads and executes immediately, blocking parsing until the script is completed</li>
+      <li><b>Defer: JS loads in parallel with HTML parsing and executes after parsing is complete [current]</b></li>
+      <li>Async: JS loads in parallel with HTML parsing and executes as soon as available</li>
+   </ol>
+   <h3>Data Storage</h3>
+   <ol>
+      <li>No data or databases required</li>
+      <li><b>Local hosted array data [current]</b></li>
+      <li>Server hosted array data</li>
+      <li>Local hosted json data/database</li>
+      <li>Server hosted json data/database</li>
+      <li>Server hosted SQL database</li>
+      <li>Server hosted noSQL database</li>
+      <li>Server hosted graph noSQL database</li>
+   </ol>
+   <h3>Image Preloading</h3>
+   <ol>
+      <li>No images</li>
+      <li>Do nothing and let image icons sit onscreen until all the images intitially load</li>
+      <li>Preload images using the link rel="preload" tag></li>
+      <li><b>Upload all image sources when loading initial homepage using JS [current]</b></li>
+      <li>Use a window onload global event handler to forestall page updating while the images load</li>
+      <li>Play a skeleton loading animation while page images load</li>
+   </ol> 
+   <h3>Regex Implementation</h3>
+   <ol>
+      <li>No regex</li>
+      <li><b>Input field search and match [current]</b></li>
+      <li>Source code search and match</li>
+      <li>Input and source code search and match</li>
+      <li>Combination of regex functionality</li>
+   </ol>
+   <h3>Form Validation</h3>
+   <ol>
+      <li>No forms</li>
+      <li>Have neither form validation nor error messages</li>
+      <li>Use automatic HTML "required" client side validation and error messages</li>
+      <li><b>Use custom JS client side validation and error messages [current]</b></li>
+      <li>Use custom JS.node server side validation and error messages</li>
+      <li>Use custom PHP server side validation and error messages</li>
+   </ol>
+   <h3>Graphics Rendering</h3>
+   <ol>
+      <li><b>Default HTML5 viewport [current]</b></li>
+      <li>HTML5 SVG</li>
+      <li>HTML5 Canvas</li>
+   </ol>
+   <h3>Table Display</h3>
+   <ol>
+      <li>No tables</li>
+      <li>Static layout, no interactive functionality</li>
+      <li><b>Static layout, dynamic interactive functionality [current]</b></li>
+      <li>Data driven dynamic layout, no interactive functionality</li>
+      <li>Data driven dynamic layout, dynamic interactive functionality</li>
+   </ol>
+   <h3>Kanban Board</h3>
+   <ol>
+      <li>No kaban board</li>
+      <li><b>Static layout, manual updates, and no interactive functionality [current]</b></li>
+      <li>Static layout, manual updates, and dynamic interactive functionality</li>
+      <li>Data driven layout, automatic updates, and no interactive functionality</li>
+      <li>Data driven layout, automatic updates, and dynamic interactive functionality</li>
+   </ol>
+   <h3>Mermaid Diagram Graphics</h3>
+   <ol>
+      <li>No mermaid graphics</li>
+      <li>Graphics static, use backtick syntax, and coded directly into file</li>
+      <li>Graphics static, use html syntax, and coded directly into file</li>
+      <li>Graphics with dynamic hyperlinks, use backtick syntax, and coded directly into file</li>
+      <li>Graphics with dynamic hyperlinks, use html syntax, and coded directly into file</li>
+      <li>Graphics static, use backtick syntax, in self-contained modules, and embedded into file</li>
+      <li><b>Graphics static, use html syntax, in self-contained modules, and embedded into file [current]</b></li>
+      <li>Graphics with dynamic hyperlinks, use backtick syntax, in self-contained modules, and embedded into file</li>
+      <li>Graphics with dynamic hyperlinks, use html syntax, in self-contained modules, and embedded into file</li>
+   </ol>
+   <h3>User Accessibility</h3>
+   <ol>
+     <li>Do not implement any user accessibility techniques</li>
+     <li>Use high foreground/background contrast</li>
+     <li><b>Use high foreground/background contrast and image alt tags [current]</b></li>
+     <li>Use high foreground/background contrast, image alt tags, and keyboard shortcuts</li>
+     <li>Use high foreground/background contrast, image alt tags, keyboard shortcuts, and dynamic settings selection options</li>
+   </ol>
+   <br>
+   <h2 id="Architecture">System Architecture</h2>
+   <div>
+      <embed src="mermaidflowchart.html">
+   </div>
+   <br>
+   <h2 id="Schedule">Development Schedule</h2>
+   <div>
+      <embed src="mermaidganttchart.html">
+   </div>
+   <br>
+   <h2 id="References">References</h2>
+   <ul>
+      <li><a href="https://www.youtube.com/watch?v=-IhQl1CBj9U" target="_blank">Accessibility Guidelines, Games 01</a></li>
+      <li><a href="https://www.youtube.com/watch?v=-IhQl1CBj9U" target="_blank">Accessibility Guidelines, Games 02</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility" target="_blank">Accessibility Guidelines, Websites</a></li>
+      <li><a href="https://www.gdcvault.com/play/581/Writing-Great-Design" target="_blank">GDC Talk: Writing Great Design Documents</a></li>
+      <li><a href="https://devdocs.io/" target="_blank">Developer Documentation</a></li>
+      <li><a href="https://mermaid-js.github.io/mermaid/" target="_blank">Mermaid Design Documentation</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ZVug65gW-fc&t=195s" target="_blank">Skeleton Loading Animation</a></li>
+      <li><a href="https://www.youtube.com/watch?v=DG4obitDvUA&t=2069s" target="_blank">Template Literals</a></li>
+   </ul>
+</body>
+</html>
