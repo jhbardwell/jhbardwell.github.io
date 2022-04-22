@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../mermaid.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <title>Website Portfolio Gantt Chart</title>
+  </head>
+  <body>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart TD
+
+        %% structure
+        subgraph title[CHART SYMBOLOGY KEY]
+          data[/data/]
+          database[(databases)]
+          documents[/static documents\]
+          folder>folders]
+          function(functions)
+          markup{{markups}}
+          styleguide([styleguides or images])
+          end
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart TD
+
+        %%relationships
+          mermaidgeneratormodule--modifies-->projectdatamodule
+          mermaidv9js--modifies-->mermaidgeneratormodule
+          projectdatamodule & quotegeneratormodule & tablegeneratormodule--embeds content within-->websitemodule
+          websitemodule--hyperlinks to-->githubhtml
+          websitemodule & mermaidgeneratormodule & projectdatamodule & quotegeneratormodule & tablegeneratormodule--hosted on-->githubio
+
+        %% structure
+        mermaidv9js(Mermaid v 9.0 JS Library)
+        githubhtml{{GitHub.com HTML}}
+        githubio[(GitHub.io Server)]
+
+        subgraph websitemodule[PORTFOLIO WEBSITE MODULE]
+          portfoliowebsitecontent>content files]
+          end
+
+        subgraph projectdatamodule[PROJECT DATA MODULE]
+          projectdatacontent>content files]
+          end
+
+        subgraph mermaidgeneratormodule[MERMAID GENERATOR MODULE]
+          mermaidgeneratorcontent>content files]
+          end
+
+        subgraph quotegeneratormodule[QUOTE GENERATOR MODULE]
+          quotegeneratorcontent>content files]
+          end
+
+        subgraph tablegeneratormodule[TABLE GENERATOR MODULE]
+          tablegeneratorcontent>content files]
+          end
+
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart LR
+
+         %%relationships
+            indexhtml & faqhtml & projectshtml & contacthtml--hyperlinks to-->resumepdf
+            indexhtml<--hyperlinks to-->faqhtml & projectshtml & contacthtml
+            faqhtml<--hyperlinks to-->projectshtml & contacthtml
+            projectshtml<--hyperlinks to-->contacthtml
+            
+            contactjs--modifies-->contacthtml
+            imageloaderjs--modifies-->indexhtml
+            projectimagespng--modifies-->designdochtml & readmehtml & readmemd
+            projectsjs--modifies-->projectshtml
+            websiteimagespng--modifies-->indexhtml & faqhtml & projectshtml & contacthtml
+
+            stylecss--styles-->indexhtml & faqhtml & projectshtml & contacthtml
+            mermaidcss--styles-->mermaidflowcharthtml & mermaidganttcharthtml & mermaidpiecharthtml
+            tablecss--styles-->tablehtml
+
+            quotedatajs--populates-->quotegeneratorjs
+            tabledatajs--populates-->tablegeneratorjs
+            tablegeneratorjs--modifies-->tablehtml
+
+         %% structure
+         subgraph websitemodule[PORTFOLIO WEBSITE MODULE]
+            indexhtml{{Index HTML}}
+            faqhtml{{FAQ HTML}}
+            projectshtml{{Projects HTML}}
+            projectsjs(Projects JS)
+            contacthtml{{Contact HTML}}
+            contactjs(Contact JS)
+            imageloaderjs(Image Loader JS)
+            resumepdf[/Resume PDF\]
+            websiteimagespng([Website Images PNG])
+            stylecss([Style CSS])
+            end
+          
+          subgraph projectdatamodule[PROJECT DATA MODULE]
+            designdochtml{{Design Doc HTML}}
+            readmehtml{{Read Me HTML}}
+            readmemd{{Read Me MD}}
+            projectimagespng([Project Images PNG])
+            end
+
+          subgraph mermaidgeneratormodule[MERMAID GENERATOR MODULE]
+            mermaidflowcharthtml{{Mermaid Flow Chart HTML}}
+            mermaidganttcharthtml{{Mermaid Gantt Chart HTML}}
+            mermaidpiecharthtml{{Mermaid Pie Chart HTML}}
+            mermaidcss([Mermaid Dark Theme CSS])
+            end
+
+         subgraph quotegeneratormodule[QUOTE GENERATOR MODULE]
+            quotedatajs[/Quote Data JS/]
+            quotegeneratorjs(Quote Generator JS)
+            end
+            
+         subgraph tablegeneratormodule[TABLE GENERATOR MODULE]
+            tabledatajs[/Table Data JS/]
+            tablegeneratorjs(Table Generator JS)
+            tablehtml{{Table HTML}}
+            tablecss([Table CSS])
+            end
+    </div>
+    <script>
+      var printArguments = function(arg1, arg2, arg3) {
+        alert('printArguments called with arguments: ' + arg1 + ', ' + arg2 + ', ' + arg3);
+      }
+      var printTask = function(taskId) {
+        alert('taskId: ' + taskId);
+      }
+      var config = {
+        startOnLoad:true,
+        securityLevel:'loose',
+      };
+      mermaid.initialize(config);
+    </script>
+  </body>
+</html>
