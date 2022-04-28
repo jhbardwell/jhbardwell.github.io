@@ -1,0 +1,23 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-style: solid;
+    padding:10px;
+}
+
+th {
+    position: sticky;
+    color:aliceblue;
+    border: midnightblue;
+    background-color: midnightblue;
+}
+
+tr:nth-child(even) {
+    background-color: lightcyan;
+}
+/*
+tr:hover {
+    color:aliceblue;
+    background-color: blue;
+}
+*/
