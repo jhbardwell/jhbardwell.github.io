@@ -193,7 +193,7 @@ const sceneNodes = [
     background: assets.ForestIdyll,
     midground: assets.RedvialBroken,
     foreground: assets.FiredragonNeutral,
-    text: "The red vial turns to warm sand in your hand. From the glittering motes spilling between your fingers arises a tiny dragon with garnet wings.  A pair of smoldering black eyes peer into yours. It slowly nibbles one of your fingers.",
+    text: "The red vial turns to warm sand in your hand. From the glittering motes spilling between your fingers arises a tiny dragon with garnet wings.  A pair of smoldering eyes peer into yours. It slowly nibbles one of your fingers.",
 
     options: [
       {
