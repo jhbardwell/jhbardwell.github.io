@@ -406,7 +406,7 @@ const sceneNodes = [
       },
       {
         text: "Beg for mercy as you have nothing worth stealing.",
-        nextScene: [15, 16, 17],
+        nextScene: [17],
       },
       {
         text: "Pummel that cocky bastard with your fists!",
@@ -445,7 +445,7 @@ const sceneNodes = [
       },
       {
         text: "Beg his foregiveness as you have no possessions to offer.",
-        nextScene: [15, 17],
+        nextScene: [17],
       },
       {
         text: "Seems suspicious. Pummel that cocky bastard with your fists!",
@@ -458,7 +458,7 @@ const sceneNodes = [
     background: assets.ForestRobbery,
     midground: assets.RobberDuel,
 
-    text: "A hooded man emerges from the trees, throws aside a large bow, and brandishes a dagger.\n'You just burgled me best mate,' he says with a cheeky grin. 'I demand a duel.'",
+    text: "A hooded man emerges from the trees, throws aside a large bow, and brandishes a dagger.\n\n'You just burgled me best mate,' he says with a cheeky grin. 'I demand a duel.'",
 
     options: [
       {
@@ -476,7 +476,7 @@ const sceneNodes = [
 
     options: [
       {
-        text: "Persue the ruffian, and then kill him.",
+        text: "Pursue the ruffian, and then kill him.",
         nextScene: 999,
       },
       {
