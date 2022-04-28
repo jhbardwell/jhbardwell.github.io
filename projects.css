@@ -1,0 +1,25 @@
+.projects{
+    display: grid;
+    grid-template-rows: 5;
+    grid-template-columns: 1;
+}
+
+.busybees-div{
+    order:1;
+}
+
+.journaltojson-div{
+    order:1;
+}
+
+.fiveminutefantasy-div{
+    order:1;
+}
+
+.kanbanscriptorium-div{
+    order:1;
+}
+
+.portfoliowebpage-div{
+    order:1;
+}
