@@ -380,7 +380,7 @@ const sceneNodes = [
     background: assets.ForestRobbery,
     midground: assets.RobberAttack,
 
-    text: "A hooded archer ambushes you from behind a tree with a knocked bow aimed at your heart.",
+    text: "A hooded archer ambushes you from behind a tree with a nocked bow aimed at your heart.",
 
     options: [
       {
