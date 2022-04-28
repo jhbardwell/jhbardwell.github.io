@@ -472,11 +472,23 @@ const sceneNodes = [
     background: assets.ForestRobbery,
     midground: assets.RobberAfraid,
 
-    text: "The thief screams, drops his weapon, and flees back into the forest. Huzzah!",
+    text: "The thief screams, drops his weapon, and flees back into the forest.",
 
     options: [
       {
-        text: "The heroes of old will sing your praises in the White Tower tonight. The next adventure awaits...",
+        text: "Persue the ruffian, and then kill him.",
+        nextScene: 999,
+      },
+      {
+        text: "Chase after the man and offer your services as a sell sword.",
+        nextScene: 999,
+      },
+      {
+        text: "Let the man go.",
+        nextScene: 999,
+      },
+      {
+        text: "Continue on your journey. The thief is of no consequence.",
         nextScene: 999,
       },
     ],
@@ -490,7 +502,19 @@ const sceneNodes = [
 
     options: [
       {
-        text: "The heroes of old will sing your praises in the White Tower tonight. The next adventure awaits...",
+        text: "Offer to help him any way you can.",
+        nextScene: 999,
+      },
+      {
+        text: "Attack! Quickly, while he's disarmed.",
+        nextScene: 999,
+      },
+      {
+        text: "Ask if he has any items worth trading.",
+        nextScene: 999,
+      },
+      {
+        text: "Ask for news of the war back home.",
         nextScene: 999,
       },
     ],
