@@ -31,7 +31,7 @@
       flowchart LR
 
         %%relationships
-
+        highlightv11js--modifies-->websitemodule
         mermaidv9js--modifies-->projectdatamodule
         projectdatamodule--embeds content within-->websitemodule
         websitemodule--hyperlinks to-->githubhtml
@@ -39,6 +39,7 @@
 
         %% structure
 
+        highlightv11js(Highlight v 11.3.2 JS Library)
         mermaidv9js(Mermaid v 9.0 JS Library)
         githubhtml[\GitHub.com HTML/]
         githubio[(GitHub.io Server)]
