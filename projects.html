@@ -4,6 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="projects.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <script src="projects.js" defer></script>
   </head>
   <body>
@@ -15,73 +18,81 @@
         <div class="projects">
           <!--
           <div id="busybees-div" class="projectdivs">
-            <img id="Newsletter-Concatenation-Program-image"
+            <img id="busybees-image"
             class="projectimages"
             src="/project-busybees/images/header-glow.png"  
             alt="Busy Bees logo with a bee for the first B" width=100% height=auto>
-            <input type="radio" id="RadioButton1-input" class="radiobuttons" name="projectradiobuttons"/>
-            <label for="RadioButton1" id="RadioButton1-label" class="projectlabels"><b>Read Me</b></label>
-            <input type="radio" id="RadioButton2-input" class="radiobuttons" name="projectradiobuttons"/>
-            <label for="RadioButton2" id="RadioButton2-label" class="projectlabels"><b>Design Doc</b></label>
+            <p id="busybees-paragraph" class="projectparagraphs">Description</p>
+            <input type="radio" id="busybees-readme-input" class="radiobuttons" name="projectradiobuttons"/>
+            <label id="busybees-readme-label" class="projectlabels"><b>Read Me</b></label>
+            <input type="radio" id="busybees-designdoc-input" class="radiobuttons" name="projectradiobuttons"/>
+            <label id="busybees-designdoc-label" class="projectlabels"><b>Design Doc</b></label>
             <br>
-            <input type="radio" id="RadioButton3-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton3" id="RadioButton3-label" class="projectlabels"><b>Kanban</b></label>
-            <input type="radio" id="RadioButton4-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton4" id="RadioButton4-label" class="projectlabels"><b>Demonstration</b></label>
+            <input type="radio" id="busybees-code-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="busybees-code-label" class="projectlabels"><b>GitHub</b></label>
+            <input type="radio" id="busybees-kanban-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="busybees-kanban-label" class="projectlabels"><b>Kanban</b></label>
             <br>
-            <input type="radio" id="RadioButton5-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton5" id="RadioButton5-label" class="projectlabels"><b>Progress Report</b></label>
+            <input type="radio" id="busybees-demo-input" class="radiobuttons" name="projectradiobuttons"/>
+            <label id="busybees-demo-label" class="projectlabels"><b>Demo</b></label>
+            <input type="radio" id="busybees-report-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="busybees-report-label" class="projectlabels"><b>Report</b></label>
             <hr>
           </div>
           <div id="journaltojson-div" class="projectdivs">
-            <img id="Research-Data-Manager-Program-image"
+            <img id="journaltojson-image"
             class="projectimages"
             src="/project-journaltojson/images/header-glow.png"
             alt="Journal to JSON logo with arrow pointing from a book to a keyboard" width=100% height=auto>
-            <input type="radio" id="RadioButton6-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton6" id="RadioButton6-label" class="projectlabels"><b>Read Me</b></label>
-            <input type="radio" id="RadioButton7-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton7" id="RadioButton7-label" class="projectlabels"><b>Design Doc</b></label>
+            <p id="journaltojson-paragraph" class="projectparagraphs">Description</p>
+            <input type="radio" id="journaltojson-readme-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="journaltojson-readme-label" class="projectlabels"><b>Read Me</b></label>
+            <input type="radio" id="journaltojson-designdoc-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="journaltojson-designdoc-label" class="projectlabels"><b>Design Doc</b></label>
             <br>
-            <input type="radio" id="RadioButton8-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton8" id="RadioButton8-label" class="projectlabels"><b>Kanban</b></label>
-            <input type="radio" id="RadioButton9-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton9" id="RadioButton9-label" class="projectlabels"><b>Demonstration</b></label>
+            <input type="radio" id="journaltojson-code-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="journaltojson-code-label" class="projectlabels"><b>GitHub</b></label>
+            <input type="radio" id="journaltojson-kanban-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="journaltojson-kanban-label" class="projectlabels"><b>Kanban</b></label>
             <br>
-            <input type="radio" id="RadioButton10-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton10" id="RadioButton10-label" class="projectlabels"><b>Progress Report</b></label>
+            <input type="radio" id="journaltojson-demo-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="journaltojson-demo-label" class="projectlabels"><b>Demo</b></label>
+            <input type="radio" id="journaltojson-report-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="journaltojson-report-label" class="projectlabels"><b>Report</b></label>
             <hr>
           </div>
-            -->
+          -->
           <div id="fiveminutefantasy-div" class="projectdivs">
             <img id="Narrative-Exploration-Program-image"
             class="projectimages"
             src="/project-fiveminutefantasy/images/header-glow.png"
             alt="Five Minute Fantasy logo with a dragon flaming the text" width=100% height=auto>
+            <p id="fiveminutefantasy-paragraph" class="projectparagraphs">A modular narrative adventure game that adapts to player choices</p>
             <input type="radio" id="RadioButton11-input" class="radiobuttons" name="projectradiobuttons" />
             <label for="RadioButton11" id="RadioButton11-label" class="projectlabels"><b>Read Me</b></label>
-            <!--
             <input type="radio" id="RadioButton12-input" class="radiobuttons" name="projectradiobuttons" />
             <label for="RadioButton12" id="RadioButton12-label" class="projectlabels"><b>Design Doc</b></label>
             <br>
+            <input type="radio" id="fiveminutefantasy-code-input" class="radiobuttons" name="projectradiobuttons" />
+            <label id="fiveminutefantasy-code-label" class="projectlabels"><b>GitHub</b></label>
+            <!--
             <input type="radio" id="RadioButton13-input" class="radiobuttons" name="projectradiobuttons" />
             <label for="RadioButton13" id="RadioButton13-label" class="projectlabels"><b>Kanban</b></label>
+            <br>
             -->
             <input type="radio" id="RadioButton14-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton14" id="RadioButton14-label" class="projectlabels"><b>Demonstration</b></label>
-            <!--
-            <br>
+            <label for="RadioButton14" id="RadioButton14-label" class="projectlabels"><b>Demo</b></label>
             <input type="radio" id="RadioButton15-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton15" id="RadioButton15-label" class="projectlabels"><b>Progress Report</b></label>
-            -->
+            <label for="RadioButton15" id="RadioButton15-label" class="projectlabels"><b>Report</b></label>
             <hr>
-            <!--
+          <!--
           </div>
           <div id="kanbanscriptorium-div" class="projectdivs">
             <img id="Kanban-Scriptorium-image"
             class="projectimages"
             src="/project-kanbanscriptorium/images/header-glow.png"
             alt="Kanban Scriptorium logo with a seated scribe for the K" width=100% height=auto>
+            <p id="kanbanscriptorium-paragraph" class="projectparagraphs">A kanban board that prioritizes feature implementation tasks</p>
             <input type="radio" id="RadioButton21-input" class="radiobuttons" name="projectradiobuttons" />
             <label for="RadioButton21" id="RadioButton21-label" class="projectlabels"><b>Read Me</b></label>
 
@@ -92,89 +103,124 @@
             <label for="RadioButton23" id="RadioButton23-label" class="projectlabels"><b>Kanban</b></label>
   
             <input type="radio" id="RadioButton24-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton24" id="RadioButton24-label" class="projectlabels"><b>Demonstration</b></label>
+            <label for="RadioButton24" id="RadioButton24-label" class="projectlabels"><b>Demo</b></label>
     
             <br>
             <input type="radio" id="RadioButton25-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton25" id="RadioButton25-label" class="projectlabels"><b>Progress Report</b></label>
+            <label for="RadioButton25" id="RadioButton25-label" class="projectlabels"><b>Report</b></label>
             
             <hr>
-            -->
+          -->
           </div>
           <div id="portfoliowebpage-div" class="projectdivs">
             <img id="Portfolio-Webpage-image"
             class="projectimages"
             src="/project-portfoliowebpage/images/header-glow.png"
             alt="Portfolio Webpage logo with an arrow circumventing a meridian line globe" width=100% height=auto>
+            <p id="portfoliowebpage-paragraph" class="projectparagraphs">A dynamic website that displays and organizes software project data</p>
             <input type="radio" id="RadioButton16-input" class="radiobuttons" name="projectradiobuttons" />
             <label for="RadioButton16" id="RadioButton16-label" class="projectlabels"><b>Read Me</b></label>
             <input type="radio" id="RadioButton17-input" class="radiobuttons" name="projectradiobuttons" />
             <label for="RadioButton17" id="RadioButton17-label" class="projectlabels"><b>Design Doc</b></label>
             <br>
-            <!--
+             <!--
             <input type="radio" id="RadioButton18-input" class="radiobuttons" name="projectradiobuttons" />
             <label for="RadioButton18" id="RadioButton18-label" class="projectlabels"><b>Kanban</b></label>
             -->
             <input type="radio" id="RadioButton19-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton19" id="RadioButton19-label" class="projectlabels"><b>Demonstration</b></label>
+            <label for="RadioButton19" id="RadioButton19-label" class="projectlabels"><b>Demo</b></label>
+            <!--
             <br>
+            -->
             <input type="radio" id="RadioButton20-input" class="radiobuttons" name="projectradiobuttons" />
-            <label for="RadioButton20" id="RadioButton20-label" class="projectlabels"><b>Progress Report</b></label>
+            <label for="RadioButton20" id="RadioButton20-label" class="projectlabels"><b>Report</b></label>
             <hr>
           </div>
         </div>
       </div>
       <div class="aside">
-        <div id="RadioButton1-div" class="contentdivs">
+        <div id="busybees-readme-div" class="projectcontents">
           <embed src="project-busybees/readme.html">
         </div>
-        <div id="RadioButton2-div" class="contentdivs">
+        <div id="busybees-designdoc-div" class="projectcontents">
           <embed src="project-busybees/designdoc.html">
         </div>
-        <div id="RadioButton3-div" class="contentdivs">
+        <div id="busybees-code-div" class="projectcontents">
+          <h2>Sample Code</h2>
+          <h3>HTML</h3>
+            <pre><code class="language-html">
+              <p>This is HTML code. Isn't this pretty code?</p>
+            </code></pre>
+          <h3>CSS</h3>
+          <pre><code class="language-css">
+            <p>This is CSS code. Isn't this pretty code?</p>
+          </code></pre>
+          <h3>JavaScript</h3>
+          <pre><code class="language-js">
+            <p>This is JS code. Isn't this pretty code?</p>
+          </code></pre>
+          <p>You can find the entire code hosted on GitHub <a href = "https://github.com/jhbardwell/Newsletter-Concatenation-Program" target="_blank">here</a></p>
+        </div>
+        <div id="busybees-kanban-div" class="projectcontents">
           <p class="center">Pending...</p>
         </div>
-        <div id="RadioButton4-div" class="contentdivs">
+        <div id="busybees-demo-div" class="projectcontents">
         </div>
-        <div id="RadioButton5-div" class="contentdivs">
+        <div id="busybees-report-div" class="projectcontents">
         </div>
-        <div id="RadioButton6-div" class="contentdivs">
+        <div id="journaltojson-readme-div" class="projectcontents">
           <embed src="project-journaltojson/readme.html">
         </div>
-        <div id="RadioButton7-div" class="contentdivs">
+        <div id="journaltojson-designdoc-div" class="contentdivs">
           <embed src="project-journaltojson/designdoc.html">
         </div>
-        <div id="RadioButton8-div" class="contentdivs">
+        <div id="journaltojson-code-div" class="projectcontents">
+          <h2>Sample Code</h2>
+          <h3>HTML</h3>
+            <pre><code class="language-html">
+              <p>This is HTML code. Isn't this pretty code?</p>
+            </code></pre>
+          <h3>CSS</h3>
+          <pre><code class="language-css">
+            <p>This is CSS code. Isn't this pretty code?</p>
+          </code></pre>
+          <h3>JavaScript</h3>
+          <pre><code class="language-js">
+            <p>This is JS code. Isn't this pretty code?</p>
+          </code></pre>
+          <p>You can find the entire code hosted on GitHub <a href = "https://github.com/jhbardwell/Research-Data-Manager-Program" target="_blank">here</a></p>
+        </div>
+        <div id="journaltojson-kanban-div" class="projectcontents">
           <p class="center">Pending...</p>
         </div>
-        <div id="RadioButton9-div" class="contentdivs">
+        <div id="journaltojson-demo-div" class="projectcontents">
         </div>
-        <div id="RadioButton10-div" class="contentdivs">
+        <div id="journaltojson-report-div" class="projectcontents">
         </div>
-        <div id="RadioButton11-div" class="contentdivs">
+        <div id="RadioButton11-div" class="projectcontents">
            <embed src="project-fiveminutefantasy/readme.html">
         </div>
-        <div id="RadioButton12-div" class="contentdivs">
+        <div id="RadioButton12-div" class="projectcontents">
           <embed src="project-fiveminutefantasy/designdoc.html">
         </div>
-        <div id="RadioButton13-div" class="contentdivs">
+        <div id="RadioButton13-div" class="projectcontents">
           <p class="center">Pending...</p>
         </div>
-        <div id="RadioButton14-div" class="contentdivs">
+        <div id="RadioButton14-div" class="projectcontents">
           <embed src="project-fiveminutefantasy/index.html">
         </div>
-        <div id="RadioButton10-div" class="contentdivs">
+        <div id="RadioButton10-div" class="projectcontents">
         </div>
-        <div id="RadioButton16-div" class="contentdivs">
+        <div id="RadioButton16-div" class="projectcontents">
           <embed src="project-portfoliowebpage/readme.html">
         </div>
-        <div id="RadioButton17-div" class="contentdivs">
+        <div id="RadioButton17-div" class="projectcontents">
           <embed src="project-portfoliowebpage/designdoc.html">
         </div>
-        <div id="RadioButton18-div" class="contentdivs">
+        <div id="RadioButton18-div" class="projectcontents">
           <p class="center">Pending...</p>
         </div>
-        <div id="RadioButton19-div" class="contentdivs">
+        <div id="RadioButton19-div" class="projectcontents">
           <embed src="https://jhbardwell.github.io">
         </div>
         <div id="RadioButton20-div" class="contentdivs">
@@ -199,19 +245,19 @@
           <h3>Time Spent</h3>
           <embed src="project-portfoliowebpage/mermaidpiechart.html">
         </div>
-        <div id="RadioButton21-div" class="contentdivs">
+        <div id="RadioButton21-div" class="projectcontents">
           <embed src="project-kanbanscriptorium/readme.html">
         </div>
-        <div id="RadioButton22-div" class="contentdivs">
+        <div id="RadioButton22-div" class="projectcontents">
           <embed src="project-kanbanscriptorium/designdoc.html">
         </div>
-        <div id="RadioButton23-div" class="contentdivs">
+        <div id="RadioButton23-div" class="projectcontents">
           <p class="center">Pending...</p>
         </div>
-        <div id="RadioButton24-div" class="contentdivs">
+        <div id="RadioButton24-div" class="projectcontents">
           <p class="center">Pending...</p>
         </div>
-        <div id="RadioButton25-div" class="contentdivs">
+        <div id="RadioButton25-div" class="projectcontents">
           <p class="center">Pending...</p>
         </div>
       </div>
@@ -219,7 +265,6 @@
         <ul id="Main-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="https://github.com/jhbardwell" target="_blank">GitHub</a></li>
           <li><a href="Bardwell.Resume.pdf" target="_blank">Resumé</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
