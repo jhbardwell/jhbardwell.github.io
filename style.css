@@ -81,6 +81,10 @@ textarea {
   border: 1px solid gray
 }
 
+.projects p{
+  color: darkgray;
+}
+
 .content{
   color:rgb(187, 187, 204);
   padding:10px;
