@@ -38,6 +38,16 @@ embed{
   text-align: justify;
 }
 
+a:visited { 
+  text-decoration: none; 
+  color: #c1c9d3; 
+ }
+
+ a:hover { 
+  text-decoration: none; 
+  color: white; 
+ }
+
 form{
   padding-left: 5px;
   padding-bottom: 5px;
@@ -83,6 +93,25 @@ textarea {
 
 .projects p{
   color: darkgray;
+}
+
+.button {
+  background-color: hsl(255, 3%, 75%);
+  border: 1px solid hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 0%);
+  outline: none;
+  box-shadow: 0 5px hsl(0, 2%, 55%);
+}
+
+.button:hover{
+  background-color: hsl(255, 15%, 85%);
+  box-shadow: 0 5px hsl(0, 2%, 55%);
+}
+
+.button:active {
+  background-color: hsl(255, 15%, 85%);
+  box-shadow: 0 1px hsl(0, 2%, 25%);
+  transform: translateY(4px);
 }
 
 .content{
