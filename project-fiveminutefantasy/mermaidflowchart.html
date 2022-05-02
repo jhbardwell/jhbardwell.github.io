@@ -89,15 +89,15 @@
         
           %%relationships
 
-          menustatehtml<--hyperlinks to-->playstatehtml & creditsstatehtml & rulesstatehtml
-  
+          menustatehtml<--hyperlinks to-->playstatehtml & creditsstatehtml & settingsstatehtml
+          playstatehtml<--hyperlinks to-->failstatehtml & victorystatehtml
           playstatehtml--modifies-->encounterdatajs & locationdatajs & renderjs
           gamelogicjs--modifies-->playstatehtml & nodesjs
           encounterdatajs & locationdatajs & inventorydatajs & timejs--modifies-->nodesjs
           nodesjs--modifies-->playstatehtml & renderjs
           timejs--modifies-->gamelogicjs & renderjs
   
-          stylecss--styles-->creditsstatehtml & menustatehtml & playstatehtml & rulesstatehtml
+          stylecss--styles-->creditsstatehtml & menustatehtml & playstatehtml & settingsstatehtml
         
           gameimagespng & gamesoundsogg--populates-->loadjs
           loadjs--populates-->renderjs
@@ -108,6 +108,7 @@
         subgraph gamemodule[GAME MODULE]
           creditsstatehtml[\Credits State HTML/]
           encounterdatajs[/Encounter Data JS/]
+          failstatehtml[\Fail State HTML/]
           gamelogicjs(Game Logic JS)
           gameimagespng([Game Images PNG])
           gamesoundsogg([Game Sounds OGG])
@@ -118,9 +119,10 @@
           nodesjs(Narrative Graph JS)
           playstatehtml[\Play State HTML/]
           renderjs(Canvas 2D Render System JS)
-          rulesstatehtml[\Rules State HTML/]
+          settingsstatehtml[\Settings State HTML/]
           stylecss([Style CSS])
           timejs(Time System JS)
+          victorystatehtml[\Fail State HTML/]
           end
 
     </div>
