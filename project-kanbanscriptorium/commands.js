@@ -94,12 +94,12 @@ const settingsCommandList = {
 };
 
 const statesCommandList = {
-    enterCreditsState: function() {window.location.href = "/creditsstate.html";},
-    enterInstructionsState: function() {window.location.href = "/instructionsstate.html";},
-    enterLoadBoardState: function() {window.location.href = "/loadboardstate.html";},
-    enterMainMenuState: function() {window.location.href = "/index.html";},
-    enterNewBoardState: function() {window.location.href = "/newboardstate.html";},
-    enterSettingsState: function() {window.location.href = "/settingsstate.html";},
+    enterCreditsState: function() {window.location.href = "/project-kanbanscriptorium/creditsstate.html";},
+    enterInstructionsState: function() {window.location.href = "/project-kanbanscriptorium/instructionsstate.html";},
+    enterLoadBoardState: function() {window.location.href = "/project-kanbanscriptorium/loadboardstate.html";},
+    enterMainMenuState: function() {window.location.href = "/project-kanbanscriptorium/index.html";},
+    enterNewBoardState: function() {window.location.href = "/project-kanbanscriptorium/newboardstate.html";},
+    enterSettingsState: function() {window.location.href = "/project-kanbanscriptorium/settingsstate.html";},
 };
 
 export {
