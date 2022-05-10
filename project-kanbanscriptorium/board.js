@@ -1,0 +1,1 @@
+import {boardCommandList as command} from "./commands.js";
