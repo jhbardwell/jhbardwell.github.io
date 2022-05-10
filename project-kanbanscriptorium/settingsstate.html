@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <script src="initialize.js" type="module" defer></script>
+    <script src="kanbanstates.js" type="module" defer></script>
+    <script src="settings.js" type="module" defer></script>
+    <title>Kanban Scriptorium</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="center">SETTINGS</h1>
+        </div>
+        <div class="content">
+            <h2>Theme</h2>
+            <div class="themeselection-div">
+                <input type="radio" id="bloodandink-theme-input" class="radiobuttons" name="themes"  checked/>
+                <label id="bloodandink-theme-label" class="fontlabels">Blood and Ink</label>
+                <br>
+                <input type="radio" id="sherwoodforest-theme-input" class="radiobuttons" name="themes" />
+                <label id="sherwoodforst-theme-label" class="fontlabels">Sherwood Forest</label>
+                <br>
+                <input type="radio" id="chessmatch-theme-input" class="radiobuttons" name="themes" />
+                <label id="chessmatch-theme-label" class="fontlabels">Chess Match</label>
+                <br>
+            </div>
+            <div id="fontselection-div" class="settingsdivs">
+                <h2>Font</h2>
+                <input type="radio" id="devinneswash-font-input" class="radiobuttons" name="fonts"  checked/>
+                <label id="devinneswash-font-label" class="fontlabels">Devinne Swash</label>
+                <br>
+                <input type="radio" id="sanserif-font-input" class="radiobuttons" name="fonts" />
+                <label id="sanserif-font-label" class="fontlabels">San Serif</label>
+                <br>
+            </div>
+        </div>
+        <div class="footer"> 
+            <div>
+                <button id="mainmenustate-button" class="button">MAIN MENU</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../mermaid.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <title>Kanban Scriptorium</title>
+  </head>
+  <body>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart TD
+
+        %% structure
+        subgraph title[CHART SYMBOLOGY KEY]
+          data[/data/]
+          database[(databases)]
+          documents[/static documents\]
+          folder>folders]
+          function(functions)
+          markup{{markups}}
+          styleguide([audiovisuals])
+          end
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart LR
+
+        %%relationships
+
+        homepagemodule<--hyperlinks to--> cardmodule & boardmodule
+        
+        cardmodule--modifies-->boardmodule
+        mermaidv9js--modifies-->projectdatamodule
+
+        projectdatamodule & cardmodule & boardmodule--hosted on-->githubio
+
+        %% structure
+
+        mermaidv9js(Mermaid v 9.0 JS Library)
+        githubio[(GitHub.io Server)]
+
+        subgraph projectdatamodule[PROJECT DATA MODULE]
+          projectdatacontent>content files]
+          end
+
+        subgraph homepagemodule[HOME PAGE MODULE]
+          homepagemodulecontent>content files]
+          end
+
+        subgraph cardmodule[CARD MODULE]
+          cardgeneratormodulecontent>content files]
+          end
+        
+        subgraph boardmodule[BOARD MODULE]
+          boardgeneratormodulecontent>content files]
+          end
+
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart LR
+
+         %%relationships
+
+        %% structure
+
+        subgraph projectdatamodule[PROJECT DATA MODULE]
+          projectimagespng([Project Images PNG])
+          designdochtml{{Design Doc HTML}}
+          mermaidflowcharthtml{{Mermaid Flow Chart HTML}}
+          mermaidganttcharthtml{{Mermaid Gantt Chart HTML}}
+          mermaidpiecharthtml{{Mermaid Pie Chart HTML}}
+          readmehtml{{Read Me HTML}}
+          readmemd{{Read Me MD}}
+          mermaidcss([Mermaid Dark Theme CSS])
+          end
+
+          subgraph homepagemodule[HOME PAGE MODULE]
+              indexhtml{{Index HTML}}   
+              stylecss([Style CSS])
+              end
+
+          subgraph cardmodule[CARD MODULE]
+              cardcreationformhtml{{Card Creation Form HTML}}   
+              cardlayouthtml{{Card Layout HTML}}
+              cardgeneratorjs(Card Generator JS)
+              carddatajs[/Card Data Data JS/]
+              cardcss([Card CSS])
+              end
+
+            subgraph boardmodule[BOARD MODULE]
+              boardcreationformhtml{{Board Creation Form HTML}}  
+              boardlayouthtml{{Board Layout HTML}} 
+              boardgeneratorjs(Board Generator JS)
+              renderjs(Canvas 2D Render System JS)
+              boardcss([Board CSS]) 
+              end
+
+    </div>
+    <script>
+      var printArguments = function(arg1, arg2, arg3) {
+        alert('printArguments called with arguments: ' + arg1 + ', ' + arg2 + ', ' + arg3);
+      }
+      var printTask = function(taskId) {
+        alert('taskId: ' + taskId);
+      }
+      var config = {
+        startOnLoad:true,
+        securityLevel:'loose',
+      };
+      mermaid.initialize(config);
+    </script>
+  </body>
+</html>
