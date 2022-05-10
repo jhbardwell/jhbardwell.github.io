@@ -62,13 +62,13 @@
 }
 @font-face {
     font-family: "devinneswash";
-    src: url("/fonts/devinneswash.woff?raw=true") format("woff"), 
-    url("/fonts/devinneswash.woff2?raw=true") format("woff2")
+    src: url("/project-kanbanscriptorium/fonts/devinneswash.woff?raw=true") format("woff"), 
+    url("/project-kanbanscriptorium/fonts/devinneswash.woff2?raw=true") format("woff2")
 }
 @font-face {
     font-family: "sanserif";
-    src: url("/fonts/arial.woff?raw=true") format("woff"), 
-    url("/fonts/arial.woff2?raw=true") format("woff2")
+    src: url("/project-kanbanscriptorium/fonts/arial.woff?raw=true") format("woff"), 
+    url("/project-kanbanscriptorium/fonts/arial.woff2?raw=true") format("woff2")
 }
 body{
     background: radial-gradient(var(--tertiary-color-light), var(--tertiary-color-dark));
