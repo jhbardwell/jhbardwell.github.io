@@ -4,6 +4,7 @@ let busybeesDiv = document.getElementById("busybees-div")
 let journaltojsonDiv = document.getElementById("journaltojson-div")
 let fiveminutefantasyDiv = document.getElementById("fiveminutefantasy-div")
 let kanbanscriptoriumDiv = document.getElementById("kanbanscriptorium-div")
+let blimpDiv = document.getElementById("blimp-div")
 let portfoliowebpageDiv = document.getElementById("portfoliowebpage-div")
 
 
@@ -12,6 +13,7 @@ let projectImages = document.getElementsByClassName("projectimages")
 let busybeesImage = document.getElementById("busybees-image")
 let journaltojsonImage = document.getElementById("journaltojson-image")
 let fiveminutefantasyImage = document.getElementById("fiveminutefantasy-image")
+let blimpImage = document.getElementById("blimp-image")
 let portfoliowebpageImage = document.getElementById("portfoliowebpage-image")
 let kanbanscriptoriumImage = document.getElementById("kanbanscriptorium-image")
 
@@ -23,7 +25,7 @@ let journaltojsonParagraph = document.getElementById("journaltojson-paragraph")
 let fiveminutefantasyParagraph = document.getElementById("fiveminutefantasy-paragraph")
 let portfoliowebpageParagraph = document.getElementById("portfoliowebpage-paragraph")
 let kanbanscriptoriumParagraph = document.getElementById("kanbanscriptorium-paragraph")
-
+let blimpParagraph = document.getElementById("blimp-paragraph")
 
 let projectLabels = document.getElementsByClassName("projectlabels")
 
@@ -32,19 +34,21 @@ let journaltojsonDesignLabel = document.getElementById("journaltojson-design-lab
 let fiveminutefantasyDesignLabel = document.getElementById("fiveminutefantasy-design-label")
 let kanbanscriptoriumDesignLabel = document.getElementById("kanbanscriptorium-design-label")
 let portfoliowebpageDesignLabel = document.getElementById("portfoliowebpage-design-label")
+let blimpDesignLabel = document.getElementById("blimp-design-label")
 
 let busybeesCodeLabel = document.getElementById("busybees-code-label")
 let journaltojsonCodeLabel = document.getElementById("journaltojson-code-label")
 let fiveminutefantasyCodeLabel = document.getElementById("fiveminutefantasy-code-label")
 let kanbanscriptoriumCodeLabel = document.getElementById("kanbanscriptorium-code-label")
 let portfoliowebpageCodeLabel = document.getElementById("portfoliowebpage-code-label")
+let blimpCodeLabel = document.getElementById("blimp-code-label")
 
 let busybeesDemoLabel = document.getElementById("busybees-demo-label")
 let journaltojsonDemoLabel = document.getElementById("journaltojson-demo-label")
 let fiveminutefantasyDemoLabel = document.getElementById("fiveminutefantasy-demo-label")
 let kanbanscriptoriumDemoLabel = document.getElementById("kanbanscriptorium-demo-label")
 let portfoliowebpageDemoLabel = document.getElementById("portfoliowebpage-demo-label")
-
+let blimpDemoLabel = document.getElementById("blimp-demo-label")
 
 let projectContents = document.getElementsByClassName("projectcontents")
 
@@ -53,6 +57,7 @@ let journaltojsonContent = document.getElementById("journaltojson-content-div")
 let fiveminutefantasyContent = document.getElementById("fiveminutefantasy-content-div")
 let kanbanscriptoriumContent = document.getElementById("kanbanscriptorium-content-div")
 let portfoliowebpageContent = document.getElementById("portfoliowebpage-content-div")
+let blimpContent = document.getElementById("blimp-content-div")
 
 let radiobuttons = document.getElementsByClassName("radiobuttons")
 
@@ -203,6 +208,30 @@ document.body.addEventListener("change", function (event) {
           kanbanscriptoriumParagraph.style.color = "indianred";
           kanbanscriptoriumDemoLabel.style.color = "indianred";
           kanbanscriptoriumContent.style.display = "block";
+          window.open("https://jhbardwell.github.io/project-kanbanscriptorium/index.html", "_blank");
+          break;
+        case "blimp-design-input":
+          blimpDiv.style.order = -1;
+          blimpImage.style.filter = "none";
+          blimpParagraph.style.color = "lime";
+          blimpDesignLabel.style.color = "lime";
+          blimpContent.style.display = "block";
+          window.open("https://jhbardwell.github.io/project-blimp/designdoc.html", "_blank");
+          break;
+        case "blimp-code-input":
+          blimpDiv.style.order = -1;
+          blimpImage.style.filter = "none";
+          blimpParagraph.style.color = "lime";
+          blimpCodeLabel.style.color = "lime";
+          blimpContent.style.display = "block";
+          window.open("https://github.com/jhbardwell/Bacteria-Lot-Identification-Matrix-Program", "_blank");
+          break;
+        case "blimp-demo-input":
+          blimpDiv.style.order = -1;
+          blimpImage.style.filter = "none";
+          blimpParagraph.style.color = "lime";
+          blimpDemoLabel.style.color = "lime";
+          blimpContent.style.display = "block";
           window.open("https://jhbardwell.github.io/project-kanbanscriptorium/index.html", "_blank");
           break;
     }
