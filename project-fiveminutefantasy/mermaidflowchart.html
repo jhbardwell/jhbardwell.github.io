@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../mermaid.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <title>Five Minute Fantasy Flow Chart</title>
+  </head>
+  <body>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart TD
+
+        %% structure
+        subgraph title[CHART SYMBOLOGY KEY]
+          data[/data/]
+          database[(databases)]
+          documents[/static documents\]
+          folder>folders]
+          function(functions)
+          markup[\markups/]
+          styleguide([audiovisuals])
+          end
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart LR
+
+        %%relationships
+
+        projectdatamodule & gamemodule--hosted on-->githubio
+        mermaidv9js--modifies-->projectdatamodule
+        
+        %% structure
+        
+        githubio[(GitHub.io Server)]
+        mermaidv9js(Mermaid v 9.0 JS Library)
+
+        subgraph projectdatamodule[PROJECT DATA MODULE]
+          projectdatamodulecontent>content files]
+          end
+
+        subgraph gamemodule[GAME MODULE]
+          gamemodulecontent>content files]
+          end
+
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart LR
+        
+        %%relationships
+
+        mermaidflowcharthtml & mermaidganttcharthtml--embeds content within-->designdochtml
+        mermaidpiecharthtml & tablehtml--embeds content within-->progressreporthtml
+
+        projectimagespng--modifies-->designdochtml & progressreporthtml & readmehtml & readmemd
+        tablegeneratorjs--modifies-->tablehtml
+
+        tabledatajs--populates-->tablegeneratorjs
+
+        designdoccss--styles-->designdochtml
+        mermaidcss--styles-->mermaidflowcharthtml & mermaidganttcharthtml & mermaidpiecharthtml
+        tablecss--styles-->tablehtml
+
+        %% structure
+
+        subgraph projectdatamodule[PROJECT DATA MODULE]
+          designdoccss(Design Doc CSS)
+          designdochtml[\Design Doc HTML/]
+          mermaidcss([Mermaid Dark Theme CSS])
+          mermaidflowcharthtml[\Mermaid Flow Chart HTML/]
+          mermaidganttcharthtml[\Mermaid Gantt Chart HTML/]
+          mermaidpiecharthtml[\Mermaid Pie Chart HTML/]
+          progressreporthtml[\Progress Report HTML/]
+          projectimagespng([Project Images PNG])
+          readmehtml[\Read Me HTML/]
+          readmemd[\Read Me MD/]
+          tablecss([Table CSS])
+          tabledatajs[/Table Data JS/]
+          tablegeneratorjs(Table Generator JS)
+          tablehtml[\Table HTML/]
+          end
+        
+          %%relationships
+
+          menustatehtml<--hyperlinks to-->playstatehtml & creditsstatehtml & settingsstatehtml
+          playstatehtml<--hyperlinks to-->failstatehtml & victorystatehtml
+          playstatehtml--modifies-->encounterdatajs & locationdatajs & renderjs
+          gamelogicjs--modifies-->playstatehtml & nodesjs
+          encounterdatajs & locationdatajs & inventorydatajs & timejs--modifies-->nodesjs
+          nodesjs--modifies-->playstatehtml & renderjs
+          timejs--modifies-->gamelogicjs & renderjs
+  
+          stylecss--styles-->creditsstatehtml & menustatehtml & playstatehtml & settingsstatehtml
+        
+          gameimagespng & gamesoundsogg--populates-->loadjs
+          loadjs--populates-->renderjs
+          nodesjs--populates-->inventorydatajs
+
+        %% structure
+
+        subgraph gamemodule[GAME MODULE]
+          creditsstatehtml[\Credits State HTML/]
+          encounterdatajs[/Encounter Data JS/]
+          failstatehtml[\Fail State HTML/]
+          gamelogicjs(Game Logic JS)
+          gameimagespng([Game Images PNG])
+          gamesoundsogg([Game Sounds OGG])
+          inventorydatajs[/Inventory Data JS/]
+          loadjs[/File Loader JS/]
+          locationdatajs[/Location Data JS/]
+          menustatehtml[\Menu State HTML/]
+          nodesjs(Narrative Graph JS)
+          playstatehtml[\Play State HTML/]
+          renderjs(Canvas 2D Render System JS)
+          settingsstatehtml[\Settings State HTML/]
+          stylecss([Style CSS])
+          timejs(Time System JS)
+          victorystatehtml[\Fail State HTML/]
+          end
+
+    </div>
+    <script>
+      var printArguments = function(arg1, arg2, arg3) {
+        alert('printArguments called with arguments: ' + arg1 + ', ' + arg2 + ', ' + arg3);
+      }
+      var printTask = function(taskId) {
+        alert('taskId: ' + taskId);
+      }
+      var config = {
+        startOnLoad:true,
+        securityLevel:'loose',
+      };
+      mermaid.initialize(config);
+    </script>
+  </body>
+</html>
