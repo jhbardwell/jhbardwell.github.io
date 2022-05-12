@@ -38,7 +38,7 @@ embed{
   text-align: justify;
 }
 
-a:visited { 
+a:any-link { 
   text-decoration: none; 
   color: #c1c9d3; 
  }
