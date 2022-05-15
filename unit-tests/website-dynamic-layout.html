@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+        background-color: darkslategray;
+        background-size: cover;
+        min-height: 100vh;
+        margin: 0;
+        padding-bottom: 5%;
+        }
+        
+        .center{
+         text-align: center;
+        }
+
+        .left{
+        text-align: left;
+        }
+
+        .justify{
+        text-align: justify;
+        }
+
+        .wrapper{
+        display:grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        }
+
+        .header{
+        background-color: black;
+        color:rgb(187, 187, 204);
+        padding-top: 5px;
+        }
+
+        .userinterface{
+        background-color: darkgoldenrod;
+        color:rgb(187, 187, 204);
+        padding: 10px;
+        }
+
+        .aside{
+        background-color: darkred;
+        color:rgb(187, 187, 204);
+        text-align: justify;
+        padding: 10px;
+        }
+
+        .content{
+        background-color: darkgreen;
+        color:rgb(187, 187, 204);
+        padding: 10px;
+        }
+
+        .footer{
+        background-color: darkblue;
+        position:fixed;
+        left:0px;
+        bottom:0px;
+        width:100%;
+        text-align: center;
+        }
+
+        .footer ul {
+        list-style: none;
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        }
+
+        .footer li {
+        font-size: 1.2em;
+        line-height: 40px;
+        height: 40px;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        }
+
+        .footer a {
+        text-decoration: none;
+        color:rgb(187, 187, 204);
+        display: block;
+        transition: .3s background-color;
+        }
+
+        .footer a:hover {
+        background-color: rgb(35, 73, 104);
+        }
+
+        @media only screen and (max-width: 600px) {
+        
+            .header{
+                grid-row:1;
+                grid-column: span 12;
+            }
+
+            .userinterface{
+                grid-row:2;
+                grid-column: span 12;
+            }
+
+            .content{
+                grid-row:3;
+                grid-column: span 12;
+            }
+
+            .aside{
+                grid-row:4;
+                grid-column: span 12;
+            }
+
+            .footer{
+                grid-row:5;
+                grid-column: span 12;
+                
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            .header{
+                grid-row:1;
+                grid-column: span 12;
+            }
+
+            .userinterface{
+                grid-row:2;
+                grid-column: span 3;
+            }
+
+            .content{
+                grid-row:2;
+                grid-column: span 9;
+            }
+
+            .aside{
+                grid-row:3;
+                grid-column: span 12;
+            }
+
+            .footer{
+                grid-row:4;
+                grid-column: span 12;
+            } 
+        }
+
+        @media only screen and (min-width: 920px) {
+
+            .header{
+                grid-row:1;
+                grid-column: span 12;
+            }
+
+            .userinterface{
+                grid-row:2;
+                grid-column: span 3;
+            }
+
+            .content{
+                grid-row:2;
+                grid-column: span 6;
+            }
+
+            .aside{
+                grid-row:2;
+                grid-column: span 3;
+            }
+
+
+            .footer{
+                grid-row:3;
+                grid-column: span 12;
+            }
+
+            .footer li {
+                width: 120px;
+                border-bottom: none;
+                height: 50px;
+                line-height: 50px;
+                font-size: 1.4em;
+                display: inline-block;
+                margin-right: -4px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header center">
+            <h1>Lorem Ipsum</h1>
+        </div>
+        <div class="userinterface">
+            <ul>
+                <li>Alpha</li>
+                <li>Beta</li>
+                <li>Gamma</li>
+                <li>Delta</li>
+            </ul>
+        </div>
+        <div class="content justify">
+            <p>Lorem ipsum dolor sit amet. Id natus numquam non ratione neque est maxime voluptatibus vel repudiandae commodi eos autem officia ut sapiente libero error tenetur. Sed voluptatem adipisci ea fuga facere aut unde commodi? A voluptatem ipsam aut quia quasi ut magni quisquam. Et officia quaerat eum dolor fugiat in quos quibusdam qui autem voluptatem.</p>
+        </div>
+        <div class="aside justify">
+            <p>Lorem ipsum dolor sit amet. Id natus numquam non ratione neque est maxime voluptatibus vel repudiandae commodi eos autem officia ut sapiente libero error tenetur. Sed voluptatem adipisci ea fuga facere aut unde commodi? A voluptatem ipsam aut quia quasi ut magni quisquam. Et officia quaerat eum dolor fugiat in quos quibusdam qui autem voluptatem.</p>
+        </div>
+        <div class="footer">
+          <ul id="Main-menu">
+            <li><a href="https://en.wikipedia.org/wiki/Dog" target="_blank">Dogs</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Cat" target="_blank">Cats</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Ferret" target="_blank">Ferrets</a></li>
+          </ul>
+        </div>
+    </div>
+</body>
+</html>

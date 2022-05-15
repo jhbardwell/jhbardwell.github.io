@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Form Validation Test</title>
+</head>
+<body>
+    <p>
+        Enter your data into the following fields
+     </p>
+     <form id="form" autocomplete="off">
+       <label for email>Email: </label>
+       <input id="email-input" name="email address">
+       <output id="email-output"></output>
+     </form>
+<script>
+      const form = document.getElementById('form');
+
+const emailInput = document.getElementById('email-input');
+
+const emailRegex = /^[A-Za-z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-za-z0-9.\-]+[.][A-za-z0-9.\-]+$/;
+
+const emailOutput = document.getElementById('email-output');
+
+let emailValid = false;
+
+function testValidation(input, regex, output, valid) {
+  if ((input.value!="")&&(regex.exec(input.value))){
+        output.innerHTML = `&#x2705;Thanks, your ${input.name} is valid`;
+        valid = true;
+  }
+  else if ((input.value!="")&&(!regex.exec(input.value))) {
+        output.innerHTML = `&#10060;Sorry, your ${input.name} is <b>not</b> valid`;
+    } 
+  else
+      output.textContent="";
+}
+
+form.addEventListener("input", function(event){
+    switch(event.target.id){
+    case "email-input":
+        testValidation(emailInput, emailRegex, emailOutput);
+        break;
+    }
+});
+</script>
+</body>
+</html>

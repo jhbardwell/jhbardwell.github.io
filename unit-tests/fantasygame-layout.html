@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #333;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-rows:3;
+  grid-template-columns:1;
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+}
+
+.gamescreen {
+  position: relative;
+}
+
+#foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.text{
+  color: hsl(0, 0%, 0%);
+  font-size : 20px;
+  outline: none;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  background-color: hsl(255, 3%, 75%);
+  border: 1px solid hsl(0, 0%, 0%);
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: hsl(0, 0%, 0%);
+  font-size : 15px;
+  outline: none;
+  box-shadow: 0 5px hsl(0, 2%, 55%);
+}
+
+.button:hover{
+  background-color: hsl(255, 15%, 85%);
+  box-shadow: 0 5px hsl(0, 2%, 55%);
+}
+
+.button:active {
+  background-color: hsl(255, 15%, 85%);
+  box-shadow: 0 1px hsl(0, 2%, 25%);
+  transform: translateY(4px);
+}
+    </style>
+    <div class="container-grid">
+        <div id="gamescreen" class="gamescreen">
+          <canvas id="background-canvas"></canvas>
+          <canvas id="foreground-canvas"></canvas>
+        </div>
+        <div id="text" class="text" >Text</div>
+        <div id="option-buttons" class="button-grid">
+          <button id="button01" class="button">Option 1</button>
+          <button id="button02" class="button">Option 2</button>
+          <button id="button03" class="button">Option 3</button>
+          <button id="button04" class="button">Option 4</button>
+        </div>
+      </div>
+    <script>
+      const backgroundcanvas = document.getElementById('background-canvas');
+      const backgroundctx = backgroundcanvas.getContext('2d');
+      backgroundctx.fillStyle = 'blue';
+      backgroundctx.fillRect(0,0,gamescreen.innerWidth,gamescreen.innerHeight);
+
+      const foregroundcanvas = document.getElementById("foreground-canvas");
+      const foregroundctx = backgroundcanvas.getContext("2d");
+      foregroundctx.fillStyle = 'yellow';
+      foregroundctx.fillRect(0,0,100,50);
+
+    </script>
+</body>
+</html>

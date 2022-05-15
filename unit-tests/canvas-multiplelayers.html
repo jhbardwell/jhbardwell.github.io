@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Multiple Layers</title>
+</head>
+<body>
+    <style>
+        #canvas{
+            background-color: rgb(214, 231, 226);
+        }
+    </style>
+    <canvas id="canvas" height="300" width="300"></canvas><br>
+    <button id="colorchange-button">Change Foreground</button>
+    <script>
+        /* using canvas from DOM */
+        let domcanvas = document.getElementById('canvas');
+        let domctx = domcanvas.getContext('2d');
+
+        /* virtual canvases - not appended to the DOM*/
+        let backgroundcanvas = document.createElement('canvas');
+        let backgroundctx = backgroundcanvas.getContext('2d');
+        backgroundctx.fillStyle = 'blue';
+        backgroundctx.fillRect(50,50,150,150);
+
+        let foregroundcanvas = document.createElement('canvas')
+        let foregroundctx = foregroundcanvas.getContext('2d');
+        foregroundctx.fillStyle = 'yellow';
+        foregroundctx.fillRect(50,50,100,50);
+
+        /* render virtual canvases on DOM canvas */
+        domctx.drawImage(backgroundcanvas, 0, 0, 200, 200);
+        domctx.drawImage(foregroundcanvas, 0, 0, 200, 200);
+
+        /* change foreground canvas */
+        colorchangeButton = document.getElementById("colorchange-button");
+
+        colorchangeButton.addEventListener("click", function(){
+            foregroundctx.fillStyle = "white";
+            foregroundctx.fillRect(50,50,100,50);
+        })
+    </script>
+</body>
+</html>
