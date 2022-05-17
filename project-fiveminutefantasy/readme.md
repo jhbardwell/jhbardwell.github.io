@@ -7,7 +7,7 @@ How far can you get in five minutes?
 
 [About](#About) | [Users](#Users) | [Demo](#Demo) | [Install](#Install) | [Design](#Design) | [Roadmap](#Roadmap) | [License](#License) | [People](#People) | [Newsletter](#Newsletter) | [Contact](#Contact)
 
-# ![About](/images/about.png)About 
+# ![About](/project-fiveminutefantasy/images/about.png)About 
 This proof-of-concept fantasy narrative adventure project serves as a testbed to explore several ideas I have regarding narrative design graph theory, modern choose your own adventure game mechanics, random element interjection, player agency and consequence, and variable win state conditions. The core conceit is that every choice you make opens, closes, or fails to effect different options for each subsequent encounter as you navigate a dangerous world of dragons, death, and intrigue. After five minutes&mdash;assuming the Black Tower doesn't claim your soul first&mdash;the game ends, tantalizing you with both a list of glorious accomplishments and every opportunity you missed...this time.
  
 The time mechanic is something of a role reversal from most games that operate within set temporal limits. You are not in a race to reach a finish line, but rather to experience as much as you can before the curtain falls. It's about the expanse of different stories unraveling with each new decision, not the final destination. And keeping the scope narrow allows for a rich, deeply layered player experience with high replay value. This game takes place in my Metal vs Magic universe, but it is a fable, a fairytale: a fantasy within a fantasy if you will.
