@@ -1,4 +1,4 @@
-![Five Minute Fantasy Project Read Me](/images/header.png)
+![Five Minute Fantasy Project Read Me](/project-fiveminutefantasy/images/header.png)
 
 Dragons, danger, gold and glory...every game a different story. 
 How far can you get in five minutes?
@@ -15,21 +15,21 @@ The time mechanic is something of a role reversal from most games that operate w
 The nature of that fantasy is entirely up to you. Create a tale to suit your taste. You are the avatar and the story-teller. So, what sort of tales will you tell?
 
 
-# ![Users](/images/users.png)Users
+# ![Users](/project-fiveminutefantasy/images/users.png)Users
 Do you enjoy narrative based games, rollicking adventures, and low fantasy epics? Did you skip through those old choose your own adventure books to try and find the best elements to craft your own story from all the pieces strewn through those dog-eared pages? You ... do like dragons ... don't you?
 
 Does your heart harken back to old school dungeons and dragons roguelikes such as Gauntlet and WazHack? Do you like your fantasy games with an actual challenge linked to a strong time mechanic a la Spelunky? Do you want to feel like your decisions matter to the larger text based narrative like Sorcery? Does your hectic schedule appreciate a satisfying, short play cycle? Then check out the "Five Minute Fantasy" demo!
 
-# ![Demo](/images/demo.png)Demo
+# ![Demo](/project-fiveminutefantasy/images/demo.png)Demo
 Do you wish to see the current project demonstration? Experience it for yourself [here](https://jhbardwell.github.io/project-fiveminutefantasy/index.html).
 
-# ![Install](/images/install.png)Install
+# ![Install](/project-fiveminutefantasy/images/install.png)Install
 Download the game here on GitHub
 
-# ![Design](/images/design.png)Design
+# ![Design](/project-fiveminutefantasy/images/design.png)Design
 Are you craving all those nitty gritty details? Go [here](https://jhbardwell.github.io/project-fiveminutefantasy/designdoc.html) to explore the goals, design rationale, implementation methods, system architecture, and development schedule of this project.
 
-# ![Roadmap](/images/roadmap.png)Roadmap
+# ![Roadmap](/project-fiveminutefantasy/images/roadmap.png)Roadmap
 ## Stage 1 - Plan
 - [X] Define problem scope
 - [X] Define target user
@@ -97,7 +97,7 @@ Are you craving all those nitty gritty details? Go [here](https://jhbardwell.git
 - [ ] Feature game mechanics on GameMaker Markup / No Red Pens
 - [ ] Start a kickstarter campaign
 
-# ![Bugs](/images/bugs.png)Bugs
+# ![Bugs](/project-fiveminutefantasy/images/bugs.png)Bugs
 
 ## Current
 - [ ] Fix glitch so buttons are not preselected when node scene loads
@@ -118,10 +118,10 @@ Are you craving all those nitty gritty details? Go [here](https://jhbardwell.git
 
 Please report all additional bugs you find here
 
-# ![License](/images/license.png)License
+# ![License](/project-fiveminutefantasy/images/license.png)License
 
 
-# ![People](/images/people.png)People
+# ![People](/project-fiveminutefantasy/images/people.png)People
 ## Contributors
 - Design: [jhbardwell](https://github.com/jhbardwell)
 - Writing: [jhbardwell](https://github.com/jhbardwell)
@@ -131,8 +131,8 @@ Please report all additional bugs you find here
 ## Investors
 If this project piques your interest, you can invest here
 
-# ![Newsletter](/images/newsletter.png)Newsletter
+# ![Newsletter](/project-fiveminutefantasy/images/newsletter.png)Newsletter
 Do you want all the latest about ongoing app developments and exciting new projects? Then sign up [here](https://jeffreybardwell.com/sendy/subscription?f=6x4w4Uh71014jJOESdfio6xcewae763pRAzSfj7irZuWdB8L8892O9A892xV6qp892juL1LRkvjEzZEC7oYmFBh5HYNmOw).
 
-# ![Contact](/images/contact.png)Contact
+# ![Contact](/project-fiveminutefantasy/images/contact.png)Contact
 Please address all questions, comments, and concerns [here](jhbardwell@gmail.com)
