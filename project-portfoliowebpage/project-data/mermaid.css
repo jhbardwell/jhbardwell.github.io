@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+}
+
+
+.active0, .active1, .active2, .active3{
+    stroke:whitesmoke;
+    fill: rgb(37, 37, 109)!important;
+    }
+
+.done0, .done1, .done2, .done3{
+    stroke:gray;
+    fill: rgb(53, 53, 54)!important;
+}
+
+.section0{
+    fill: black;
+}
+
+.section1{
+    fill:rgb(53, 53, 54);
+}
+
+.section2{
+    fill: purple;
+}
