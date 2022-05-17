@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      body{
+         padding:10px;
+      }
+      embed{
+         background-color: white;
+         overflow:auto;
+         min-width: 100%;
+         min-height: 100vh;
+         padding-left: 10px;
+      }
+      h1{
+         color: hsl(0, 10%, 0%)
+      }
+      h2{
+         color: hsl(0, 10%, 10%)
+      }
+      h3{
+         color: hsl(0, 10%, 20%)
+      }
+      h4{
+         color: hsl(0, 10%, 30%)
+      }
+      
+      ol {
+         counter-reset: item
+      }
+      li {
+         display: block
+      }
+      ol li:before {
+         content: counters(item, ".") " ";
+         counter-increment: item
+      }
+
+      ul li{
+         list-style-type: circle;
+      }
+      
+      table, th, td {
+         padding: 10px;
+         border: 1px solid black;
+         border-collapse: collapse;
+      }
+      th{
+         background-color:lightgray;
+      }
+   </style>
+   <title>Five Minute Fantasy Project Design Doc</title>
+</head>
+<body>
+   <h1>Five Minute Fantasy Design Doc</h1>
+   <p>This is a living document, changing and adapting as needs warrant to reflect the current state of the project.</p>
+   <br>
+   <hr>
+   <h2>Table of Contents</h2>
+   <ol>
+      <li><a href="#Summary">Executive Summary</a></li>
+      <li><a href="#Fundamentals">Fundamentals</a>
+         <ol>
+            <li><a href="#Setup">Setup</a></li>
+            <li><a href="#Problem">Problem</a></li>
+            <li><a href="#Solutions">Solution Options</a>
+               <ol>
+                  <li><a href="#Buildoptions">Build Options</a></li>
+                  <li><a href="#Selectionrationale">Selection Rationale</a></li>
+               </ol>
+            </li>
+            <li><a href="#Genres">Genres</a></li>
+            <li><a href="#Goals">Goals</a></li>
+         </ol>
+      </li>
+      <li><a href="#Mechanics">Mechanics</a>
+        <ol>
+           <li><a href="#Features">Features</a>
+               <ol>
+                  <li><a href="#Minimum">Minimum</a></li>
+                  <li><a href="#Core">Core</a></li>
+                  <li><a href="#Wishlist">Wishlist</a></li>
+               </ol>
+            </li>
+            <li><a href="#Playcycle">Play Cycle</a></li>
+            <li><a href="#Gameloop">Game Loop</a></li>
+            </li>
+        </ol>
+      </li>
+      <li><a href="#Dynamics">Dynamics</a>
+        <ol>
+            <li><a href="#Gamestates">Game States</a>
+            <li><a href="#Gamesystems">Game Systems</a>
+            <li><a href="#Kanban">Kanban Board</a></li>
+            <li><a href="#Architecture">System Architecture</a>
+               <ol>
+                  <li><a href="#Architecture">Chart Symbology Key</li>
+                  <li><a href="#Architecture">Module Inter-Relationships</li>
+                  <li><a href="#Architecture">Module Intra-Relationships</li>
+            </ol>
+            <li><a href="#Schedule">Development Schedule</a></li>
+        </ol>
+      </li>
+      <li><a href="#Aesthetics">Aesthetics</a>
+         <ol>
+            <li><a href="#Logo">Logo Design</a></li>
+            <li><a href="#UI">User Interface Design</a></li>
+            <li><a href="#Graphics">Graphics Design</a></li>
+            <li><a href="#Audio">Audio Design</a></li>
+         </ol>
+      </li>
+      <li><a href="#Definitions">Definitions</a></li>
+      <li><a href="#References">References</a></li>
+   </ol>
+   <br>
+   <hr>
+   <h2 id="Summary">Executive Summary</h2>
+   <p>The purpose of this project is to create a fantasy narrative videogame that allows player agency to generate the story, blending old school adventure game with modern emergent systemic mechanics. These systemic mechanics, which include time-of-day, weather, location, and inventory, allow for an element of random variation when presenting the player with possible encounters. Unlike so many games that only provide the illusion of choice or weakly branching narratives, the core gameplay loop of "Five Minute Fantasy" is make a decision&rarr;get a reaction&rarr;suffer the consequence. The player is the main character in the storybook. What the player decides drives the story forward at the fundamental level, changing the text, graphics, and outcomes of various encounters.</p>
+   <p>The encounter system can be likened to a classic quest system except that it is more granular, dynamic, and modular. Every decision-mediated consequence of the player is logged as an encounter. Prior encounters and current inventory items dictate player options during subsequent encounters. Player choice is the predominant&mdash;but not the only&mdash;factor driving this game. If a decision results in more than one possible encounter occurring, likelihood probabilities are applied depending on circumstance. In-game time is tied to the speed at which the player makes decisions: every choice advances time one-third of an hour. Weather patterns are random and tied to seasonality and time-of-day.</p>
+   <p>You might be thinking that this sounds awfully similar to an immersive sim. While some sims use player choice to generate a limitiless multitude of branching paths and eliminate any coherent narrative altogether (a slice of life story: a la The Sims) and others constrain the narrative within a large branching storyline that uses player choice to select different branches (a novelesque story: a la Deus Ex, Fallout New Vegas, or The Witcher), this game follows a different strategy using a different story type. In "Five Minute Fantasy," the player is telling a short story in the form of a fantasy storybook, and the consequences of the choices they make define that story. The player is not merely following different predefined branches, pruning back that narrative tree with every step they take. Instead, the player is dynamically generating branching vectors as they go and from a single common node seed, growing their own unique tree.</p>
+   <p>The play cycle of this game is short and sweet and right there in the name. Players get five minutes to experience their immersive adventure story (unless they die mid tale) after which time the game ends and displays the qualitative metrics of their accomplishments as lines on a histogram (a la Infinifactory), comparing what they did to what everyone else has ever done. This allows the player to not only craft their own narrative, but define their own win state. What constitutes a satisfying story is of a wholly individual perspective.</p>
+   
+   <br>
+   <hr>
+   <h2 id="Fundamentals">Fundamentals</h2>
+   <h3 id="Setup">Setup</h3>
+   <p>Adapting stories from literature to videogames warps mechanics for a passive audience, applying them to an active one using branching linear narratives disguised as choices.</p>
+   <br>
+   <h3 id="Problem">Problem</h3>
+   <p>Videogame decision tree node event triggers typically only give the illusion of player agency, choice, and meaningful consequence, often snapping back to a linear narrative. This supposed active medium lacks both player participation and emergent game play.</p>
+   <br>
+   <h3 id="Solutions">Solutions</h3>
+   <h4 id="Buildoptions">Fantasy Narrative Game Creation Options</h4>
+   <table>
+      <tr>
+         <th>Topic</th>
+         <th>Options</th>
+         <th>Pros</th>
+         <th>Cons</th>
+      </tr>
+      <tr>
+         <td rowspan="5">
+            <p><b>Game Engine Development</b></p>
+            <img src="/project-fiveminutefantasy/images/engine.png",
+            alt="Icon: stylized engine"> 
+         </td>
+         <td><b>1A. <a href="https://www.unrealengine.com/en-US">Unreal</a></b> (3D)</td>
+         <td>Can write C++ code. Game dev industry standard. Large, vibrant game dev community. Porting to consoles is relatively painless.</td>
+         <td>Requires you to share royalties for commercial use license. Large program. Steep, narrow application learning curve. Not really meant for 2D games.</td>
+      </tr>
+      <tr>
+         <td><b>1B. <a href="https://unity.com/">Unity</a></b> (2D or 3D)</td>
+         <td>Indie dev standard. Large assets store. Large, vibrant game dev community. Porting to consoles is relatively painless.</td>
+         <td>Requires you to share royalties for commercial use license. You should really know C#. You have a tenuous grasp of C++ nevermind C#. Stepp, narrow application learning curve. Large ungainly program that will crash most computers.</td>
+      </tr>
+      <tr>
+         <td><b>1C. <a href="https://godotengine.org/">Godot</a></b> (2D or 3D)</td>
+         <td>Free for commercial use, no license required. Versatile. Can accept multiple scripting languages. Small program. Mid-sized game dev community.</td>
+         <td>Small user base and limited assets store. Better for 2D, middling for 3D. Not standard in indie or large game dev industries</td>
+      </tr>
+      <tr>
+         <td><b>1D. <a href="https://www.pygame.org/news">Pygame</a></b> (2D), <b><a href="https://www.renpy.org/">RenPy</a></b>  (2D), <b><a href="https://www.panda3d.org/">Panda3D</a></b>  (3D), <b><a href="https://gamemaker.io/en/gamemaker">GameMaker</a></b> (2D), or <b><a href="https://www.inklestudios.com/ink/">Ink</a></b> (2D or 3D)</td>
+         <td>Free for commercial use, no license required. Successful implementation for indie dev confirmed. Small programs.</td>
+         <td>Most of these would require learning a new language and/or diving back into Python after a several year hiatus. Shallow, narrow application learning curve. Implementation for commercial indie games is present but limited. Strictly limited to 2D games with the exception of Panda3D (visual graphics) and Ink (narrative graphs). Small game dev communities. Niche development opportunities. May be difficult to port to consoles due to freeware nature of the programs involved.</td>
+      </tr>
+      <tr>
+         <td><b>1E. Develop Your Own</b> (2D and 3D)</td>
+         <td>No license required. Build it. Own it. Keep it trim, easy to modify, and free to use (for you). No royalty sharing required. Create a simple, scaleable, optimized framework template and then tweak it to generate multiple games. A potential source of client work after you prove and publish those multiple games. Use libraries, purchase assets, and hire assistance as needed. Strengthen your fundamental html/css/js coding chops. Use <a href="https://www.electronjs.org/">ElectronJS</a> or <a href="https://nodejs.org/en/">NodeJS</a> to create portable executable files from html/css/js/json. Creating 2D is just within self-coding realm of possibility. Creating 3D is possible using <a href="https://threejs.org/">ThreeJS</a> library. For sound design, use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> (it operates similar to Canvas2D).</td>
+         <td>Effort wasted building the engine is time better spent making games. There is no support structure, dev community, or convenient assets store. You will have to train potential future collaborators and/or employees to use this new engine.</td>
+      </tr>
+      <tr>
+         <td rowspan="4">
+            <p><b>Narrative Design</b></p>
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <p><b>2A. Embedded </b></p>
+         </td>
+         <td>It's like watching a participatory movie. Strong stories due to the focus placed on heavily authored content. Not dependent on the player’s attention span to deliver strong dramatic pacing. Examples: <a href="https://store.steampowered.com/app/1659420/UNCHARTED_Legacy_of_Thieves_Collection/">Uncharted</a>, <a href="https://www.playstation.com/en-us/games/the-last-of-us-part-ii/">The Last of Us</a></td>
+         <td>Low replayability. Narrative value is purely extrinsic to the player. Only creates an illusion of interactivity via bottlenecking choices. Applies chokehold on player creativity and exploration.</td>
+      </tr>
+      <tr>
+         <td>
+            <p><b>2B. Emergent / Immersive</b></p>
+         </td>
+         <td>High replayability. Encourages player interactivity, creativity, and exploration. Examples: <a href="https://store.steampowered.com/app/239160/Thief/">Thief</a>, <a href="https://store.steampowered.com/app/6910/Deus_Ex_Game_of_the_Year_Edition/">Deus Ex</a>, <a href="https://store.steampowered.com/app/264710/Subnautica/">Subnautica</a>, <a href="https://store.steampowered.com/app/275850/No_Mans_Sky/">No Man's Sky</a>, <a href="https://store.steampowered.com/app/1222670/The_Sims_4/">The Sims</a></td>
+         <td>Narrative value is purely intrinsic to the player. Plot and pacing often go out the window. Playing can turn into a grinding slog.</td>
+      </tr>
+      <tr>
+         <td>
+            <p><b>2C. Blended</b></p>
+         </td>
+         <td>Narrative can have both intrinsic and extrinsic value for the player. Storyline structure and explorative freedom are juggled hand in hand. Examples: <a href="https://www.zelda.com/breath-of-the-wild/">Breath of the Wild</a>, <a href="https://store.steampowered.com/app/753640/Outer_Wilds/">Outer Wilds</a>, <a href="https://store.steampowered.com/app/814380/Sekiro_Shadows_Die_Twice__GOTY_Edition/">Sekiro</a>, <a href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/">The Witcher</a></td>
+         <td>Like most middle of the road options, there are no great disadvantages other than those caused by trying to mutally satisfy two opposing choices.</td>
+      </tr>
+      <tr>
+         <td rowspan="7">
+            <p><b>Narrative Structure</b></p>
+            <img src="/project-fiveminutefantasy/images/narration.png",
+            alt="Icon: gloved hand pointer">
+            <p><b>KEY</b></p>
+            <p><b>Blue Box</b>:<br>start game</p>
+            <p><b>Yellow Box</b>:<br>random-mediated advance</p> 
+            <p><b>Orange Box</b>:<br>choice-mediated advance</p> 
+            <p><b>Green Box</b>:<br>good ending</p> 
+            <p><b>Red Box</b>:<br>bad ending</p> 
+            <p><b>Purple Box</b>:<br>ambiguous ending </p>  
+         </td>
+         <td><b>3A. Time Cave</b><br>
+            <img src="/project-fiveminutefantasy/images/timecave.png",
+            alt="Chart: time cave narration vector/node graph">  
+         </td>
+         <td>A classic structure that provides replay value. Creates deep branching narratives which broaden over the progression of the plot. Examples: <a href="https://www.stanleyparable.com/">The Stanley Parable</a>, <a href="https://en.wikipedia.org/wiki/Choose_Your_Own_Adventure">Choose Your Own Adventure Book series</a></td>
+         <td>Once finite options are exhausted, replay value diminishes. Difficult to write well, prone to fragmented plots and instadeath. There can be no true randomness built into the system.</td>
+      </tr>
+      <tr>
+         <td><b>3B. Gauntlet</b><br>
+            <img src="/project-fiveminutefantasy/images/gauntlet.png",
+            alt="Chart: gauntlet narration vector/node graph"> 
+         </td>
+         <td>Provides linear central storylines with branching sub narratives. This format most resembles the standard novel format. Examples: <a href="https://playclassic.games/games/adventure-dos-games-online/play-zork-great-underground-empire-online/">Zork</a>, <a href="https://itch.io/games/made-with-twine">Many Twine Games</a></td>
+         <td>Imposing a linear structure on a branching narrative requires looping or heavy pruning, either by deadly or friendly endpoints.</td>
+      </tr>
+      <tr>
+         <td><b>3C. Branch and Bottleneck</b><br>
+            <img src="/project-fiveminutefantasy/images/branchandbottleneck.png",
+            alt="Chart: branch and bottleneck narration vector/node graph">  
+         </td>
+         <td>A game narrative much affected by the passage of time, either in terms of character development, plot progression, or both. Thus, this is the domain of time management life sims, classic mystery point-and-click games, and progress-mechanic CYA games. Examples: <a href="https://store.steampowered.com/app/774201/Heavens_Vault/">Heaven's Vault</a>, <a href="https://store.steampowered.com/app/251990/Long_Live_The_Queen/">Long Live the Queen</a>, <a href="https://www.gog.com/en/game/the_dagger_of_amon_ra">The Dagger of Amon Ra</a>, <a href="https://www.choiceofgames.com/about-us/">Most games published by Choice of Games, LLC</a> </td>
+         <td>Does not work unless the narrative has a temporal or progression component. Does not seem to have flourished outside a narrow old-school text adventure or point-and-click adventure niches. Though perhaps this is the fault of these systems' gameplay mechanics rather than their narrative structure.</td>
+      </tr>
+      <tr>
+         <td><b>3D. Quest</b><br>
+            <img src="/project-fiveminutefantasy/images/quest.png",
+            alt="Chart: quest narration vector/node graph">  
+         </td>
+         <td>The quest structure forms distinct branches, though they tend to rejoin to reach a relatively small number of winning endings (often only one). The elements of these branches have a modular structure: small, tightly-grouped clusters of nodes allowing many ways to approach a single situation, with lots of interconnection within each cluster and relatively little outside it. Re-merging is fairly common; backtracking rather less so. Quests generally involve some level of state-tracking. This mode is well-suited for journeys of exploration, focused on setting; the quest’s structure tends to be organised by geography rather than timee. Examples: <a href = "https://dnd.wizards.com/">Dungeons and Dragons</a>, <a href="https://www.inklestudios.com/80days/">80 Days</a></td>
+         <td>This format tends to be very episodic. Easy to loose track of the overarching narrative structure getting bogged down by small scale questing storylines.</td>
+      </tr>
+      <tr>
+         <td><b>3E. Open World</b><br>
+            <img src="/project-fiveminutefantasy/images/openworld.png",
+            alt="Chart: open world narration vector/node graph">  
+         </td>
+         <td>Even though quests are structured by geography, time still plays an important part: there’s a built-in direction of travel. But take a CYOA structure, make travel between the major nodes reversible, and you have a static geography, a world in which the player can toodle about indefinitely. Examples: <a href="https://elderscrolls.bethesda.net/en/skyrim">Skyrim.</a>, <a href ="https://store.steampowered.com/app/17450/Dragon_Age_Origins/">Dragon Age: Origins</a>, <a href="https://store.steampowered.com/app/22380/Fallout_New_Vegas/">Fallout: New Vegas</a></td>
+         <td>Still prone to quest fatigue, and open world games and sandlot games have been done to death. Too many are big, mostly empty boxees.</td>
+      </tr>
+      <tr>
+         <td><b>3F. Floating Modules</b><br>
+            <img src="/project-fiveminutefantasy/images/floatingmodules.png",
+            alt="Chart: floating modules narration vector/node graph">  
+         </td>
+         <td>A mode only really possible in computer-based works. There is no tree – or, while there may be scattered twigs and branches, there’s no trunk. No central plot, no through-line: modular encounters become available to the player based largely on state, or perhaps randomly. Good for endless replayability value and true player agency choice-driven narrative creation. Examples: <a href="https://www.mobygames.com/game/king-of-chicago">King of Chicago</a>, <a href="http://web.archive.org/web/20040404061317/www.channelzilch.com/doug/battle.htm">Speech by Doug Sharp on pitfalls developing 'King of Chicago'</a></td>
+         <td>Difficult to write well, accounting for all options. Without a large plot, the structure will easily collapse into a linear narrative.</td>
+      </tr>
+      <tr>
+         <td><b>3G. Loop and Grow</b><br>
+            <img src="/project-fiveminutefantasy/images/loopandgrow.png",
+            alt="Chart: loop and grow narration vector/node graph"> 
+         </td>
+         <td> The game has a central thread of some kind, which loops around, over and over, to the same point: but thanks to state-tracking, each time around new options may be unlocked and others closed off. This is a very general pattern, and can co-exist with many others. Examples: <a href="https://store.steampowered.com/app/1252330/DEATHLOOP/">Deathloop</a>, <a href="https://store.steampowered.com/app/512890/Elsinore/">Elsinore</a>, <a href="https://store.steampowered.com/app/319630/Life_is_Strange__Episode_1/">Life is Strange</a>, <a href="https://store.steampowered.com/app/753640/Outer_Wilds/">Outer Wilds</a>, <a href="https://store.steampowered.com/app/668770/Solarium/">Solarium</a></td>
+         <td>Best suited for a narrative with repetitive temporal elements.</td>
+      </tr>
+   </table>
+   <h4 id="Selectionrationale">Selection Rationale</h4>
+   <p>I chose to create my own small modest game engine&mdash;swallowing the extra up front time investiture to avoid the spiraling penalties of scope creep later imposed by a one-man project&mdash; as larger game engines are better suiter to more complex larger team projects. Using them on small projects invites perpetual scope creep. Smaller game engines would be more manageable, but did not align with my goals. I don't just want to make games; I want to make a system to make games. All the good systems develop their engines in-house. This maximizes creative solutions, adaptability, and flexibility (but beware more scope creep). Trying to bolt certain creative visions onto limited existing engines only results in pain. Does anyone recall the results of Ion Storm shoehorning the original Deus Ex into the Unreal Engine?</p>
+   <p>I selected a blended narrative design. There is a story to be told. However, I place the details of its authorship in the hands of the player within the very broad bounds of lore and systemic effects created by the game designer.</p>
+   <p>For the narrative structure, I chose a floating modular system. Of all the choices, only this one can solely exist within a computer game rather than being a tired pen-and-paper method crudely adapted to fit a computer game. Only this method creates a game that truly puts the player in the driver's seat rather than having them sit a passive passenger with the author behind the wheel. How could I resist such a challenge?</p>
+   <br>
+   <h3 id="Genres">Genre Tags</h3>
+   <ul>
+      <li>2D</li>
+      <li>Choices Matter</li>
+      <li>Choose Your Own Adventure</li>
+      <li>Exploration</li>
+      <li>Fantasy</li>
+      <li>Indie</li>
+      <li>Interactive Fiction</li>
+      <li>Medieval</li>
+      <li>Multiple Endings</li>
+      <li>Narrative</li>
+      <li>Replay Value</li>
+      <li>Short</li>
+      <li>Simulation</li>
+      <li>Singleplayer</li>
+      <li>Story Rich</li>
+   </ul>
+   <h3 id="Goals">Goals</h3>
+   <ul>
+      <li>Allow players to create their own emergent storylines</li>
+      <li>Toggle player selection mediated graphics</li>
+      <li>Successfully have a player race, gender, and creed neutral perspective</li>
+      <li>Implement systemic narrative, time, weather, encounter, and location mechanics</li>
+      <li>Pose modular narrative scene selection based on player choice, in-game mechanics, and probability metrics</li>
+      <li>Create dynamic accessibility settings controls</li>
+      <li>Feature multiple language options for both text and audio</li>
+   </ul>
+   <br>
+   <hr>
+   <h2 id="Mechanics">Mechanics</h2>
+   <h3 id="Features">Features</h3>
+   <h4 id="Minimum">Minimum (Implemented)</h4>
+   <ul>
+      <li>[X] Documentation: static</li>
+      <li>[X] Game State: Play</li>
+      <li>[X] Graphics: dynamic</li>
+      <li>[X] Mechanic: Narrative: random linear quest</li>
+      <li>[X] Mechanic: Time</li>
+      <li>[X] Writing: Scene Nodes: 15</li>
+      <li>[X] Writing: Scene Location: forest</li>
+      <li>[X] Items Array: dynamic</li>
+      <li>[X] Rendering: canvas</li>
+   </ul>
+   <h4 id="Core">Core (Implemented)</h4>
+   <ul>
+      <li>[X] Design Pattern: Finite State Machine</li>
+      <li>[X] Design Pattern: Command</li>
+      <li>[X] Game State: Menu: dynamic</li>
+      <li>[X] Musical Score</li>
+   </ul>
+   <h4 id="Core">Core (Pending...)</h4>
+   <ul>
+      <li>[--] Mechanic: Narrative: modular</li>
+      <li>[--] Mechanic: Location</li>
+      <li>[--] Mechanic: Weather</li>
+      <li>[--] Mechanic: Economy</li>
+      <li>[--] Writing: Scene Nodes: 300</li>
+      <li>[--] Writing: Scene Location: field</li>
+      <li>[--] Writing: Scene Location: town</li>
+      <li>[--] Writing: Scene Location: market</li>
+      <li>[--] Game State: Credits</li>
+      <li>[--] Game State: Settings</li>
+      <li>[--] Settings Accessibility</li>
+      <li>[--] Sound Effects</li>
+   </ul>
+   <h4 id="Wishlist">Wishlist (Implemented)</h4>
+   <ul>
+      <li>[X] Graphics: image preloader</li>
+   </ul>
+   <h4>Wishlist (Pending...)</h4>
+   <ul>
+      <li>[--] User Data Collection: game play stats</li>
+      <li>[--] User Data Collection: game narration path</li>
+      <li>[--] Settings: english audio narration</li>
+      <li>[--] Settings: english subtitles</li>
+      <li>[--] Settings: german audio narration</li>
+      <li>[--] Settings: german subtitles</li>
+      <li>[--] Settings: japanese audio narration</li>
+      <li>[--] Settings: japanese subtitles</li>
+      <li>[--] Settings: korean audio narration</li>
+      <li>[--] Settings: korean subtitles</li>
+      <li>[--] Settings: spanish audio narration</li>
+      <li>[--] Settings: spanish subtitles</li>
+   </ul>
+   <h3 id="Playcycle">Play Cycle</h3>
+   <p>The play cycle of this game is five minutes. It is designed to be endlessly replayable with customizable player choice-driven storylines and subjective win states. As such, there are no load or save functions.</p>
+   <h3 id="Gameplayloop">Narrative Game Play Loop</h3>
+   <ul>
+      <li><b>1. Decision</b>: The player is presented by a choice and given a series of options displayed as text buttons. Those options are dictated by prior player choices, current player inventory, and in-game systemic elements.</li>
+      <br>
+      <li><b>2. Reaction</b>: The perception and possible consequences behind making the choice are telegraphed by a change in animation and sound cues as the player hovers over each button to make their choice.</li>
+      <br>
+      <li><b>3. Consequence</b>: Once the player selects and clicks a button, the choice is made, which then unlocks avenues of narrative progression in the form of a new decision that builds on those previously made.</li>
+      <br>
+      <li><b>4. Repeat...</b></li>
+   </ul>
+   <p>This loop applies to all narrative elements: non player character progression, inventory item loss or acquisition, time progression, and changes in location.</p>
+   <br>
+   <hr>
+   <h2 id="Dynamics">Dynamics</h2>
+   <h3 id="Gamestates">Game States</h3>
+   <h4 id="Menu">Main Menu</h4>
+   <p>Game starts here by default. Offers a gateway to the game play, settings, and credits states.</p>
+   <h4 id="Settings">Settings</h4>
+   <p>Allows players to regulate screen brightness, screen contrast, toggle sound effects, audio narration, and music on or off, regulate the volume of all three previous elements, and select the language of the program's text elements and audio narrations.</p>
+   <h4 id="Credits">Credits</h4>
+   <p>Acknowledges all those who contributed in some way to creating this game.</p>
+   <h4 id="Gameplay">Game Play</h4>
+   <p>The core gameplay loop occurs during this stage.</p>
+   <h4 id="Victory">Victory</h4>
+   <p>Players directed here upon surviving for five minutes. Upbeat music plays. Displays comparative statistics as line (current play session) on histogram (all other play sessions) for various metrics</p>
+   <h4 id="Failure">Failure</h4>
+   <p>Players directed here upon dying after the five minute mark. Somber music plays. Displays comparative statistics as line (current play session) on histogram (all other play sessions) for various metrics</p>
+   <h3 id="Gamesystems">Game Systems</h3>
+   <h4 id="Command">Command</h4>
+   <p>Where all the game's functions are stored and organized.</p>
+   <h4 id="Encounter">Encounter</h4>
+   <p>Where all the game's encounter data and prerequisites are stored.</p>
+   <h4 id="Inventory">Inventory</h4>
+   <p>Where all the player inventory is stored an organized</p>
+   <h4 id="Logic">Logic</h4>
+   <p>The system that regulates the game play logic</p>
+   <h4 id="Nodes">Nodes</h4>
+   <p>Narration scene and option nodes are organized here by location.</p>
+   <h4 id="Time">Time</h4>
+   <p>The system that regulates in-game time. Advances by one-third of an hour each time a decision is made.</p>
+   <h4 id="Weather">Weather</h4>
+   <p>The system that regulates and displays the weather is organized here.</p>
+   <h3 id="Kanban">Kanban Board</h3>
+   <p>Upgraded Board Pending</p>
+   <h3 id="Architecture">System Architecture</h3>
+   <div>
+      <embed src="mermaidflowchart.html">
+   </div>
+   <br>
+   <h3 id="Schedule">Development Schedule</h3>
+   <div>
+      <embed src="mermaidganttchart.html">
+   </div>
+   <br>
+   <hr>
+   <h2 id="Aesthetics">Aesthetics</h2>
+   <h3 id="Logo">Logo Design</h2>
+   <p>The logo of the dragon poised to burn the title card&mdash;and indeed does so when the player hovers over one of the adjacent menu buttons, aiming to torch this human in their midst with a rather cheerful draconic grin&mdash;visually sets the stage for the core gameplay loop of decision&rarr;reaction&rarr;consequence.</p>   
+   <h3 id="UI">User Interface Design</h3>
+   <p>The player interacts with the world entirely through button press selections.</p>
+   <h3 id="Graphics">Graphics Design</h3>
+   <p>Graphics and animations are simple, stylized caricatures of either subverted or true-to-type fantasy archetypes. Colors are bold and primary. This makes images easier to create, manipulate, and reproduce and adds to the universal storybook tone the game is attempting to evoke</p>
+   <h3 id="Audio">Audio Design</h3>
+   <p>The gameplay soundtrack is upbeat, martial fantasy string and woodwind music with drums in the background. Composition mirrors a classic Freytag pyramid structure and ends at the five minute time-out mark. Variations on the theme and different songs to avoid repetition fatigue across multiple concurrent play cycles are pending. The menu, settings, and credit screens have a simpler cyclical soundtrack that shares a few string and drum lietmotifs. The victory condition music is rousing. The failure condition music is somber.</p>
+   <br>
+   <hr>
+   <h2 id="Definitions">Definitions</h2>
+   <ul>
+      <li><b>browser engine (n)</b>: a program that transforms HTML, CSS, JS, and JSON files into static or dynamically displayed webpage content</li><br>
+      <li><b>command pattern (n)</b>: a software design pattern that decouples the code which calls upon a function from the code which executes that function</li><br>
+      <li><b>data-driven (adj)</b>: software whose structure and content are both softcoded using dom creation and data or databases, respectively</li><br>
+      <li><b>dynamic (adj)</b>: software whose structure is hardcoded but content is softcoded and subject to dom manipulation</li><br>
+      <li><b>frame rate (n)</b>: the speed (frames/second) by which static frames are advanced to provide the illusion of dynamic motion (that illusion fails below 12 fps). In film: 24 fps, videogames: 30 fps, and high end graphics games: 60 fps are the norm. Note that PC monitors run in multiples of 30 fps.</li><br>
+      <li><b>rendering engine (n)</b>: a program that monitors and adjusts for changes in CPU run speed while presenting static text and images or dynamic animations, moving images, and particle effects made from arrays of static images. This is different from a time engine, which only affects in-game time.</li><br>
+      <li><b>state machine pattern (n)</b>: a software design pattern that regulates the transition between two or more independently operating program states</li><br>
+      <li><b>static (adj)</b>: software whose structure and content are both hardcoded and unchanging</li><br>
+      <li><b>time engine/system (n)</b>: a systemic program that regulates, monitors, and advances in-game time, affects changes in temporal in-game variables, and may or may not monitor the effect of temporal on nontemporal variables. This is different from a rendering engine, which only affects real world and mechanism-based time</li><br>
+   </ul>
+   <br>
+   <hr>
+   <h2 id="References">References</h2>
+   <ul>
+      <li><a href="https://maetl.net/notes/storyboard/narrative-graph-models" target="_blank">Narrative Graphs 01</a></li>
+      <li><a href="https://heterogenoustasks.wordpress.com/2015/01/26/standard-patterns-in-choice-based-games/" target="_blank">Narrative Graphs 02</a></li>
+      <li><a href="https://www.youtube.com/watch?v=eVwH3VL1EsA" target="_blank">Page Transitions</a></li>
+      <li><a href="https://www.statista.com/statistics/552623/number-games-released-steam/" target="_blank">Steam Release Statistics</a></li>
+      <li><a href="https://www.youtube.com/watch?v=R1S_NhKkvGA" target="_blank">Text Adventure Game</a></li>
+      <li><a href="https://www.html5rocks.com/en/tutorials/webaudio/games/" target="_blank">Web Audio API 01</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="_blank">Web Audio API 02</a></li>
+   </ul>
+</body>
+</html>
