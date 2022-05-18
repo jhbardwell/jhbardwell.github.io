@@ -124,9 +124,10 @@
         %%relationships
           gamelogicjs--modifies-->encounterdatajs & locationdatajs
           commandsjs--populates-->gamelogicjs
-          gamelogicjs--populates-->usergameplaydatajs & inventorydatajs & timejs
-          encounterdatajs & locationdatajs & inventorydatajs & timejs--modify-->nodesjs
-          
+          gamelogicjs--populates-->inventorydatajs & timejs
+          encounterdatajs & locationdatajs & inventorydatajs & weatherjs & timejs--modifies-->nodesjs
+          timejs--modifies-->weatherjs
+          encounterdatajs & locationdatajs & inventorydatajs & weatherjs & timejs--populates-->usergameplaydatajs
 
         %% structure
         subgraph gameplaymodule[GAME PLAY MODULE]
@@ -138,6 +139,7 @@
           nodesjs(Narrative Graph JS)
           timejs(Time System JS)
           usergameplaydatajs[/User Game Play Data JS/]
+          weatherjs(Weather JS)
           end
     </div>
 

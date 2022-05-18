@@ -175,6 +175,8 @@
       <tr>
          <td rowspan="4">
             <p><b>Narrative Design</b></p>
+            <img src="/project-fiveminutefantasy/images/narrationdesign.png",
+            alt="Icon: library book">
          </td>
       </tr>
       <tr>
@@ -201,7 +203,7 @@
       <tr>
          <td rowspan="7">
             <p><b>Narrative Structure</b></p>
-            <img src="/project-fiveminutefantasy/images/narration.png",
+            <img src="/project-fiveminutefantasy/images/narrationstructure.png",
             alt="Icon: gloved hand pointer">
             <p><b>KEY</b></p>
             <p><b>Blue Box</b>:<br>start game</p>
@@ -365,7 +367,7 @@
       <br>
       <li><b>2. Reaction</b>: The perception and possible consequences behind making the choice are telegraphed by a change in animation and sound cues as the player hovers over each button to make their choice.</li>
       <br>
-      <li><b>3. Consequence</b>: Once the player selects and clicks a button, the choice is made, which then unlocks avenues of narrative progression in the form of a new decision that builds on those previously made.</li>
+      <li><b>3. Consequence</b>: Once the player selects and clicks a button, the choice is made, which then unlocks avenues of narrative progression in the form of a new decision opportunity that builds on those previously made.</li>
       <br>
       <li><b>4. Repeat...</b></li>
    </ul>
@@ -376,43 +378,74 @@
    <h3 id="Gamestates">Game States</h3>
    <h4 id="Menu">Main Menu</h4>
    <p>Game starts here by default. Offers a gateway to the game play, settings, and credits states.</p>
+   <p>This is an "Intro" stage. It is the first thing the player sees, revealing (or reaffirming) everything this game is, how this game functions at the granular level, and why this game is awesome.</p>
+   <br>
    <h4 id="Settings">Settings</h4>
    <p>Allows players to regulate screen brightness, screen contrast, toggle sound effects, audio narration, and music on or off, regulate the volume of all three previous elements, and select the language of the program's text elements and audio narrations.</p>
+   <p>This is a "Prep" stage. It allows the player to tailor the game environment to suit their preferences.</p>
+   <br>
    <h4 id="Credits">Credits</h4>
-   <p>Acknowledges all those who contributed in some way to creating this game.</p>
+   <p>Acknowledges all those who contributed in some way to creating this game. This includes artwork, music, layout design, programming, noteworthy beta testers, noteworthy kickstarter patrons, etc...</p>
+   <p>This is an "Ancillary" stage. It allows the player to peruse extra content. Most folks will skip it.</p>
+   <br>
    <h4 id="Gameplay">Game Play</h4>
-   <p>The core gameplay loop occurs during this stage.</p>
+   <p>The core gameplay loop occurs here. The game redirects the story in real time based on the player's actions, advances at the pace of player's decisons, and ends before having met all the player's goals.</p>
+   <p>This is the "Action" stage where players get to explore, immerse, interact, and read...lots of reading. This game is basically an interactive fantasy storybook simulation that casts the player as protagonist, author, and artist.</p>
+   <br>
    <h4 id="Victory">Victory</h4>
-   <p>Players directed here upon surviving for five minutes. Upbeat music plays. Displays comparative statistics as line (current play session) on histogram (all other play sessions) for various metrics</p>
+   <p>Players directed here after surviving for five minutes. Upbeat music plays. Displays comparative statistics as line (current play session) on histogram (all other play sessions) for various metrics</p>
+   <p>This is a "Home" stage. It allows the player to relax, pause, and reflect before diving back into things...or just peruse one or two stats and dive back into things. The challenge-evoking community-oriented graphical leaderboard nature of the histograms also encourages the formulation of future goals and strategies while insidiously incentivizing just one more play session.</p>
+   <p>Once the player decides to go again, game restart is lightning fast. Push a button. Back to square one. No main menu. No loading screen. BAM.</p>
+   <br>
    <h4 id="Failure">Failure</h4>
-   <p>Players directed here upon dying after the five minute mark. Somber music plays. Displays comparative statistics as line (current play session) on histogram (all other play sessions) for various metrics</p>
-   <h3 id="Gamesystems">Game Systems</h3>
+   <p>Players directed here upon dying before the five minute mark. Somber music plays. Displays comparative statistics as line (current play session) on histogram (all other play sessions) for various metrics</p>
+   <p>This is a "Home" stage. It allows the player to relax, pause, and reflect before diving back into things...or just peruse one or two stats and dive back into things. The challenge-evoking community-oriented graphical leaderboard nature of the histograms also encourages the formulation of future goals and strategies while insidiously incentivizing just one more play session.</p>
+   <p>Once the player decides to go again, game restart is lightning fast. Push a button. Back to square one. No main menu. No loading screen. BAM.</p>
+   <br>
+   <h3 id="Game Systems">Game Systems</h3>
    <h4 id="Command">Command</h4>
    <p>Where all the game's functions are stored and organized into categorized arrays.</p>
+   <br>
    <h4 id="Encounter">Encounter</h4>
    <p>Where all the game's encounter data and prerequisites are stored.</p>
+   <br>
    <h4 id="Inventory">Inventory</h4>
    <p>Where all the player inventory is stored an organized.</p>
+   <br>
    <h4 id="Logic">Logic</h4>
    <p>The system that regulates the game play logic.</p>
+   <br>
    <h4 id="Nodes">Nodes</h4>
    <p>Narration scene and associated four option nodes are organized here by in-game location.</p>
+   <br>
    <h4 id="Time">Time</h4>
    <p>The system that regulates in-game time. Advances by one-third of an hour each time a decision is made. Enumeration time states include one-third hour, hour, time-of-day, and day. In-game time advances by one-third of an hour with each decision.</p>
+   <br>
    <h4 id="Weather">Weather</h4>
    <p>The system that regulates and displays the weather is organized here. Enumeration weather states include sun, overcast, and rain.</p>
+   <br>
    <h3 id="Metrics">End Game Metrics</h3>
    <ul>
+      <li>The [insert current play session frequency here]th Five Minute Fantasy:</li>
       <li>survival time</li>
       <li>encounters mastered</li>
+      <li>locations discovered</li>
       <li>characters met</li>
-      <li>characters helped : characters killed</li>
+      <li>characters helped</li>
+      <li>characters killed</li>
       <li>coins spent : coins earned</li>
       <li>battles : sharp bargains</li>
       <li>weapons discovered</li>
       <li>spells cast</li>
       <li>dragons found</li>
       <li>vials stolen</li>
+      <li>...changes on rota based on player submission lottery...</li>
+   </ul>
+   <p>Advertisements or Random Tips: also changing on a random rota</p>
+   <ul>
+      <li>Want to explore the ABC? Then check out our exciting new expansion pack, XYZ!</li>
+      <li>If you enjoyed crafting your own exciting short fantasy adventure, check out this novel.</li>
+      <li>Don't use a red fire dragon in the rain. Go for your blue water/ice dragon instead!</li>
    </ul>
    <h3 id="Kanban">Kanban Board</h3>
    <p>Upgraded Board Pending</p>
