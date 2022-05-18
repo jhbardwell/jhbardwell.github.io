@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./mermaid.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <title>Website Portfolio Gantt Chart</title>
+  </head>
+  <body>
+    <div class="mermaid">
+        %%{init: {'theme': 'dark', 'themeVariables': 
+        {'fontSize': '35px', 'fontFamily': 'Arial'}}}%%
+        gantt
+          dateFormat  YYYY-MM-DD
+          axisFormat %b %e %Y
+           
+          todayMarker stroke-width:5px,stroke:#7f7a9b,opacity:0.5
+           
+          section PLAN
+            define problem scope         :done,  scope, 2022-02-05, 5d
+            define target user           :done,  user, after scope, 3d
+            draft readme                 :done,  readmedraft, after user, 6d
+            iterate readme               :done,  readmeiterate, after readmedraft, 2022-04-02
+            draft designdoc              :done,  designdocdraft, after readmedraft, 5d
+            iterate designdoc            :done,  designdociterate, 2022-03-15, 1w
+            draft gantt chart            :done,  ganttdraft, 2022-03-22, 2d
+            iterate gantt chart          :done,  ganttiterate, after ganttdraft, 2022-04-02
+           
+          section PROTOTYPE
+            draft initial scene nodes    :done,   initscenenodedraft, 2022-02-10, 5d
+            iterate initial scene nodes  :done,   initsceneiterate, after initscenenodedraft, 3m
+            draft time mechanic          :done,   timemechdraft, 2022-02-05, 3d
+            iterate time mechanic        :done,   timemechiterate, after timemechdraft, 15d
+            draft narrative mechanic     :done,   narrativemechdraft, 2022-02-15, 4d
+            iterate narrative mechanic   :done,   narrativemechitererate, after narrativemechdraft, 10d
+            
+            collect reference images     :done,   collectrefimages, 2022-03-10, 5d
+          section PLAYTEST
+            solicit feedback             :active, feedback, 2022-04-26, 2w
+           
+          section PROVE
+            
+          section POLISH 
+            optimize code               :active, optimize code, 2022-05-15, 3w
+  
+          section PUBLISH
+            github.io host               :done, githubhost,      2022-04-25, 1d  
+  
+          section POST
+           
+    </div>
+    <script>
+      var printArguments = function(arg1, arg2, arg3) {
+        alert('printArguments called with arguments: ' + arg1 + ', ' + arg2 + ', ' + arg3);
+      }
+      var printTask = function(taskId) {
+        alert('taskId: ' + taskId);
+      }
+      var config = {
+        startOnLoad:true,
+        securityLevel:'loose',
+      };
+      mermaid.initialize(config);
+    </script>
+  </body>
+</html>
