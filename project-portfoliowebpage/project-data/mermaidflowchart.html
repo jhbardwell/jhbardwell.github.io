@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mermaid.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <title>Website Portfolio Gantt Chart</title>
+  </head>
+  <body>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart TD
+
+        %% structure
+        subgraph title[CHART SYMBOLOGY KEY]
+          data[/data/]
+          database[(databases)]
+          documents[/static documents\]
+          folder>folders]
+          function(functions)
+          markup[\markups/]
+          styleguide([audiovisuals])
+          end
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart LR
+
+        %%relationships
+        highlightv11js--modifies-->websitemodule
+        mermaidv9js--modifies-->projectdatamodule
+        projectdatamodule--embeds content within-->websitemodule
+        websitemodule--hyperlinks to-->githubhtml
+        websitemodule & projectdatamodule--hosted on-->githubio
+
+        %% structure
+
+        highlightv11js(Highlight v 11.3.2 JS Library)
+        mermaidv9js(Mermaid v 9.0 JS Library)
+        githubhtml[\GitHub.com HTML/]
+        githubio[(GitHub.io Server)]
+
+        subgraph projectdatamodule[PROJECT DATA MODULE]
+          projectdatacontent>content files]
+          end
+
+        subgraph websitemodule[PORTFOLIO WEBSITE MODULE]
+          portfoliowebsitecontent>content files]
+          end
+
+    </div>
+    <hr>
+    <div class="mermaid">
+      %%{init: {'theme': 'dark'}}%%
+      flowchart LR
+        
+        %%relationships
+
+        mermaidflowcharthtml & mermaidganttcharthtml--embeds content within-->designdochtml
+        mermaidpiecharthtml & tablehtml--embeds content within-->progressreporthtml
+
+        projectimagespng--modifies-->designdochtml & progressreporthtml & readmehtml & readmemd
+        tablegeneratorjs--modifies-->tablehtml
+
+        tabledatajs--populates-->tablegeneratorjs
+
+        designdoccss--styles-->designdochtml
+        mermaidcss--styles-->mermaidflowcharthtml & mermaidganttcharthtml & mermaidpiecharthtml
+        tablecss--styles-->tablehtml
+
+        %% structure
+
+        subgraph projectdatamodule[PROJECT DATA MODULE]
+          designdoccss([Design Doc CSS])  
+          designdochtml[\Design Doc HTML/]
+          mermaidcss([Mermaid Dark Theme CSS])
+          mermaidflowcharthtml[\Mermaid Flow Chart HTML/]
+          mermaidganttcharthtml[\Mermaid Gantt Chart HTML/]
+          mermaidpiecharthtml[\Mermaid Pie Chart HTML/]
+          progressreporthtml[\Progress Report HTML/]
+          projectimagespng([Project Images PNG])
+          readmehtml[\Read Me HTML/]
+          readmemd[\Read Me MD/]
+          tablecss([Table CSS])
+          tabledatajs[/Table Data JS/]
+          tablegeneratorjs(Table Generator JS)
+          tablehtml[\Table HTML/]
+          end
+          
+        %%relationships
+
+        indexhtml & faqhtml & projectshtml & contacthtml--hyperlinks to-->resumepdf
+        indexhtml<--hyperlinks to-->faqhtml & projectshtml & contacthtml
+        faqhtml<--hyperlinks to-->projectshtml & contacthtml
+        projectshtml<--hyperlinks to-->contacthtml
+
+        contactjs--modifies-->contacthtml
+        imageloaderjs--modifies-->indexhtml & faqhtml & projectshtml & contacthtml
+        projectsjs--modifies-->projectshtml
+        quotegeneratorjs--modifies-->indexhtml
+
+        quotedatajs--populates-->quotegeneratorjs
+        websiteimagespng--populates-->imageloaderjs
+
+        projectscss--styles-->projectshtml
+        stylecss--styles-->indexhtml & faqhtml & projectshtml & contacthtml
+        
+        %%structure
+
+        subgraph websitemodule[PORTFOLIO WEBSITE MODULE]
+          contacthtml[\Contact HTML/]
+          contactjs(Contact JS) 
+          faqhtml[\FAQ HTML/]
+          imageloaderjs[/Image Loader JS/]
+          indexhtml[\Index HTML/]
+          projectscss([Projects CSS])
+          projectshtml[\Projects HTML/]
+          projectsjs(Projects JS)
+          resumepdf[/Resume PDF\]
+          stylecss([Style CSS])
+          quotedatajs[/Quote Data JS/]
+          quotegeneratorjs(Quote Generator JS)
+          websiteimagespng([Website Images PNG])
+          end
+
+    </div>
+    <script>
+      var printArguments = function(arg1, arg2, arg3) {
+        alert('printArguments called with arguments: ' + arg1 + ', ' + arg2 + ', ' + arg3);
+      }
+      var printTask = function(taskId) {
+        alert('taskId: ' + taskId);
+      }
+      var config = {
+        startOnLoad:true,
+        securityLevel:'loose',
+      };
+      mermaid.initialize(config);
+    </script>
+  </body>
+</html>
