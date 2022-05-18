@@ -97,7 +97,7 @@ document.body.addEventListener("change", function (event) {
           busybeesParagraph.style.color = "palegoldenrod";
           busybeesDesignLabel.style.color = "palegoldenrod";
           busybeesContent.style.display = "block";
-          window.open("https://jhbardwell.github.io/project-busybees/designdoc.html", "_blank");
+          window.open("https://jhbardwell.github.io/project-busybees/project-data/designdoc.html", "_blank");
           break;
         case "busybees-code-input":
           busybeesDiv.style.order = -1;
@@ -121,7 +121,7 @@ document.body.addEventListener("change", function (event) {
           journaltojsonParagraph.style.color = "lightblue";
           journaltojsonDesignLabel.style.color = "lightblue";
           journaltojsonContent.style.display = "block";
-          window.open("https://jhbardwell.github.io/project-journaltojson/designdoc.html", "_blank");
+          window.open("https://jhbardwell.github.io/project-journaltojson/project-data/designdoc.html", "_blank");
           break;
         case "journaltojson-code-input":
           journaltojsonDiv.style.order = -1;
@@ -144,7 +144,7 @@ document.body.addEventListener("change", function (event) {
           fiveminutefantasyParagraph.style.color = "orange";
           fiveminutefantasyDesignLabel.style.color = "orange";
           fiveminutefantasyContent.style.display = "block";
-          window.open("https://jhbardwell.github.io/project-fiveminutefantasy/designdoc.html", "_blank");
+          window.open("https://jhbardwell.github.io/project-fiveminutefantasy/project-data/designdoc.html", "_blank");
           break;
         case "fiveminutefantasy-code-input":
           fiveminutefantasyDiv.style.order = -1;
@@ -168,7 +168,7 @@ document.body.addEventListener("change", function (event) {
           portfoliowebpageParagraph.style.color = "violet";
           portfoliowebpageDesignLabel.style.color = "violet";
           portfoliowebpageContent.style.display = "block";
-          window.open("https://jhbardwell.github.io/project-portfoliowebpage/designdoc.html", "_blank");
+          window.open("https://jhbardwell.github.io/project-portfoliowebpage/project-data/designdoc.html", "_blank");
           break;
         case "portfoliowebpage-code-input":
           portfoliowebpageDiv.style.order = -1;
@@ -192,7 +192,7 @@ document.body.addEventListener("change", function (event) {
           kanbanscriptoriumParagraph.style.color = "indianred";
           kanbanscriptoriumDesignLabel.style.color = "indianred";
           kanbanscriptoriumContent.style.display = "block";
-          window.open("https://jhbardwell.github.io/project-kanbanscriptorium/designdoc.html", "_blank");
+          window.open("https://jhbardwell.github.io/project-kanbanscriptorium/project-data/designdoc.html", "_blank");
           break;
         case "kanbanscriptorium-code-input":
           kanbanscriptoriumDiv.style.order = -1;
@@ -216,7 +216,7 @@ document.body.addEventListener("change", function (event) {
           blimpParagraph.style.color = "lime";
           blimpDesignLabel.style.color = "lime";
           blimpContent.style.display = "block";
-          window.open("https://jhbardwell.github.io/project-blimp/designdoc.html", "_blank");
+          window.open("https://jhbardwell.github.io/project-blimp/project-data/designdoc.html", "_blank");
           break;
         case "blimp-code-input":
           blimpDiv.style.order = -1;
@@ -232,7 +232,7 @@ document.body.addEventListener("change", function (event) {
           blimpParagraph.style.color = "lime";
           blimpDemoLabel.style.color = "lime";
           blimpContent.style.display = "block";
-          window.open("https://jhbardwell.github.io/project-kanbanscriptorium/index.html", "_blank");
+          window.open("https://jhbardwell.github.io/project-blimp/index.html", "_blank");
           break;
     }
 })
