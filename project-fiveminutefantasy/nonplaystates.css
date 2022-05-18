@@ -1,0 +1,12 @@
+:root{
+    --primary-font-family: "devinneswash";
+}
+@font-face {
+    font-family: "devinneswash";
+    src: url("/project-fiveminutefantasy/fonts/devinneswash.woff?raw=true") format("woff"), 
+    url("/project-fiveminutefantasy/fonts/devinneswash.woff2?raw=true") format("woff2")
+}
+h1, h2, button{
+    font-family: var(--primary-font-family);
+    letter-spacing: 2px;
+}
