@@ -87,14 +87,37 @@
             </li>
             <li><a href="#Playcycle">Play Cycle</a></li>
             <li><a href="#Gameloop">Game Loop</a></li>
-            </li>
         </ol>
       </li>
       <li><a href="#Dynamics">Dynamics</a>
         <ol>
-            <li><a href="#Gamestates">Game States</a></li>
-            <li><a href="#Gamesystems">Game Systems</a></li>
-            <li><a href="#Metrics">Endgame Metrics</a></li>
+            <li><a href="#Gamestates">Game States</a>
+            <ol>
+               <li><a href="#Menu">Menu</a></li>
+               <li><a href="#Settings">Settings</a></li>
+               <li><a href="#Credits">Credits</a></li>
+               <li><a href="#Gameplay">Game Play</a></li>
+               <li><a href="#Victory">Victory</a></li>
+               <li><a href="#Failure">Failure</a></li>
+            </ol>
+            </li>
+            <li><a href="#Gamesystems">Game Systems</a>
+               <ol>
+                  <li><a href="#Command">Command</a></li>
+                  <li><a href="#Encounter">Encounter</a></li>
+                  <li><a href="#Inventory">Inventory</a></li>
+                  <li><a href="#Logic">Logic</a></li>
+                  <li><a href="#Nodes">Nodes</a></li>
+                  <li><a href="#Time">Time</a></li>
+                  <li><a href="#Weather">Weather</a></li>
+               </ol>
+            </li>
+            <li><a href="#Metrics">Metrics</a>
+               <ol>
+                  <li><a href="#Public">Public</a></li>
+                  <li><a href="#Private">Private</a></li>
+               </ol>
+            </li>
             <li><a href="#Kanban">Kanban Board</a></li>
             <li><a href="#Architecture">System Architecture</a>
                <ol>
@@ -113,6 +136,7 @@
             <li><a href="#Audio">Audio Design</a></li>
          </ol>
       </li>
+      <li><a href="#Postrelease">Post Release</a></li>
       <li><a href="#Definitions">Definitions</a></li>
       <li><a href="#References">References</a></li>
    </ol>
@@ -233,7 +257,7 @@
             <img src="/project-fiveminutefantasy/images/branchandbottleneck.png",
             alt="Chart: branch and bottleneck narration vector/node graph">  
          </td>
-         <td>A game narrative much affected by the passage of time, either in terms of character development, plot progression, or both. Thus, this is the domain of time management life sims, classic mystery point-and-click games, and progress-mechanic CYA games. Examples: <a href="https://store.steampowered.com/app/774201/Heavens_Vault/">Heaven's Vault</a>, <a href="https://store.steampowered.com/app/251990/Long_Live_The_Queen/">Long Live the Queen</a>, <a href="https://www.gog.com/en/game/the_dagger_of_amon_ra">The Dagger of Amon Ra</a>, <a href="https://www.choiceofgames.com/about-us/">Most games published by Choice of Games, LLC</a> </td>
+         <td>A game narrative much affected by the passage of time, either in terms of character development, plot progression, or both. Thus, this is the domain of time management life sims, classic mystery point-and-click games, and progress-mechanic CYA games. Examples: <a href="https://store.steampowered.com/app/774201/Heavens_Vault/">Heaven's Vault</a>, <a href="https://store.steampowered.com/app/960910/Heavy_Rain/">Heavy Rain</a>, <a href="https://store.steampowered.com/app/251990/Long_Live_The_Queen/">Long Live the Queen</a>, <a href="https://store.steampowered.com/app/481510/Night_in_the_Woods/">Night in the Woods</a>, <a href="https://www.gog.com/en/game/the_dagger_of_amon_ra">The Dagger of Amon Ra</a>, <a href="https://store.steampowered.com/app/207610/The_Walking_Dead/">The Walking Dead</a>, <a href="https://www.choiceofgames.com/about-us/">Most games published by Choice of Games, LLC</a> </td>
          <td>Does not work unless the narrative has a temporal or progression component. Does not seem to have flourished outside a narrow old-school text adventure or point-and-click adventure niches. Though perhaps this is the fault of these systems' gameplay mechanics rather than their narrative structure.</td>
       </tr>
       <tr>
@@ -249,7 +273,7 @@
             <img src="/project-fiveminutefantasy/images/openworld.png",
             alt="Chart: open world narration vector/node graph">  
          </td>
-         <td>Even though quests are structured by geography, time still plays an important part: there’s a built-in direction of travel. But take a CYOA structure, make travel between the major nodes reversible, and you have a static geography, a world in which the player can toodle about indefinitely. Examples: <a href="https://elderscrolls.bethesda.net/en/skyrim">Skyrim.</a>, <a href ="https://store.steampowered.com/app/17450/Dragon_Age_Origins/">Dragon Age: Origins</a>, <a href="https://store.steampowered.com/app/22380/Fallout_New_Vegas/">Fallout: New Vegas</a></td>
+         <td>Even though quests are structured by geography, time still plays an important part: there’s a built-in direction of travel. But take a CYOA structure, make travel between the major nodes reversible, and you have a static geography, a world in which the player can toodle about indefinitely. Examples: <a href="https://elderscrolls.bethesda.net/en/skyrim">Skyrim.</a>, <a href ="https://store.steampowered.com/app/17450/Dragon_Age_Origins/">Dragon Age: Origins</a>, <a href="https://store.steampowered.com/app/22380/Fallout_New_Vegas/">Fallout: New Vegas</a>, <a href="https://store.steampowered.com/app/1328670/Mass_Effect_Legendary_Edition/">Mass Effect</a></td>
          <td>Still prone to quest fatigue, and open world games and sandlot games have been done to death. Too many are big, mostly empty boxees.</td>
       </tr>
       <tr>
@@ -257,7 +281,7 @@
             <img src="/project-fiveminutefantasy/images/floatingmodules.png",
             alt="Chart: floating modules narration vector/node graph">  
          </td>
-         <td>A mode only really possible in computer-based works. There is no tree – or, while there may be scattered twigs and branches, there’s no trunk. No central plot, no through-line: modular encounters become available to the player based largely on state, or perhaps randomly. Good for endless replayability value and true player agency choice-driven narrative creation. Examples: <a href="https://www.mobygames.com/game/king-of-chicago">King of Chicago</a>, <a href="http://web.archive.org/web/20040404061317/www.channelzilch.com/doug/battle.htm">Speech by Doug Sharp on pitfalls developing 'King of Chicago'</a></td>
+         <td>Only possible in computer-based works. There is no tree – or, while there may be scattered twigs and branches, there’s no trunk. No central plot, no through-line: modular encounters become available to the player based largely on state, or perhaps randomly. Good for endless replayability value and true player agency choice-driven narrative creation. Examples: <a href="https://www.playablstudios.com/facade">Façade</a>, <a href="https://store.steampowered.com/app/383870/Firewatch/">Firewatch</a>, <a href="https://www.mobygames.com/game/king-of-chicago">King of Chicago</a>, <a href="https://store.steampowered.com/app/388880/Oxenfree/">Oxenfree</a>, <a href="http://web.archive.org/web/20040404061317/www.channelzilch.com/doug/battle.htm">Speech by Doug Sharp on pitfalls developing 'King of Chicago'</a></td>
          <td>Difficult to write well, accounting for all options. Without a large plot, the structure will easily collapse into a linear narrative.</td>
       </tr>
       <tr>
@@ -277,6 +301,7 @@
    <h3 id="Genres">Genre Tags</h3>
    <ul>
       <li>2D</li>
+      <li>Adventure</li>
       <li>Choices Matter</li>
       <li>Choose Your Own Adventure</li>
       <li>Exploration</li>
@@ -299,7 +324,7 @@
       <li>Successfully have a player race, gender, and creed neutral perspective</li>
       <li>Implement systemic narrative, time, weather, encounter, and location mechanics</li>
       <li>Pose modular narrative scene selection based on player choice, in-game mechanics, and probability metrics</li>
-      <li>Create dynamic accessibility settings controls</li>
+      <li>Create dynamic settings controls and accessibility options</li>
       <li>Feature multiple language options for both text and audio</li>
    </ul>
    <br>
@@ -377,20 +402,40 @@
    <h2 id="Dynamics">Dynamics</h2>
    <h3 id="Gamestates">Game States</h3>
    <h4 id="Menu">Main Menu</h4>
-   <p>Game starts here by default. Offers a gateway to the game play, settings, and credits states.</p>
-   <p>This is an "Intro" stage. It is the first thing the player sees, revealing (or reaffirming) everything this game is, how this game functions at the granular level, and why this game is awesome.</p>
+   <p>Game starts here by default. Offers the player an easily navigable portal to the game play, settings, and credits states.</p>
+   <p>This is an "Intro" stage and as much onboarding as the player gets before throwing them into the fray. This is the first thing the player sees and with which they interact, revealing (or reaffirming) the game's core loop. As the player chooses a menu option, the adjacent static dragon logo changes and shoots flame at their selection before advancing them to their next choice. These events handily demonstrate the game in microcosm: decision, raction, consequences.</p>
+   <p>The cursor icon is represented as a circular wax signet stamp. Radiobuttons are chosen by stamping them (with appropriate sound effect).</p>
    <br>
    <h4 id="Settings">Settings</h4>
-   <p>Allows players to regulate screen brightness, screen contrast, toggle sound effects, audio narration, and music on or off, regulate the volume of all three previous elements, and select the language of the program's text elements and audio narrations.</p>
-   <p>This is a "Prep" stage. It allows the player to tailor the game environment to suit their preferences.</p>
+   <p>Allows players to regulate the game's visuals and audio. Offers accessibility adjustment and multilinguistic features, catering to as wide and varied an audience as possible with no barrier to an enjoyable gameplay experience.</p>
+   <p>This is a "Prep" stage. It allows the player to tailor the game environment to suit their individual preferences.</p>
+   <p>The cursor icon is represented as a circular wax signet stamp. Radiobuttons are chosen by stamping them (with appropriate sound effect). Sliders are represented as knotted strings of twine, which are also stamped.</p>
+   <ul>
+      <li>ink splatter: on/off</li>
+      <li>ink color: customizer</li>
+      <li>screen size: full/window</li>
+      <li>screen brightness: slider</li>
+      <li>screen contrast: slider</li>
+      <li>screen colorblindness filter: on/off</li>
+      <li>screen sepia filter: on/off</li>
+      <li>screen grayscale filter: on/off</li>
+      <li>language selection: english/spanish/german/japanese/korean</li>
+      <li>audio reader: on/off</li>
+      <li>music: volume slider</li>
+      <li>sound effects: volume slider</li>
+   </ul>
    <br>
    <h4 id="Credits">Credits</h4>
    <p>Acknowledges all those who contributed in some way to creating this game. This includes artwork, music, layout design, programming, noteworthy beta testers, noteworthy kickstarter patrons, etc...</p>
    <p>This is an "Ancillary" stage. It allows the player to peruse extra content. Most folks will skip it.</p>
+   <p>The cursor icon is represented as a trumpet. There are no selection options.</p>
    <br>
    <h4 id="Gameplay">Game Play</h4>
    <p>The core gameplay loop occurs here. The game redirects the story in real time based on the player's actions, advances at the pace of player's decisons, and ends before having met all the player's goals.</p>
    <p>This is the "Action" stage where players get to explore, immerse, interact, and read...lots of reading. This game is basically an interactive fantasy storybook simulation that casts the player as protagonist, author, and artist.</p>
+   <p>What the player decides drives the story forward at the fundamental level, changing the text, graphics, and outcomes of various encounters. The encounter system can be likened to a classic quest system except that it is more granular, dynamic, and modular. Every decision-mediated consequence of the player is logged as an encounter. Prior encounters and current inventory items dictate player options during subsequent encounters. As the player dithers making their decision, the quill pen cursor icon will drip ink all over the page, obscuring the contents in a not-so-subtle visual reminder that the clock is silently ticking. Likewise, the inkwell in which the non moving quill is dipped slowly depletes as the game progresses towards a conclusion.</p>
+   <p>Player choice is the predominant—but not the only—factor driving this game. Non player controlled factors include randomized game start time-of-day and season conditions; game progression systemic factors such as character location, item availability, item price, random encounters, weather patterns, and time progression; and game end conditions such as a game-mediated death consequence or the five minute time limit. If a decision results in more than one possible encounter occurring, likelihood probabilities are applied depending on circumstance. The rate of in-game time progression is directly tied to the speed at which the player makes decisions: every choice advances time one-third of an hour. Weather patterns are random and tied to seasonality and time-of-day.</p>
+   <p>The cursor icon is represented as quill when either moving (bare quill) or not moving (bare quill dripping ink when hovering).  Actions are chosen by clicking on (writing) them.</p>
    <br>
    <h4 id="Victory">Victory</h4>
    <p>Players directed here after surviving for five minutes. Upbeat music plays. Displays comparative statistics as line (current play session) on histogram (all other play sessions) for various metrics</p>
@@ -424,7 +469,8 @@
    <h4 id="Weather">Weather</h4>
    <p>The system that regulates and displays the weather is organized here. Enumeration weather states include sun, overcast, and rain.</p>
    <br>
-   <h3 id="Metrics">End Game Metrics</h3>
+   <h3 id="Metrics">Metrics</h3>
+   <h4 id="Public">Public Endgame Display</h4>
    <ul>
       <li>The [insert current play session frequency here]th Five Minute Fantasy:</li>
       <li>survival time</li>
@@ -434,9 +480,8 @@
       <li>characters helped</li>
       <li>characters killed</li>
       <li>coins spent : coins earned</li>
-      <li>battles : sharp bargains</li>
+      <li>battles : bargains</li>
       <li>weapons discovered</li>
-      <li>spells cast</li>
       <li>dragons found</li>
       <li>vials stolen</li>
       <li>...changes on rota based on player submission lottery...</li>
@@ -446,6 +491,19 @@
       <li>Want to explore the ABC? Then check out our exciting new expansion pack, XYZ!</li>
       <li>If you enjoyed crafting your own exciting short fantasy adventure, check out this novel.</li>
       <li>Don't use a red fire dragon in the rain. Go for your blue water/ice dragon instead!</li>
+   </ul>
+   <h4 id="Private">Private Collected Data</h4>
+   <ul>
+      <li>player IPN</li>
+      <li>player session start time</li>
+      <li>player session end time</li>
+      <li>player session restart frequency</li>
+      <li>player session length</li>
+      <li>character interaction frequency</li>
+      <li>node location frequency</li>
+      <li>node progression sequence</li>
+      <li>node decision time</li>
+      <li>node option selection</li>
    </ul>
    <h3 id="Kanban">Kanban Board</h3>
    <p>Upgraded Board Pending</p>
@@ -469,6 +527,11 @@
    <p>Graphics and animations are simple, stylized caricatures of either subverted or true-to-type fantasy archetypes. Colors are bold and primary. This makes images easier to create, manipulate, and reproduce and adds to the universal storybook tone the game is attempting to evoke</p>
    <h3 id="Audio">Audio Design</h3>
    <p>The gameplay soundtrack is upbeat, martial fantasy string and woodwind music with drums in the background. Composition mirrors a classic Freytag pyramid structure and ends at the five minute time-out mark. Variations on the theme and different songs to avoid repetition fatigue across multiple concurrent play cycles are pending. The menu, settings, and credit screens have a simpler cyclical soundtrack that shares a few string and drum lietmotifs. The victory condition music is rousing. The failure condition music is somber.</p>
+   <br>
+   <hr>
+   <h2 id="Postrelease">Post Release</h2>
+   <p>Games wither and die on the vine without their creators encouraging and promoting active community involvement after the game is purchased. This keeps the lifeblood pumping, keeps the experience relevant, keeps the revenue flowing. Various strategies include subsequent DLC (XYZ), regular seasonal content (Fortnite), modding (DOOM or Skyrim), player game content creation (XYZ), active competition among players a la PvP or MMORPG mechanics (XYZ), or passive competition among players a la leaderboards or comparative histograms (Infinifactory). Other strategies used to keep an old game afloat in the churning flotsom of all those other games include brand awareness, cross-promotion, and franchise hype, which may or may not lead to inevitable sequels.</p>
+   <p></p>
    <br>
    <hr>
    <h2 id="Definitions">Definitions</h2>
