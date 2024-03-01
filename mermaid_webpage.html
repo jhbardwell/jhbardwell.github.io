@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./mermaid.css" />
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+<title>Mermaid Code HTML Template</title>
+</head>
+<body>
+<h1> Mermaid Flowcharts </h1> 
+<h2> Introduction </h2>
+<p>
+This is an example of the mermaid JavaScript program executed within an HTML file, which includes both the image generated and the mermaid code used to create that image. Note that many combinations and flowchart configurations are possible. You may examine the entire HTML file code by either using your browser's inspect or <a href="https://en.wikipedia.org/wiki/Web_development_tools" target="_blank">developer tools</a> features.
+</p>
+<p>
+Make your own mermaid code diagram today! Use the hyperlink <a href="https://mermaid.js.org/" target="_blank">here</a> to learn more.
+</p>
+<h2> Example Image </h2>
+
+<div class="mermaid">
+%%{init: {'theme': 'neutral', 'themeVariables':
+{'fontSize': '40px', 'fontFamily': 'Arial'}}}%%
+
+%%{init: {'theme': 'neutral'}}%%
+flowchart TD
+
+%% nodes or vertices
+start[Start]
+stop[Stop]
+go((GO))
+slow((SLOW))
+halt((HALT))
+
+%%node style or color and size variables
+style go fill:green
+style slow fill:yellow
+style halt fill:red
+
+%%edges or lines
+start-->go-->slow-->halt-->stop
+stop-->start
+
+</div>
+<p> <i> Figure 1 – A sample mermaid diagram showing a traffic light finite state model </i></p>
+
+<h2> Example Code </h2>
+<pre>
+<code><div class="mermaid"></code>
+%%{init: {'theme': 'neutral', 'themeVariables':
+{'fontSize': '40px', 'fontFamily': 'Arial'}}}%%
+
+%%{init: {'theme': 'neutral'}}%%
+flowchart TD
+
+%% nodes or vertices
+start[Start]
+stop[Stop]
+go((GO))
+slow((SLOW))
+halt((HALT))
+
+%%node style or color and size variables
+style go fill:green
+style slow fill:yellow
+style halt fill:red
+
+%%edges or lines
+start-->go-->slow-->halt-->stop
+stop-->start
+
+</div>
+</pre>
+
+<script>
+var printArguments = function(arg1, arg2, arg3) {
+alert('printArguments called with arguments: ' + arg1 + ', ' + arg2 + ', ' + arg3);
+}
+var printTask = function(taskId) {
+alert('taskId: ' + taskId);
+}
+var config = {
+startOnLoad:true,
+securityLevel:'loose',
+};
+mermaid.initialize(config);
+</script>
+</body>
+</html>
